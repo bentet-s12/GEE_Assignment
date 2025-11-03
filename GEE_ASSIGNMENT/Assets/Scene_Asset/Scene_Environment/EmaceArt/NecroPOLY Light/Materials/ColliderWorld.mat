@@ -12,6 +12,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _ENVIRONMENTREFLECTIONS_OFF
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
   - _DISABLE_SSR_TRANSPARENT
@@ -32,6 +33,7 @@ Material:
   - TransparentBackface
   - RayTracingPrepass
   - DepthOnly
+  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -337,7 +339,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0.051570036, g: 0.10377359, b: 0.04943928, a: 0.003921569}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.65928507, g: 1, b: 0, a: 0.07058824}
+    - _Color: {r: 0.051570013, g: 0.10377356, b: 0.04943926, a: 0.003921569}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
