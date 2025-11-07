@@ -52,9 +52,39 @@ PrefabInstance:
       propertyPath: m_Name
       value: door Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 672034195004258536, guid: b4085400587ce8343bc19fdf76f07f76, type: 3}
     m_RemovedGameObjects:
     - {fileID: 6149181913174975891, guid: b4085400587ce8343bc19fdf76f07f76, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2303517785830224366, guid: b4085400587ce8343bc19fdf76f07f76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9038671995694896977}
   m_SourcePrefab: {fileID: 100100000, guid: b4085400587ce8343bc19fdf76f07f76, type: 3}
+--- !u!1 &1667481446488394527 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2303517785830224366, guid: b4085400587ce8343bc19fdf76f07f76, type: 3}
+  m_PrefabInstance: {fileID: 636037458224134897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9038671995694896977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667481446488394527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb1452321880cb498477baf86a1379a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadscene: 
+  currentscenename: 
+  scenenames:
+  - scene1
+  - scene2
+  - scene3
+  - scene4
+  - scene5
+  - scene6
