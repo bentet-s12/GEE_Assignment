@@ -3777,8 +3777,8 @@ GameObject:
   - component: {fileID: 647195366}
   - component: {fileID: 647195365}
   - component: {fileID: 647195364}
-  m_Layer: 0
-  m_Name: Cube (2)
+  m_Layer: 3
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4408,8 +4408,8 @@ GameObject:
   - component: {fileID: 706921189}
   - component: {fileID: 706921188}
   - component: {fileID: 706921187}
-  m_Layer: 0
-  m_Name: Cube (3)
+  m_Layer: 3
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6176,9 +6176,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6a35efed7aff6284f8cfb684da549f8d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1240001804}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6a35efed7aff6284f8cfb684da549f8d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1240001807}
   m_SourcePrefab: {fileID: 100100000, guid: 6a35efed7aff6284f8cfb684da549f8d, type: 3}
 --- !u!1001 &1117030915
 PrefabInstance:
@@ -6751,13 +6748,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1.83
+  m_Height: 2.03
   m_Radius: 0.25
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.9, z: 0}
+  m_Center: {x: 0, y: 0.99, z: 0}
 --- !u!114 &1240001804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6797,33 +6794,6 @@ MonoBehaviour:
   walkSpeed: 3
   runSpeed: 6
   gravity: -9.81
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 0
-  groundedOffset: 0.1
---- !u!136 &1240001807
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240001800}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.4
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.03, z: 0}
 --- !u!1001 &1244900574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7959,8 +7929,8 @@ GameObject:
   - component: {fileID: 1407341055}
   - component: {fileID: 1407341054}
   - component: {fileID: 1407341053}
-  m_Layer: 0
-  m_Name: Ground (1)
+  m_Layer: 3
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8237,8 +8207,8 @@ GameObject:
   - component: {fileID: 1448765215}
   - component: {fileID: 1448765214}
   - component: {fileID: 1448765213}
-  m_Layer: 0
-  m_Name: Cube (1)
+  m_Layer: 3
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9844,7 +9814,7 @@ GameObject:
   - component: {fileID: 1803298156}
   - component: {fileID: 1803298155}
   - component: {fileID: 1803298154}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10014,8 +9984,8 @@ GameObject:
   - component: {fileID: 1855714595}
   - component: {fileID: 1855714594}
   - component: {fileID: 1855714593}
-  m_Layer: 0
-  m_Name: Ground (2)
+  m_Layer: 3
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10122,8 +10092,8 @@ GameObject:
   - component: {fileID: 1869325121}
   - component: {fileID: 1869325120}
   - component: {fileID: 1869325119}
-  m_Layer: 0
-  m_Name: Cube
+  m_Layer: 3
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

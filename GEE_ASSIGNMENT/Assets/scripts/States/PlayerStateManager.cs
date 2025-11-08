@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerStateManager : MonoBehaviour
@@ -14,9 +14,6 @@ public class PlayerStateManager : MonoBehaviour
 
     [Header("Gravity")]
     public float gravity = -9.81f;
-    public LayerMask groundMask;
-    public float groundedOffset = 0.1f;
-
     private Vector3 velocity;
     private bool isGrounded;
 
@@ -25,6 +22,9 @@ public class PlayerStateManager : MonoBehaviour
     [HideInInspector] public IdleState idleState;
     [HideInInspector] public WalkState walkState;
     [HideInInspector] public RunState runState;
+    [HideInInspector] public AimState aimState;
+
+    private bool isAiming = false;
 
     void Start()
     {
@@ -33,9 +33,13 @@ public class PlayerStateManager : MonoBehaviour
         idleState = new IdleState(this);
         walkState = new WalkState(this);
         runState = new RunState(this);
+        aimState = new AimState(this);
 
         currentState = idleState;
         currentState.EnterState();
+
+        // ensure start not aiming
+        animator.SetBool("Aiming", false);
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -43,9 +47,25 @@ public class PlayerStateManager : MonoBehaviour
 
     void Update()
     {
+        // toggle aim
+        if (Input.GetMouseButtonDown(1))
+        {
+            isAiming = !isAiming;
+            animator.SetBool("Aiming", isAiming);
+            cameraScript.SetAiming(isAiming);
+
+            if (isAiming)
+                SwitchState(aimState);
+            else
+                SwitchState(idleState);
+        }
+
+        // only move if not aiming
+        if (!isAiming)
+            HandleMovement();
+
         currentState.UpdateState();
         ApplyGravity();
-        HandleMovement();
     }
 
     private void HandleMovement()
@@ -53,7 +73,8 @@ public class PlayerStateManager : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
-        if (Mathf.Abs(h) < 0.1f && Mathf.Abs(v) < 0.1f) return;
+        if (Mathf.Abs(h) < 0.1f && Mathf.Abs(v) < 0.1f)
+            return;
 
         Vector3 forward = cameraScript.GetCameraForwardFlat();
         Vector3 right = cameraScript.GetCameraRightFlat();
@@ -69,8 +90,7 @@ public class PlayerStateManager : MonoBehaviour
 
     private void ApplyGravity()
     {
-        Vector3 spherePos = new Vector3(transform.position.x, transform.position.y - controller.height / 2 + groundedOffset, transform.position.z);
-        isGrounded = Physics.CheckSphere(spherePos, controller.radius - 0.05f, groundMask);
+        isGrounded = controller.isGrounded;
 
         if (isGrounded && velocity.y < 0)
             velocity.y = -2f;
