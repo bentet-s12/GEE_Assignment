@@ -2525,7 +2525,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 0, y: 0.000012636}
+  m_AnchoredPosition: {x: 0, y: 0.000012397766}
   m_SizeDelta: {x: 0, y: -5.8233}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &399040419
@@ -4124,7 +4124,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0000076293945, y: 0.0000019073}
+  m_AnchoredPosition: {x: -0.0000076293945, y: 0.0000019073486}
   m_SizeDelta: {x: -35, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &905383865
@@ -4778,7 +4778,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.13725491, g: 0.12156863, b: 0.2, a: 1}
-    m_HighlightedColor: {r: 0, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.28034887, g: 0.9433962, b: 0.9433962, a: 1}
     m_PressedColor: {r: 0.4356547, g: 0.3230242, b: 0.5754717, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -5228,7 +5228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60ceb7825075e0d48a2154bb522737cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: bfb73118f1784404eb8f35b4cfd172b8, type: 2}
 --- !u!1 &1143405358
 GameObject:
   m_ObjectHideFlags: 0
@@ -7050,7 +7049,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -79.0311, y: 0.0000019073}
+  m_AnchoredPosition: {x: -79.0311, y: 0}
   m_SizeDelta: {x: -128.3866, y: -35.5206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1658796554
