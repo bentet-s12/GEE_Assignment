@@ -8,13 +8,14 @@ public class PlayerStateManager : MonoBehaviour
     public FixedThirdPersonCamera cameraScript;
     [HideInInspector] public CharacterController controller;
 
-    [Header("Speeds")]
+    [Header("Movement Speeds")]
     public float walkSpeed = 2.5f;
     public float runSpeed = 5f;
+    public float jumpForce = 5f;
 
     [Header("Gravity")]
     public float gravity = -9.81f;
-    private Vector3 velocity;
+    [HideInInspector] public Vector3 velocity;
     private bool isGrounded;
 
     // States
@@ -38,16 +39,25 @@ public class PlayerStateManager : MonoBehaviour
         currentState = idleState;
         currentState.EnterState();
 
-        // ensure start not aiming
-        animator.SetBool("Aiming", false);
-
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     void Update()
     {
-        // toggle aim
+        HandleAimToggle();
+        HandleJumpInput();
+
+        currentState.UpdateState();
+        ApplyGravity();
+
+        if (!isAiming)
+            HandleMovement();
+    }
+
+    // ------------------ AIM TOGGLE ------------------
+    private void HandleAimToggle()
+    {
         if (Input.GetMouseButtonDown(1))
         {
             isAiming = !isAiming;
@@ -59,15 +69,9 @@ public class PlayerStateManager : MonoBehaviour
             else
                 SwitchState(idleState);
         }
-
-        // only move if not aiming
-        if (!isAiming)
-            HandleMovement();
-
-        currentState.UpdateState();
-        ApplyGravity();
     }
 
+    // ------------------ MOVEMENT ------------------
     private void HandleMovement()
     {
         float h = Input.GetAxis("Horizontal");
@@ -88,18 +92,41 @@ public class PlayerStateManager : MonoBehaviour
             transform.forward = lookDir;
     }
 
-    private void ApplyGravity()
+    // ------------------ JUMP ------------------
+    private void HandleJumpInput()
     {
         isGrounded = controller.isGrounded;
 
+        // Reset on ground
         if (isGrounded && velocity.y < 0)
+        {
             velocity.y = -2f;
-        else
-            velocity.y += gravity * Time.deltaTime;
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", false);
+        }
 
+        // Jump
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && !isAiming)
+        {
+            velocity.y = jumpForce;
+            animator.SetBool("isJumping", true);
+            animator.SetBool("isFalling", false);
+        }
+
+        // Falling
+        if (velocity.y < 0 && !isGrounded)
+        {
+            animator.SetBool("isFalling", true);
+        }
+    }
+
+    private void ApplyGravity()
+    {
+        velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
 
+    // ------------------ STATE SWITCH ------------------
     public void SwitchState(PlayerState newState)
     {
         currentState.ExitState();

@@ -6793,7 +6793,9 @@ MonoBehaviour:
   controller: {fileID: 0}
   walkSpeed: 3
   runSpeed: 6
+  jumpForce: 9.07
   gravity: -9.81
+  velocity: {x: 0, y: 0, z: 0}
 --- !u!1001 &1244900574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11983,6 +11985,9 @@ MonoBehaviour:
   minPitch: -40
   maxPitch: 60
   smoothTime: 0.1
+  normalDistance: 3.5
+  aimDistance: 2
+  zoomSpeed: 5
 --- !u!1001 &2110601525
 PrefabInstance:
   m_ObjectHideFlags: 0
