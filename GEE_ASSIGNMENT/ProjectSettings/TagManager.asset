@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - P_player
+  - SpawnPoint
+  - gameManager
   layers:
   - Default
   - TransparentFX
