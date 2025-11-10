@@ -1,83 +1,93 @@
-using System.Collections;
+ï»¿using System.Collections;
 using UnityEngine;
 
 public class shootScript : MonoBehaviour
 {
-    private Camera cam;
-    [SerializeField] private float impulseStrength = 5.0f;
-    [SerializeField] private Transform firingpoint;
-    [SerializeField] private float fireRateDelay = 0.2f;
+    [Header("References")]
+    [SerializeField] private Transform firingPoint;       // Gun muzzle
+    [SerializeField] private GameObject projectilePrefab; // Bullet prefab
+    [SerializeField] private Camera cam;                  // Main camera
+    [SerializeField] private PlayerStateManager playerManager;
+
+    [Header("Settings")]
+    [SerializeField] private float bulletSpeed = 80f;
+    [SerializeField] private float fireRateDelay = 0.15f;
     [SerializeField] private int multishot = 1;
-    [SerializeField] private float spreadAngle = 15f;
-    [SerializeField] private GameObject projectilePrefab;
-    [SerializeField] private Transform gun;
-    [SerializeField] private float maxAimDistance = 100f;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        cam = GameObject.FindAnyObjectByType<Camera>();
-    }
-    void setfireRatedelay(float newdelay)
-    {
-        fireRateDelay = newdelay;
-    }
+    [SerializeField] private float spreadAngle = 10f;
+    [SerializeField] private float spawnOffset = 0.3f;
+    [SerializeField] private float bulletLifetime = 5f;
 
-    void AimGunAtCenter()
-    {
-        // Just aim straight forward from the camera — no raycast
-        Vector3 aimPoint = cam.transform.position + cam.transform.forward * 1000f;
+    private bool canShoot = true;
 
-        // Make the gun and firing point look in that direction
-        gun.LookAt(aimPoint);
-        firingpoint.LookAt(aimPoint);
+    void Awake()
+    {
+        if (cam == null)
+            cam = Camera.main;
+
+        if (playerManager == null)
+            playerManager = Object.FindFirstObjectByType<PlayerStateManager>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //gun.rotation = Quaternion.LookRotation(cam.transform.forward);
-        //firingpoint.rotation = Quaternion.LookRotation(cam.transform.forward);
-        AimGunAtCenter();
+        bool canShootNow =
+            playerManager.currentState == playerManager.walkState ||
+            playerManager.currentState == playerManager.runState ||
+            playerManager.currentState == playerManager.aimState;
 
-        Debug.Log("gun is active");
-        if (Input.GetMouseButtonDown(0))
+        if (canShootNow && Input.GetMouseButtonDown(0) && canShoot)
         {
-            Debug.Log("shooting");
             StartCoroutine(Shoot());
         }
     }
+
     IEnumerator Shoot()
     {
-        if (multishot == 1)
+        canShoot = false;
+
+        Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        Vector3 targetPoint;
+
+        if (Physics.Raycast(ray, out RaycastHit hit, 1000f))
+            targetPoint = hit.point;
+        else
+            targetPoint = ray.GetPoint(1000f);
+
+        Vector3 shootDir = (targetPoint - firingPoint.position).normalized;
+
+        if (multishot <= 1)
         {
-            FireProjectile(firingpoint.rotation);
-            yield return new WaitForSeconds(fireRateDelay);
+            FireProjectile(shootDir);
         }
         else
         {
-
             float startAngle = -spreadAngle * 0.5f;
             float angleStep = spreadAngle / (multishot - 1);
 
             for (int i = 0; i < multishot; i++)
             {
-                // Calculate rotation offset
-                Quaternion shotRotation = firingpoint.rotation * Quaternion.Euler(0, startAngle + (angleStep * i), 0);
-                FireProjectile(shotRotation);
+                Quaternion spreadRot = Quaternion.AngleAxis(startAngle + angleStep * i, Vector3.up);
+                Vector3 spreadDir = spreadRot * shootDir;
+                FireProjectile(spreadDir);
             }
-            yield return new WaitForSeconds(fireRateDelay);
         }
-        void FireProjectile(Quaternion rotation)
+
+        yield return new WaitForSeconds(fireRateDelay);
+        canShoot = true;
+    }
+
+    void FireProjectile(Vector3 direction)
+    {
+        Vector3 spawnPos = firingPoint.position + direction * spawnOffset;
+
+        GameObject projectile = Instantiate(projectilePrefab, spawnPos, Quaternion.LookRotation(direction));
+
+        Rigidbody rb = projectile.GetComponent<Rigidbody>();
+        if (rb != null)
         {
-            GameObject projectile = Instantiate(projectilePrefab, firingpoint.position, rotation);
-            Rigidbody rb = projectile.GetComponent<Rigidbody>();
-
-            if (rb != null)
-            {
-                rb.AddForce(rotation * Vector3.forward * impulseStrength, ForceMode.Impulse);
-            }
-
-            Destroy(projectile, 5f); // optional cleanup
+            rb.linearVelocity = direction * bulletSpeed;
         }
+
+        Destroy(projectile, bulletLifetime);
     }
 }
