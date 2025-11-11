@@ -12,6 +12,7 @@ public class AimState : PlayerState
     public void EnterState()
     {
         manager.animator.SetBool("Aiming", true);
+        
     }
 
     public void UpdateState()

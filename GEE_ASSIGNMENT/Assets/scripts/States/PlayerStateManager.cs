@@ -24,6 +24,7 @@ public class PlayerStateManager : MonoBehaviour
     [HideInInspector] public WalkState walkState;
     [HideInInspector] public RunState runState;
     [HideInInspector] public AimState aimState;
+    [HideInInspector] public JumpState jumpState;
 
     private bool isAiming = false;
 
@@ -31,10 +32,12 @@ public class PlayerStateManager : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
 
+        // Initialize states
         idleState = new IdleState(this);
         walkState = new WalkState(this);
         runState = new RunState(this);
         aimState = new AimState(this);
+        jumpState = new JumpState(this);
 
         currentState = idleState;
         currentState.EnterState();
@@ -48,26 +51,25 @@ public class PlayerStateManager : MonoBehaviour
         HandleAimToggle();
         HandleJumpInput();
 
+        HandleMovement();
+
         currentState.UpdateState();
         ApplyGravity();
-
-        if (!isAiming)
-            HandleMovement();
     }
-
     // ------------------ AIM TOGGLE ------------------
     private void HandleAimToggle()
     {
+        // Press once to toggle aim
         if (Input.GetMouseButtonDown(1))
         {
-            isAiming = !isAiming;
+            isAiming = !isAiming; // flip the bool
+
             animator.SetBool("Aiming", isAiming);
             cameraScript.SetAiming(isAiming);
 
-            if (isAiming)
-                SwitchState(aimState);
-            else
-                SwitchState(idleState);
+            // Maintain walking/running states
+            animator.SetBool("Walking", animator.GetBool("Walking"));
+            animator.SetBool("isJumping", animator.GetBool("isJumping"));
         }
     }
 
@@ -77,19 +79,28 @@ public class PlayerStateManager : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
-        if (Mathf.Abs(h) < 0.1f && Mathf.Abs(v) < 0.1f)
-            return;
-
+        // movement direction relative to camera
         Vector3 forward = cameraScript.GetCameraForwardFlat();
         Vector3 right = cameraScript.GetCameraRightFlat();
         Vector3 move = forward * v + right * h;
 
-        float speed = (currentState == runState) ? runSpeed : walkSpeed;
-        controller.Move(move.normalized * speed * Time.deltaTime);
+        // movement speed logic
+        float speed = (Input.GetKey(KeyCode.LeftShift)) ? runSpeed : walkSpeed;
 
-        Vector3 lookDir = cameraScript.GetCameraForwardFlat();
-        if (lookDir != Vector3.zero)
-            transform.forward = lookDir;
+        // slower movement while aiming
+        if (isAiming)
+            speed *= 0.7f;
+
+        // movement apply
+        if (move.magnitude > 0.1f)
+        {
+            controller.Move(move.normalized * speed * Time.deltaTime);
+
+            // character faces camera direction while moving
+            Vector3 lookDir = cameraScript.GetCameraForwardFlat();
+            if (lookDir != Vector3.zero)
+                transform.forward = lookDir;
+        }
     }
 
     // ------------------ JUMP ------------------
@@ -97,7 +108,7 @@ public class PlayerStateManager : MonoBehaviour
     {
         isGrounded = controller.isGrounded;
 
-        // Reset on ground
+        // Reset when grounded
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
@@ -105,21 +116,22 @@ public class PlayerStateManager : MonoBehaviour
             animator.SetBool("isFalling", false);
         }
 
-        // Jump
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && !isAiming)
+        // Jump trigger
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             velocity.y = jumpForce;
             animator.SetBool("isJumping", true);
             animator.SetBool("isFalling", false);
         }
 
-        // Falling
+        // Falling transition
         if (velocity.y < 0 && !isGrounded)
         {
             animator.SetBool("isFalling", true);
         }
     }
 
+    // ------------------ GRAVITY ------------------
     private void ApplyGravity()
     {
         velocity.y += gravity * Time.deltaTime;

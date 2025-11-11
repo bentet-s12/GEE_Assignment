@@ -11,13 +11,14 @@ public class shootScript : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField] private float bulletSpeed = 80f;
-    [SerializeField] private float fireRateDelay = 0.15f;
+    [SerializeField] private float fireRateDelay = 0.1f;  // Lower = faster fire rate
     [SerializeField] private int multishot = 1;
     [SerializeField] private float spreadAngle = 10f;
     [SerializeField] private float spawnOffset = 0.3f;
     [SerializeField] private float bulletLifetime = 5f;
 
-    private bool canShoot = true;
+    private bool isShooting = false;
+    private Coroutine shootingCoroutine;
 
     void Awake()
     {
@@ -33,18 +34,36 @@ public class shootScript : MonoBehaviour
         bool canShootNow =
             playerManager.currentState == playerManager.walkState ||
             playerManager.currentState == playerManager.runState ||
-            playerManager.currentState == playerManager.aimState;
+            playerManager.currentState == playerManager.aimState ||
+            playerManager.currentState == playerManager.idleState;
 
-        if (canShootNow && Input.GetMouseButtonDown(0) && canShoot)
+        // Start shooting when button is pressed down
+        if (Input.GetMouseButtonDown(0) && canShootNow && !isShooting)
         {
-            StartCoroutine(Shoot());
+            isShooting = true;
+            shootingCoroutine = StartCoroutine(ShootContinuously());
+        }
+
+        // Stop shooting when button is released
+        if (Input.GetMouseButtonUp(0) && isShooting)
+        {
+            isShooting = false;
+            StopCoroutine(shootingCoroutine);
         }
     }
 
-    IEnumerator Shoot()
+    IEnumerator ShootContinuously()
     {
-        canShoot = false;
+        while (isShooting)
+        {
+            FireProjectileBurst();
+            yield return new WaitForSeconds(fireRateDelay);
+        }
+    }
 
+    void FireProjectileBurst()
+    {
+        // Ray from camera to center of screen
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         Vector3 targetPoint;
 
@@ -55,6 +74,7 @@ public class shootScript : MonoBehaviour
 
         Vector3 shootDir = (targetPoint - firingPoint.position).normalized;
 
+        // Handle single or multishot
         if (multishot <= 1)
         {
             FireProjectile(shootDir);
@@ -71,9 +91,6 @@ public class shootScript : MonoBehaviour
                 FireProjectile(spreadDir);
             }
         }
-
-        yield return new WaitForSeconds(fireRateDelay);
-        canShoot = true;
     }
 
     void FireProjectile(Vector3 direction)
