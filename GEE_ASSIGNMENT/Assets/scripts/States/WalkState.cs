@@ -31,6 +31,7 @@ public class WalkState : PlayerState
             manager.SwitchState(manager.runState);
             return;
         }
+     
     }
 
     public void ExitState()
