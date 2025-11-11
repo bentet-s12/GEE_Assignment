@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: door Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8650358900541798361, guid: b4085400587ce8343bc19fdf76f07f76, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.03
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 672034195004258536, guid: b4085400587ce8343bc19fdf76f07f76, type: 3}
     m_RemovedGameObjects:
@@ -88,3 +92,4 @@ MonoBehaviour:
   - scene4
   - scene5
   - scene6
+  logicscript: {fileID: 0}

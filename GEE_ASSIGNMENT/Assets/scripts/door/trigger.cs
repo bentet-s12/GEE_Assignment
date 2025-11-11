@@ -18,6 +18,11 @@ public class portaltrigger : MonoBehaviour
     {
         GameObject manager = GameObject.FindGameObjectWithTag("gameManager");
         logicscript = manager.GetComponent<gamelogic>();
+        if (currentscenename == null)
+        {
+            string currentscenename = SceneManager.GetActiveScene().name;
+
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,8 +37,21 @@ public class portaltrigger : MonoBehaviour
                 {
                     int chosenscene = Random.Range(0, scenenames.Count - 1);
                     loadscene = scenenames[chosenscene];
-                    logicscript.roomIncrease();
-                    SceneManager.LoadScene(loadscene);
+
+                    if (loadscene != currentscenename)
+                    {
+                        logicscript.roomIncrease();
+                        SceneManager.LoadScene(loadscene);
+                    }
+                    //try to make sure the chances of getting the same scene is lower
+                    else
+                    {
+                        chosenscene = Random.Range(0, scenenames.Count - 1);
+                        loadscene = scenenames[chosenscene];
+                        logicscript.roomIncrease();
+                        SceneManager.LoadScene(loadscene);
+
+                    }
                     //inform the scene manager that the scene is loading to change variables on scene start here
 
                 }
