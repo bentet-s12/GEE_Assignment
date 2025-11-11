@@ -48,7 +48,7 @@ public class SpawnScript : MonoBehaviour
             {
                 player.transform.position = spawn.transform.position;
                 Debug.Log($"Player moved to spawn point at {spawn.transform.position}");
-                logicscript.spawnEnemies();
+                logicscript.SpawnEnemies();
             }
             else
             {

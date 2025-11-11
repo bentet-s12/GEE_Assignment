@@ -2,51 +2,59 @@ using UnityEngine;
 
 public class gamelogic : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private int currentRoom = 0;
-    [SerializeField] private int spawncount;
-    public enemyspawn enemyscript;
+    [SerializeField] private int spawnCount;
+    private enemyspawn enemyScript;
 
     private void Start()
     {
         GameObject manager = GameObject.FindGameObjectWithTag("SpawnPoint");
-        enemyscript = manager.GetComponent<enemyspawn>();
-    }
-    public void roomIncrease()
-    {
-        currentRoom += 1;
-        Debug.Log(currentRoom);
-    }
-    public void spawnEnemies()
-    {
-        if (enemyscript != null) {
-            if (currentRoom % 10 != 0)
-            {
-                spawncount = Random.Range(0, 10);
-                spawncount = spawncount * currentRoom;
-                int enemyspawned = Random.Range(0, spawncount);
-                enemyscript.spawnEnemy(enemyspawned);
-                if (enemyspawned < spawncount)
-                {
-                    int elitespawned = spawncount - enemyspawned;
-                    enemyscript.spawnElite(elitespawned);
-                }
-            }
-            else
-            {
-                spawncount = Random.Range(0, 10);
-                spawncount = spawncount * currentRoom;
-                enemyscript.spawnBoss(1 * (currentRoom / 10));
-                spawncount = spawncount - (1 * (currentRoom / 10));
-                int enemyspawned = Random.Range(0, (spawncount - (1 * (currentRoom / 10))));
-                enemyscript.spawnEnemy(enemyspawned);
-                if (enemyspawned < spawncount)
-                {
-                    int elitespawned = spawncount - enemyspawned;
-                    enemyscript.spawnElite(elitespawned);
-                }
-            }
+        if (manager != null)
+        {
+            enemyScript = manager.GetComponent<enemyspawn>();
+        }
+        else
+        {
+            Debug.LogError("SpawnPoint not found! Please tag your enemy spawner GameObject correctly.");
         }
     }
- }
-    
+
+    public void roomIncrease()
+    {
+        currentRoom++;
+        Debug.Log($"Room: {currentRoom}");
+    }
+
+    public void SpawnEnemies()
+    {
+      
+        if (enemyScript == null || currentRoom == 0) return;
+
+        spawnCount = Random.Range(1, 10) * currentRoom;
+
+        if (currentRoom % 10 == 0)
+        {
+            // Boss room
+            int bossCount = currentRoom / 10;
+            enemyScript.spawnBoss(bossCount);
+
+            int adjustedSpawn = Mathf.Max(0, spawnCount - bossCount);
+            int enemiesSpawned = Random.Range(0, adjustedSpawn);
+            enemyScript.spawnEnemy(enemiesSpawned);
+
+            int elitesSpawned = adjustedSpawn - enemiesSpawned;
+            if (elitesSpawned > 0)
+                enemyScript.spawnElite(elitesSpawned);
+        }
+        else
+        {
+            // Normal room
+            int enemiesSpawned = Random.Range(1, spawnCount);
+            enemyScript.spawnEnemy(enemiesSpawned);
+
+            int elitesSpawned = spawnCount - enemiesSpawned;
+            if (elitesSpawned > 0)
+                enemyScript.spawnElite(elitesSpawned);
+        }
+    }
+}

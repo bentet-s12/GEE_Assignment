@@ -11133,30 +11133,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5795983529661421129, guid: 888cccfa8ab4ceb4da5369a064655ad7, type: 3}
   m_PrefabInstance: {fileID: 1972568032}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1976195450 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9128779458003069683, guid: 36d4f269ca1246a4885fb1b2b0f9b146, type: 3}
-  m_PrefabInstance: {fileID: 2896460050192474341}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1976195453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976195450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5ca4940cb2c46c419afa87ebc802168, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnspace: {fileID: 0}
-  enemyprefab: {fileID: 0}
-  eliteprefab: {fileID: 0}
-  bossprefab: {fileID: 0}
-  spawnedEnemies: 0
-  defeatedEnemies: 0
-  DoorSlideScript: {fileID: 0}
 --- !u!1 &1979293227
 GameObject:
   m_ObjectHideFlags: 0
@@ -12284,10 +12260,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2659505764359214997, guid: 36d4f269ca1246a4885fb1b2b0f9b146, type: 3}
-      propertyPath: m_TagString
-      value: SpawnPoint
-      objectReference: {fileID: 0}
     - target: {fileID: 4717340588897312390, guid: 36d4f269ca1246a4885fb1b2b0f9b146, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.13
@@ -12335,10 +12307,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9128779458003069683, guid: 36d4f269ca1246a4885fb1b2b0f9b146, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1976195453}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36d4f269ca1246a4885fb1b2b0f9b146, type: 3}
 --- !u!1001 &3854279125988106258
 PrefabInstance:

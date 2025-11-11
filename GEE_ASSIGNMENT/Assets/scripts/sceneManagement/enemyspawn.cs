@@ -10,12 +10,12 @@ public class enemyspawn : MonoBehaviour
     [SerializeField] private GameObject bossprefab;
     [SerializeField] private int spawnedEnemies;
     [SerializeField] private int defeatedEnemies;
-    [SerializeField] private DoorSlide DoorSlideScript;
+    [SerializeField] private DoorSlide[] doorScripts;
 
     private void Start()
     {
-        DoorSlide DoorSlideScript = GameObject.FindFirstObjectByType<DoorSlide>();
-        
+
+
     }
     public void enemydefeated()
     {
@@ -36,10 +36,17 @@ public class enemyspawn : MonoBehaviour
     }
     private void Update()
     {
+
         if (defeatedEnemies == spawnedEnemies)
         {
-            DoorSlideScript.Activate();
+
+            foreach (DoorSlide door in doorScripts)
+            {
+                if (door != null)
+                    door.Activate();
+            }
+
         }
+
     }
-    
 }
