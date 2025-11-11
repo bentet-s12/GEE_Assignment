@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: door inactive variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8133385634793655592, guid: 02e2090659d6d4a45bf307e9bd1fdc10, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.042
+      objectReference: {fileID: 0}
     - target: {fileID: 9038671995694896977, guid: 02e2090659d6d4a45bf307e9bd1fdc10, type: 3}
       propertyPath: m_Enabled
       value: 0
