@@ -5,7 +5,13 @@ using System.Collections;
 public class SpawnScript : MonoBehaviour
 {
     [SerializeField] private GameObject spawn;
+    public gamelogic logicscript;
 
+    private void Start()
+    {
+        GameObject manager = GameObject.FindGameObjectWithTag("gameManager");
+        logicscript = manager.GetComponent<gamelogic>();
+    }
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -42,6 +48,7 @@ public class SpawnScript : MonoBehaviour
             {
                 player.transform.position = spawn.transform.position;
                 Debug.Log($"Player moved to spawn point at {spawn.transform.position}");
+                logicscript.spawnEnemies();
             }
             else
             {

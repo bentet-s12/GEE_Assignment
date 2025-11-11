@@ -10,6 +10,17 @@ public class enemyspawn : MonoBehaviour
     [SerializeField] private GameObject bossprefab;
     [SerializeField] private int spawnedEnemies;
     [SerializeField] private int defeatedEnemies;
+    [SerializeField] private DoorSlide DoorSlideScript;
+
+    private void Start()
+    {
+        DoorSlide DoorSlideScript = GameObject.FindFirstObjectByType<DoorSlide>();
+        
+    }
+    public void enemydefeated()
+    {
+        defeatedEnemies++;
+    }
     public void spawnEnemy(int spawnamt)
     {
         //spawn in spawn area
@@ -25,7 +36,10 @@ public class enemyspawn : MonoBehaviour
     }
     private void Update()
     {
-       
+        if (defeatedEnemies == spawnedEnemies)
+        {
+            DoorSlideScript.Activate();
+        }
     }
     
 }
