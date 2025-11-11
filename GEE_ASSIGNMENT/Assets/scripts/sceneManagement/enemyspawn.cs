@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class enemyspawn : MonoBehaviour
@@ -7,18 +8,24 @@ public class enemyspawn : MonoBehaviour
     [SerializeField] private GameObject enemyprefab;
     [SerializeField] private GameObject eliteprefab;
     [SerializeField] private GameObject bossprefab;
-
+    [SerializeField] private int spawnedEnemies;
+    [SerializeField] private int defeatedEnemies;
     public void spawnEnemy(int spawnamt)
     {
         //spawn in spawn area
+        spawnedEnemies += spawnamt;
     }
     public void spawnElite(int spawnamt)
     {
-
+        spawnedEnemies += spawnamt;
     }
     public void spawnBoss(int spawnamt)
     {
-
+        spawnedEnemies += spawnamt;
     }
-
+    private void Update()
+    {
+       
+    }
+    
 }
