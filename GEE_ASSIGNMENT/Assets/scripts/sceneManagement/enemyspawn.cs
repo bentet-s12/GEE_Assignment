@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -11,12 +12,19 @@ public class enemyspawn : MonoBehaviour
     [SerializeField] private int spawnedEnemies;
     [SerializeField] private int defeatedEnemies;
     [SerializeField] private DoorSlide[] doorScripts;
+    private bool canCheckDoors = false;
 
-    private void Start()
+    void Start()
     {
-
-
+        StartCoroutine(EnableDoorCheckAfterDelay(5f));
     }
+    IEnumerator EnableDoorCheckAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        canCheckDoors = true;
+        Debug.Log("Door checking enabled!");
+    }
+
     public void enemydefeated()
     {
         defeatedEnemies++;
@@ -34,19 +42,25 @@ public class enemyspawn : MonoBehaviour
     {
         spawnedEnemies += spawnamt;
     }
+
     private void Update()
     {
-
-        if (defeatedEnemies == spawnedEnemies)
+        if (canCheckDoors)
         {
-
-            foreach (DoorSlide door in doorScripts)
+            if (defeatedEnemies == spawnedEnemies)
             {
-                if (door != null)
-                    door.Activate();
+
+                foreach (DoorSlide door in doorScripts)
+                {
+                    if (door != null)
+                        door.Activate();
+                }
+
             }
-
         }
-
+        else
+        {
+            return;
+        }
     }
 }
