@@ -67,9 +67,10 @@ public class PlayerStateManager : MonoBehaviour
             animator.SetBool("Aiming", isAiming);
             cameraScript.SetAiming(isAiming);
 
-            // Maintain walking/running states
+            // Maintain walking, jumping 
             animator.SetBool("Walking", animator.GetBool("Walking"));
             animator.SetBool("isJumping", animator.GetBool("isJumping"));
+            animator.SetBool("Running", false);
         }
     }
 

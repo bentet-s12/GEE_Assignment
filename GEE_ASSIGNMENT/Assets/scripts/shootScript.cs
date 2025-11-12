@@ -35,7 +35,8 @@ public class shootScript : MonoBehaviour
             playerManager.currentState == playerManager.walkState ||
             playerManager.currentState == playerManager.runState ||
             playerManager.currentState == playerManager.aimState ||
-            playerManager.currentState == playerManager.idleState;
+            playerManager.currentState == playerManager.jumpState;
+           
 
         // Start shooting when button is pressed down
         if (Input.GetMouseButtonDown(0) && canShootNow && !isShooting)
