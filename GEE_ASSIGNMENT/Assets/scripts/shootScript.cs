@@ -103,7 +103,7 @@ public class shootScript : MonoBehaviour
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.linearVelocity = direction * bulletSpeed;
+            rb.linearVelocity = direction * bulletSpeed ; 
         }
 
         Destroy(projectile, bulletLifetime);
