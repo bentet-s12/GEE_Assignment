@@ -6,7 +6,7 @@ public class gamelogic : MonoBehaviour
     [SerializeField] private int spawnCount;
     private enemyspawn enemyScript;
 
-    private void Start()
+    private void Update()
     {
         GameObject manager = GameObject.FindGameObjectWithTag("SpawnPoint");
         if (manager != null)
@@ -24,10 +24,14 @@ public class gamelogic : MonoBehaviour
         currentRoom++;
         Debug.Log($"Room: {currentRoom}");
     }
+    public int getCurrentRoom()
+    {
+        return currentRoom;
+    }
 
     public void SpawnEnemies()
     {
-      
+        spawnCount = Random.Range(1, 10) * currentRoom;
         if (enemyScript == null || currentRoom == 0) return;
 
         spawnCount = Random.Range(1, 10) * currentRoom;

@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class shootScript : MonoBehaviour
@@ -16,6 +17,8 @@ public class shootScript : MonoBehaviour
     [SerializeField] private float spreadAngle = 10f;
     [SerializeField] private float spawnOffset = 0.3f;
     [SerializeField] private float bulletLifetime = 5f;
+    [SerializeField] private int damage = 1;
+    [SerializeField] private int basedamage = 1;
 
     private bool isShooting = false;
     private Coroutine shootingCoroutine;
@@ -28,6 +31,14 @@ public class shootScript : MonoBehaviour
         if (playerManager == null)
             playerManager = Object.FindFirstObjectByType<PlayerStateManager>();
     }
+    public int getdamage()
+    {
+        return damage;
+    }
+    public void setdmg(int dmg)
+    {
+        damage = dmg;
+    }
 
     void Update()
     {
@@ -35,7 +46,8 @@ public class shootScript : MonoBehaviour
             playerManager.currentState == playerManager.walkState ||
             playerManager.currentState == playerManager.runState ||
             playerManager.currentState == playerManager.aimState ||
-            playerManager.currentState == playerManager.idleState;
+            playerManager.currentState == playerManager.jumpState;
+           
 
         // Start shooting when button is pressed down
         if (Input.GetMouseButtonDown(0) && canShootNow && !isShooting)
@@ -92,17 +104,29 @@ public class shootScript : MonoBehaviour
             }
         }
     }
-
+    
+    public void setmultishot(int add)
+    {
+        multishot += add;
+    }
     void FireProjectile(Vector3 direction)
     {
         Vector3 spawnPos = firingPoint.position + direction * spawnOffset;
 
         GameObject projectile = Instantiate(projectilePrefab, spawnPos, Quaternion.LookRotation(direction));
-
+        bullet dmgScript = projectile.GetComponent<bullet>();
+        if (dmgScript != null)
+        {
+            float currentdmg = dmgScript.getdmg();
+            if(currentdmg != damage)
+            {
+                dmgScript.setdmg(currentdmg);
+            }
+        }
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.linearVelocity = direction * bulletSpeed;
+            rb.linearVelocity = direction * bulletSpeed ; 
         }
 
         Destroy(projectile, bulletLifetime);

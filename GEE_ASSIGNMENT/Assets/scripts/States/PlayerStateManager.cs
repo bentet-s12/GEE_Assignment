@@ -28,6 +28,16 @@ public class PlayerStateManager : MonoBehaviour
 
     private bool isAiming = false;
 
+    public float getspeed()
+    {
+        return walkSpeed;
+    }
+    public void setspeed(float addspeed)
+    {
+        walkSpeed += addspeed;
+        runSpeed += addspeed;
+
+    }
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -67,9 +77,10 @@ public class PlayerStateManager : MonoBehaviour
             animator.SetBool("Aiming", isAiming);
             cameraScript.SetAiming(isAiming);
 
-            // Maintain walking/running states
+            // Maintain walking, jumping 
             animator.SetBool("Walking", animator.GetBool("Walking"));
             animator.SetBool("isJumping", animator.GetBool("isJumping"));
+            animator.SetBool("Running", false);
         }
     }
 
