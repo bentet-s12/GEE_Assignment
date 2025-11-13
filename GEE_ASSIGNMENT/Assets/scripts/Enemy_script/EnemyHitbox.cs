@@ -10,6 +10,7 @@ public class EnemyHitbox : MonoBehaviour
         {
             Debug.Log("Player hit for " + damage);
             // Hook up your damage system here
+
         }
     }
 }
