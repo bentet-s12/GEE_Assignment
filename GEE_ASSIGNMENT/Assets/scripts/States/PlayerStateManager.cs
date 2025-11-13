@@ -28,6 +28,16 @@ public class PlayerStateManager : MonoBehaviour
 
     private bool isAiming = false;
 
+    public float getspeed()
+    {
+        return walkSpeed;
+    }
+    public void setspeed(float addspeed)
+    {
+        walkSpeed += addspeed;
+        runSpeed += addspeed;
+
+    }
     void Start()
     {
         controller = GetComponent<CharacterController>();

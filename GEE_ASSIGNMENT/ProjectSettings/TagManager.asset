@@ -8,6 +8,7 @@ TagManager:
   - SpawnPoint
   - gameManager
   - enemySpawn
+  - weapon
   layers:
   - Default
   - TransparentFX

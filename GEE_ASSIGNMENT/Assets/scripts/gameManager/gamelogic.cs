@@ -24,6 +24,10 @@ public class gamelogic : MonoBehaviour
         currentRoom++;
         Debug.Log($"Room: {currentRoom}");
     }
+    public int getCurrentRoom()
+    {
+        return currentRoom;
+    }
 
     public void SpawnEnemies()
     {
