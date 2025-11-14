@@ -51,7 +51,7 @@ public class EnemyLogic : MonoBehaviour
             enemyRef.hitbox.SetActive(false);
 
         wanderTimer = wanderDelay;
-        PickNewWanderDestination();
+        newWander();
 
         lastPosition = transform.position;
         stuckTimer = 0f;
@@ -83,7 +83,6 @@ public class EnemyLogic : MonoBehaviour
         enemyRef.animator.SetFloat("speed", speed);
     }
 
-    // ============ COMBAT ============
 
     private void ChaseAndAttack(float dist)
     {
@@ -130,6 +129,9 @@ public class EnemyLogic : MonoBehaviour
         enemyRef.agent.isStopped = true;
         enemyRef.animator.SetBool("swing", true);
 
+        if (enemyRef.hitbox != null)
+            enemyRef.hitbox.GetComponent<EnemyHitbox>().resetHit();
+
         yield return new WaitForSeconds(enemyRef.windupTime);
 
         if (enemyRef.hitbox != null)
@@ -148,7 +150,6 @@ public class EnemyLogic : MonoBehaviour
         isSwinging = false;
     }
 
-    // ============ WANDER ============
 
     private void Wander()
     {
@@ -170,11 +171,11 @@ public class EnemyLogic : MonoBehaviour
         // Pick new wander point periodically
         if (wanderTimer >= wanderDelay)
         {
-            PickNewWanderDestination();
+            newWander();
             wanderTimer = 0;
         }
 
-        // STUCK DETECTION — if not moving much after a few seconds
+        //if the enemy is not moving much after a few seconds
         if (stuckTimer >= stuckCheckInterval)
         {
             float movedDistance = Vector3.Distance(transform.position, lastPosition);
@@ -185,14 +186,14 @@ public class EnemyLogic : MonoBehaviour
                 wanderDirection = Quaternion.Euler(0, randomAngle, 0) * transform.rotation;
                 transform.rotation = wanderDirection;
 
-                PickNewWanderDestination();
+                newWander();
             }
             lastPosition = transform.position;
             stuckTimer = 0f;
         }
     }
 
-    private void PickNewWanderDestination()
+    private void newWander()
     {
         Vector3 randomDir = Random.insideUnitSphere * wanderRadius + transform.position;
         if (NavMesh.SamplePosition(randomDir, out NavMeshHit navHit, wanderRadius, NavMesh.AllAreas))
