@@ -4,20 +4,23 @@ public class gamelogic : MonoBehaviour
 {
     [SerializeField] private int currentRoom = 0;
     [SerializeField] private int spawnCount;
+    [SerializeField] private GameObject manager;
     private enemyspawn enemyScript;
 
-    private void Update()
+    void update()
     {
-        GameObject manager = GameObject.FindGameObjectWithTag("SpawnPoint");
+        manager = GameObject.FindGameObjectWithTag("SpawnPoint");
         if (manager != null)
         {
             enemyScript = manager.GetComponent<enemyspawn>();
         }
         else
         {
-            Debug.LogError("SpawnPoint not found! Please tag your enemy spawner GameObject correctly.");
+            Debug.Log("SpawnPoint not found! Please tag your enemy spawner GameObject correctly.");
         }
     }
+    
+    
 
     public void roomIncrease()
     {
