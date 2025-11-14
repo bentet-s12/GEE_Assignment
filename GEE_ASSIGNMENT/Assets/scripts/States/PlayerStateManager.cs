@@ -26,7 +26,7 @@ public class PlayerStateManager : MonoBehaviour
     [HideInInspector] public AimState aimState;
     [HideInInspector] public JumpState jumpState;
 
-    private bool isAiming = false;
+    [HideInInspector] public bool isAiming = false;
 
     public float getspeed()
     {
@@ -80,7 +80,8 @@ public class PlayerStateManager : MonoBehaviour
             // Maintain walking, jumping 
             animator.SetBool("Walking", animator.GetBool("Walking"));
             animator.SetBool("isJumping", animator.GetBool("isJumping"));
-            animator.SetBool("Running", false);
+            
+            
         }
     }
 
@@ -95,52 +96,69 @@ public class PlayerStateManager : MonoBehaviour
         Vector3 right = cameraScript.GetCameraRightFlat();
         Vector3 move = forward * v + right * h;
 
-        // movement speed logic
         float speed = (Input.GetKey(KeyCode.LeftShift)) ? runSpeed : walkSpeed;
 
-        // slower movement while aiming
         if (isAiming)
             speed *= 0.7f;
 
-        // movement apply
+        // MOVE
         if (move.magnitude > 0.1f)
         {
             controller.Move(move.normalized * speed * Time.deltaTime);
 
-            // character faces camera direction while moving
+            // movement rotation
             Vector3 lookDir = cameraScript.GetCameraForwardFlat();
             if (lookDir != Vector3.zero)
-                transform.forward = lookDir;
+            {
+                Quaternion targetRot = Quaternion.LookRotation(lookDir);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * 10f);
+            }
+        }
+
+        // ⭐ Rotate player with camera even when standing still and aiming
+        if (isAiming && move.magnitude < 0.1f)
+        {
+            Vector3 aimDir = cameraScript.GetCameraForwardFlat();
+            if (aimDir != Vector3.zero)
+            {
+                Quaternion targetRot = Quaternion.LookRotation(aimDir);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * 10f);
+            }
         }
     }
+
 
     // ------------------ JUMP ------------------
     private void HandleJumpInput()
     {
         isGrounded = controller.isGrounded;
 
-        // Reset when grounded
+        // ---------------- GROUND CHECK ----------------
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
+
             animator.SetBool("isJumping", false);
             animator.SetBool("isFalling", false);
         }
 
-        // Jump trigger
+        // ---------------- JUMP ----------------
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             velocity.y = jumpForce;
             animator.SetBool("isJumping", true);
             animator.SetBool("isFalling", false);
+            return;
         }
 
-        // Falling transition
-        if (velocity.y < 0 && !isGrounded)
+        // ---------------- FALLING ----------------
+        if (!isGrounded && velocity.y < 0)
         {
             animator.SetBool("isFalling", true);
+            animator.SetBool("isJumping", false);
         }
     }
+
 
     // ------------------ GRAVITY ------------------
     private void ApplyGravity()

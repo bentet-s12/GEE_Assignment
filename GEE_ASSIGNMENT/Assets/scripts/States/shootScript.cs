@@ -20,7 +20,7 @@ public class shootScript : MonoBehaviour
     [SerializeField] private int damage = 1;
     [SerializeField] private int basedamage = 1;
 
-    private bool isShooting = false;
+    [HideInInspector] public bool isShooting = false;
     private Coroutine shootingCoroutine;
 
     void Awake()
@@ -47,11 +47,10 @@ public class shootScript : MonoBehaviour
     void Update()
     {
         bool canShootNow =
-            playerManager.currentState == playerManager.walkState ||
-            playerManager.currentState == playerManager.runState ||
-            playerManager.currentState == playerManager.aimState ||
-            playerManager.currentState == playerManager.jumpState;
-           
+            playerManager.isAiming ||                                     // aim idle & aim walk shoot
+            playerManager.currentState == playerManager.walkState ||      // walk shooting
+            playerManager.currentState == playerManager.runState;
+
 
         // Start shooting when button is pressed down
         if (Input.GetMouseButtonDown(0) && canShootNow && !isShooting)

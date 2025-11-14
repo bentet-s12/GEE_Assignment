@@ -6414,7 +6414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6a35efed7aff6284f8cfb684da549f8d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.39
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6a35efed7aff6284f8cfb684da549f8d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7100,6 +7100,7 @@ MonoBehaviour:
   jumpForce: 9
   gravity: -9.81
   velocity: {x: 0, y: 0, z: 0}
+  isAiming: 0
 --- !u!114 &1240001807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12442,6 +12443,7 @@ MonoBehaviour:
   normalDistance: 3.5
   aimDistance: 2
   zoomSpeed: 5
+  crosshairTexture: {fileID: 2800000, guid: 6f61a28b2c4473249a65f9279cbc240c, type: 3}
 --- !u!1001 &2110601525
 PrefabInstance:
   m_ObjectHideFlags: 0

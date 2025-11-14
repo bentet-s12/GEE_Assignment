@@ -21,6 +21,7 @@ public class FixedThirdPersonCamera : MonoBehaviour
     private float yaw;
     private float pitch;
     private Vector3 currentVelocity;
+    public Texture2D crosshairTexture;
     private bool isAiming = false;
 
     void Start()
@@ -64,6 +65,18 @@ public class FixedThirdPersonCamera : MonoBehaviour
         // look at player
         transform.LookAt(target.position + Vector3.up * height);
     }
+
+    void OnGUI()
+    {
+        if (crosshairTexture == null) return;
+
+        float size = 32f; // size of the crosshair on screen
+        float posX = (Screen.width - size) / 2;
+        float posY = (Screen.height - size) / 2;
+
+        GUI.DrawTexture(new Rect(posX, posY, size, size), crosshairTexture);
+    }
+
 
     public void SetAiming(bool aiming)
     {
