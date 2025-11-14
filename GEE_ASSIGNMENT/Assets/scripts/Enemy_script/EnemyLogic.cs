@@ -15,7 +15,7 @@ public class EnemyLogic : MonoBehaviour
     private float attackRangeBuffer = 0.2f;
 
     [Header("Detection Settings")]
-    public float detectionRange = 10f;
+    public float detectionRange = 12f;
 
     [Header("Wander Settings")]
     public float wanderRadius = 8f;
@@ -51,7 +51,7 @@ public class EnemyLogic : MonoBehaviour
             enemyRef.hitbox.SetActive(false);
 
         wanderTimer = wanderDelay;
-        PickNewWanderDestination();
+        newWander();
 
         lastPosition = transform.position;
         stuckTimer = 0f;
@@ -80,10 +80,9 @@ public class EnemyLogic : MonoBehaviour
 
         // update animation speed
         float speed = enemyRef.agent.velocity.magnitude;
-        enemyRef.animator.SetFloat("speed", speed);
+        enemyRef.animator.SetFloat("speed", speed); //this is the normal walking animation
     }
 
-    // ============ COMBAT ============
 
     private void ChaseAndAttack(float dist)
     {
@@ -128,7 +127,10 @@ public class EnemyLogic : MonoBehaviour
         isSwinging = true;
 
         enemyRef.agent.isStopped = true;
-        enemyRef.animator.SetBool("swing", true);
+        enemyRef.animator.SetBool("swing", true); //this is the animation of "swinging"
+
+        if (enemyRef.hitbox != null)
+            enemyRef.hitbox.GetComponent<EnemyHitbox>().resetHit();
 
         yield return new WaitForSeconds(enemyRef.windupTime);
 
@@ -148,7 +150,6 @@ public class EnemyLogic : MonoBehaviour
         isSwinging = false;
     }
 
-    // ============ WANDER ============
 
     private void Wander()
     {
@@ -170,11 +171,11 @@ public class EnemyLogic : MonoBehaviour
         // Pick new wander point periodically
         if (wanderTimer >= wanderDelay)
         {
-            PickNewWanderDestination();
+            newWander();
             wanderTimer = 0;
         }
 
-        // STUCK DETECTION — if not moving much after a few seconds
+        //if the enemy is not moving much after a few seconds
         if (stuckTimer >= stuckCheckInterval)
         {
             float movedDistance = Vector3.Distance(transform.position, lastPosition);
@@ -185,17 +186,17 @@ public class EnemyLogic : MonoBehaviour
                 wanderDirection = Quaternion.Euler(0, randomAngle, 0) * transform.rotation;
                 transform.rotation = wanderDirection;
 
-                PickNewWanderDestination();
+                newWander();
             }
             lastPosition = transform.position;
             stuckTimer = 0f;
         }
     }
 
-    private void PickNewWanderDestination()
+    private void newWander()
     {
-        Vector3 randomDir = Random.insideUnitSphere * wanderRadius + transform.position;
-        if (NavMesh.SamplePosition(randomDir, out NavMeshHit navHit, wanderRadius, NavMesh.AllAreas))
+        Vector3 forwardPoint = Random.insideUnitSphere * wanderRadius + transform.position;
+        if (NavMesh.SamplePosition(forwardPoint, out NavMeshHit navHit, wanderRadius, NavMesh.AllAreas))
         {
             enemyRef.agent.isStopped = false;
             enemyRef.agent.SetDestination(navHit.position);

@@ -170,34 +170,45 @@ public class levelling_logic : MonoBehaviour
         else
         {
             health = 20;
+
         }
-        if (statScript.getHealth() != health)
+        if (statScript != null)
         {
-            statScript.setHealth(health);
-            statScript.setmaxhealth();
+            if (statScript.getHealth() != health)
+            {
+                statScript.setHealth(health);
+                statScript.setmaxhealth();
+            }
         }
-        currentspeed = spdScript.getspeed();
-        if (currentspeed != basespeed + Tempspeed)
+        if (spdScript != null)
         {
-            float addspd = basespeed + Tempspeed - currentspeed;
-            spdScript.setspeed(addspd);
-            
+            currentspeed = spdScript.getspeed();
+            if (currentspeed != basespeed + Tempspeed)
+            {
+                float addspd = basespeed + Tempspeed - currentspeed;
+                spdScript.setspeed(addspd);
+
+            }
         }
-        currentdamage = gunScript.getdamage();
-        if (currentdamage != damage + damagetemp)
+        if (gunScript != null)
         {
-            int adddmg = damage + damagetemp;
-            gunScript.setdmg(adddmg);
-            
+            currentdamage = gunScript.getdamage();
+            if (currentdamage != damage + damagetemp)
+            {
+                int adddmg = damage + damagetemp;
+                gunScript.setdmg(adddmg);
+
+            }
+
+            currentmultishot = gunScript.getmultishot();
+            if (currentmultishot != multishot)
+            {
+                gunScript.setmultishot(multishot);
+            }
         }
-        currentmultishot = gunScript.getmultishot();
-        if (currentmultishot != multishot)
-        {
-            gunScript.setmultishot(multishot);
-        }
-        {
+        
 
         }
     }
 
-}
+

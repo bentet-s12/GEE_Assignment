@@ -7,7 +7,7 @@ public class gamelogic : MonoBehaviour
     [SerializeField] private GameObject manager;
     private enemyspawn enemyScript;
 
-    void update()
+    void Update()
     {
         manager = GameObject.FindGameObjectWithTag("SpawnPoint");
         if (manager != null)
