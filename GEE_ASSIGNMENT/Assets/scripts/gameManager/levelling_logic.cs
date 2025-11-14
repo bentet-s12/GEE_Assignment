@@ -60,7 +60,7 @@ public class levelling_logic : MonoBehaviour
             }
             else
             {
-                Debug.LogError("cannot find stats");
+                Debug.Log("cannot find stats");
             }
             GameObject weapon = GameObject.FindGameObjectWithTag("weapon");
             if (weapon != null)
@@ -70,7 +70,7 @@ public class levelling_logic : MonoBehaviour
             }
             else
             {
-                Debug.LogError("cannot find gun");
+                Debug.Log("cannot find gun");
             }
 
             GameObject manager = GameObject.FindGameObjectWithTag("gameManager");
@@ -80,7 +80,7 @@ public class levelling_logic : MonoBehaviour
             }
             else
             {
-                Debug.LogError("cannot find stats");
+                Debug.Log("cannot find stats");
             }
         }
       }
@@ -139,7 +139,7 @@ public class levelling_logic : MonoBehaviour
             }
             else
             {
-                Debug.LogError("cannot find stats");
+                Debug.Log("cannot find stats");
             }
             GameObject weapon = GameObject.FindGameObjectWithTag("weapon");
             if (weapon != null)
@@ -149,7 +149,7 @@ public class levelling_logic : MonoBehaviour
             }
             else
             {
-                Debug.LogError("cannot find gun");
+                Debug.Log("cannot find gun");
             }
 
             GameObject manager = GameObject.FindGameObjectWithTag("gameManager");
@@ -159,7 +159,7 @@ public class levelling_logic : MonoBehaviour
             }
             else
             {
-                Debug.LogError("cannot find stats");
+                Debug.Log("cannot find stats");
             }
         }
         int currentRoom = logicScript.getCurrentRoom();
