@@ -35,6 +35,13 @@ public class EnemyLogic : MonoBehaviour
     private void Awake()
     {
         enemyRef = GetComponent<EnemyRef>();
+
+        if (target == null)
+        {
+            GameObject p = GameObject.FindGameObjectWithTag("Player");
+            if (p != null)
+                target = p.transform;
+        }
     }
 
     private void Start()
