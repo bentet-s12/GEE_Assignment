@@ -15,7 +15,7 @@ public class EnemyLogic : MonoBehaviour
     private float attackRangeBuffer = 0.2f;
 
     [Header("Detection Settings")]
-    public float detectionRange = 10f;
+    public float detectionRange = 12f;
 
     [Header("Wander Settings")]
     public float wanderRadius = 8f;
@@ -80,7 +80,7 @@ public class EnemyLogic : MonoBehaviour
 
         // update animation speed
         float speed = enemyRef.agent.velocity.magnitude;
-        enemyRef.animator.SetFloat("speed", speed);
+        enemyRef.animator.SetFloat("speed", speed); //this is the normal walking animation
     }
 
 
@@ -127,7 +127,7 @@ public class EnemyLogic : MonoBehaviour
         isSwinging = true;
 
         enemyRef.agent.isStopped = true;
-        enemyRef.animator.SetBool("swing", true);
+        enemyRef.animator.SetBool("swing", true); //this is the animation of "swinging"
 
         if (enemyRef.hitbox != null)
             enemyRef.hitbox.GetComponent<EnemyHitbox>().resetHit();
@@ -195,8 +195,8 @@ public class EnemyLogic : MonoBehaviour
 
     private void newWander()
     {
-        Vector3 randomDir = Random.insideUnitSphere * wanderRadius + transform.position;
-        if (NavMesh.SamplePosition(randomDir, out NavMeshHit navHit, wanderRadius, NavMesh.AllAreas))
+        Vector3 forwardPoint = Random.insideUnitSphere * wanderRadius + transform.position;
+        if (NavMesh.SamplePosition(forwardPoint, out NavMeshHit navHit, wanderRadius, NavMesh.AllAreas))
         {
             enemyRef.agent.isStopped = false;
             enemyRef.agent.SetDestination(navHit.position);

@@ -1718,10 +1718,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: basic_enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3824376872616119446, guid: 0ee30b2e2f4cf434a87984be41e519a7, type: 3}
+      propertyPath: m_Speed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6277855844050429845, guid: 0ee30b2e2f4cf434a87984be41e519a7, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1078884755}
+    - target: {fileID: 6277855844050429845, guid: 0ee30b2e2f4cf434a87984be41e519a7, type: 3}
+      propertyPath: wanderRadius
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277855844050429845, guid: 0ee30b2e2f4cf434a87984be41e519a7, type: 3}
+      propertyPath: detectionRange
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1903,6 +1915,10 @@ PrefabInstance:
     - target: {fileID: 411059229876827932, guid: 0ee30b2e2f4cf434a87984be41e519a7, type: 3}
       propertyPath: m_Name
       value: basic_enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824376872616119446, guid: 0ee30b2e2f4cf434a87984be41e519a7, type: 3}
+      propertyPath: m_Speed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6277855844050429845, guid: 0ee30b2e2f4cf434a87984be41e519a7, type: 3}
       propertyPath: target

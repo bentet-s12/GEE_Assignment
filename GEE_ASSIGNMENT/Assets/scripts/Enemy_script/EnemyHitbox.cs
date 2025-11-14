@@ -18,8 +18,7 @@ public class EnemyHitbox : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player hit for " + damage);
-           
-
+          
         }
     }
 }
