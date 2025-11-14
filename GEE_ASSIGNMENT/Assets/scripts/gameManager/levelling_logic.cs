@@ -162,8 +162,15 @@ public class levelling_logic : MonoBehaviour
                 Debug.Log("cannot find stats");
             }
         }
-        int currentRoom = logicScript.getCurrentRoom();
-        health = health * currentRoom;
+        if (logicScript != null)
+        {
+            int currentRoom = logicScript.getCurrentRoom();
+            health = health * currentRoom;
+        }
+        else
+        {
+            health = 20;
+        }
         if (statScript.getHealth() != health)
         {
             statScript.setHealth(health);
