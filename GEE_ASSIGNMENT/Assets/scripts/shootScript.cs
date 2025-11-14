@@ -13,7 +13,7 @@ public class shootScript : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float bulletSpeed = 80f;
     [SerializeField] private float fireRateDelay = 0.1f;  // Lower = faster fire rate
-    [SerializeField] private int multishot = 1;
+    [SerializeField] private int multishot = 0;
     [SerializeField] private float spreadAngle = 10f;
     [SerializeField] private float spawnOffset = 0.3f;
     [SerializeField] private float bulletLifetime = 5f;
@@ -38,6 +38,10 @@ public class shootScript : MonoBehaviour
     public void setdmg(int dmg)
     {
         damage = dmg;
+    }
+    public int getmultishot()
+    {
+        return multishot;
     }
 
     void Update()
@@ -96,7 +100,7 @@ public class shootScript : MonoBehaviour
             float startAngle = -spreadAngle * 0.5f;
             float angleStep = spreadAngle / (multishot - 1);
 
-            for (int i = 0; i < multishot; i++)
+            for (int i = 0; i < multishot+1; i++)
             {
                 Quaternion spreadRot = Quaternion.AngleAxis(startAngle + angleStep * i, Vector3.up);
                 Vector3 spreadDir = spreadRot * shootDir;
@@ -107,7 +111,7 @@ public class shootScript : MonoBehaviour
     
     public void setmultishot(int add)
     {
-        multishot += add;
+        multishot = add;
     }
     void FireProjectile(Vector3 direction)
     {

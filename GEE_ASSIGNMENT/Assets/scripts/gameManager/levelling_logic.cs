@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ public class levelling_logic : MonoBehaviour
     [SerializeField] private PlayerStateManager spdScript;
 
     [SerializeField] private int health;
+
     [SerializeField] private float basespeed;
     [SerializeField] private float currentspeed;
     [SerializeField] private float Tempspeed;
@@ -21,9 +23,32 @@ public class levelling_logic : MonoBehaviour
     [SerializeField] private int damagetemp;
     [SerializeField] private int currentdamage;
 
+    [SerializeField] private int currentmultishot;
+    [SerializeField] private int multishot;
+
+    private GameObject player;
+    //playerPrefs
+    public void SaveData()
+    {
+        PlayerPrefs.SetInt("multi", multishot);
+        PlayerPrefs.SetFloat("spd", Tempspeed);
+        PlayerPrefs.Save();
+    }
+    public void loadData()
+    {
+        multishot = PlayerPrefs.GetInt("multi");
+        Tempspeed = PlayerPrefs.GetFloat("spd");
+ 
+        //maybe ability
+    }
+    public void DeleteData()
+    {
+        PlayerPrefs.DeleteAll();
+    }
     private void Start()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        
+        player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
             statScript = player.GetComponent<stats>();
@@ -85,11 +110,12 @@ public class levelling_logic : MonoBehaviour
             gunScript.setdmg(dmg);
         }
     }
-    public void addmulti(int multi)
+    public void addmulti()
     {
+        currentmultishot++;
         if (gunScript != null)
         {
-            gunScript.setmultishot(multi);
+            gunScript.setmultishot(currentmultishot);
         }
     }
     public void addtempspd(float add)
@@ -98,6 +124,41 @@ public class levelling_logic : MonoBehaviour
     }
     private void Update()
     {
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                statScript = player.GetComponent<stats>();
+                spdScript = player.GetComponent<PlayerStateManager>();
+                basespeed = spdScript.getspeed();
+                health = statScript.getHealth();
+            }
+            else
+            {
+                Debug.LogError("cannot find stats");
+            }
+            GameObject weapon = GameObject.FindGameObjectWithTag("weapon");
+            if (weapon != null)
+            {
+                gunScript = weapon.GetComponent<shootScript>();
+                damage = gunScript.getdamage();
+            }
+            else
+            {
+                Debug.LogError("cannot find gun");
+            }
+
+            GameObject manager = GameObject.FindGameObjectWithTag("gameManager");
+            if (weapon != null)
+            {
+                logicScript = manager.GetComponent<gamelogic>();
+            }
+            else
+            {
+                Debug.LogError("cannot find stats");
+            }
+        }
         int currentRoom = logicScript.getCurrentRoom();
         health = health * currentRoom;
         if (statScript.getHealth() != health)
@@ -118,6 +179,14 @@ public class levelling_logic : MonoBehaviour
             int adddmg = damage + damagetemp;
             gunScript.setdmg(adddmg);
             
+        }
+        currentmultishot = gunScript.getmultishot();
+        if (currentmultishot != multishot)
+        {
+            gunScript.setmultishot(multishot);
+        }
+        {
+
         }
     }
 
