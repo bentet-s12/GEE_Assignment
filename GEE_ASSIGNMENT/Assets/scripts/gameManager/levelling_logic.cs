@@ -47,40 +47,43 @@ public class levelling_logic : MonoBehaviour
     }
     private void Start()
     {
-        
+
         player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
-            statScript = player.GetComponent<stats>();
-            spdScript = player.GetComponent<PlayerStateManager>();
-            basespeed = spdScript.getspeed();
-            health = statScript.getHealth();
+            if (player != null)
+            {
+                statScript = player.GetComponent<stats>();
+                spdScript = player.GetComponent<PlayerStateManager>();
+                basespeed = spdScript.getspeed();
+                health = statScript.getHealth();
+            }
+            else
+            {
+                Debug.LogError("cannot find stats");
+            }
+            GameObject weapon = GameObject.FindGameObjectWithTag("weapon");
+            if (weapon != null)
+            {
+                gunScript = weapon.GetComponent<shootScript>();
+                damage = gunScript.getdamage();
+            }
+            else
+            {
+                Debug.LogError("cannot find gun");
+            }
+
+            GameObject manager = GameObject.FindGameObjectWithTag("gameManager");
+            if (weapon != null)
+            {
+                logicScript = manager.GetComponent<gamelogic>();
+            }
+            else
+            {
+                Debug.LogError("cannot find stats");
+            }
         }
-        else
-        {
-            Debug.LogError("cannot find stats");
-        }
-        GameObject weapon = GameObject.FindGameObjectWithTag("weapon");
-        if (weapon != null)
-        {
-            gunScript = weapon.GetComponent<shootScript>();
-            damage = gunScript.getdamage();
-        }
-        else
-        {
-            Debug.LogError("cannot find gun");
-        }
-        
-        GameObject manager = GameObject.FindGameObjectWithTag("gameManager");
-        if (weapon != null)
-        {
-            logicScript = manager.GetComponent<gamelogic>();
-        }
-        else
-        {
-            Debug.LogError("cannot find stats");
-        }
-    }
+      }
     public void calculateExpNeeded()
     {
         if (level == 0)
