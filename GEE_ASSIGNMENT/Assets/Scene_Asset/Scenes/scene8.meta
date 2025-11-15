@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: ed7310fa1105c8846945f862a89ac7a8
 =======
 <<<<<<< Updated upstream
@@ -12,6 +13,9 @@ guid: 3ca2c8c49621288418da538ba8670dff
 guid: 3ca2c8c49621288418da538ba8670dff
 >>>>>>> Stashed changes
 >>>>>>> parent of 3c4b689 (Dragon)
+=======
+guid: ed7310fa1105c8846945f862a89ac7a8
+>>>>>>> parent of 7d719d6 (Dragon)
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
