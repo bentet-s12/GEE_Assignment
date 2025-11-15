@@ -80,14 +80,10 @@ public class shootScript : MonoBehaviour
     {
         // Ray from camera to center of screen
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-        Vector3 targetPoint;
-
-        if (Physics.Raycast(ray, out RaycastHit hit, 1000f))
-            targetPoint = hit.point;
-        else
-            targetPoint = ray.GetPoint(1000f);
-
+        
+        Vector3 targetPoint = ray.GetPoint(1000f);
         Vector3 shootDir = (targetPoint - firingPoint.position).normalized;
+
 
         // Handle single or multishot
         if (multishot <= 1)
@@ -120,7 +116,7 @@ public class shootScript : MonoBehaviour
         bullet dmgScript = projectile.GetComponent<bullet>();
         if (dmgScript != null)
         {
-            float currentdmg = dmgScript.getdmg();
+            int currentdmg = dmgScript.getdmg();
             if(currentdmg != damage)
             {
                 dmgScript.setdmg(currentdmg);

@@ -17,6 +17,7 @@ public class enemyspawn : MonoBehaviour
     void Start()
     {
         StartCoroutine(EnableDoorCheckAfterDelay(5f));
+        spawnspace = GameObject.FindGameObjectWithTag("enemySpawn").GetComponent<Collider>();
     }
     IEnumerator EnableDoorCheckAfterDelay(float delay)
     {
@@ -27,7 +28,7 @@ public class enemyspawn : MonoBehaviour
 
     public void enemydefeated()
     {
-        defeatedEnemies++;
+        defeatedEnemies += 1;
     }
     public void spawnEnemy(int spawnamt)
     {
@@ -45,6 +46,15 @@ public class enemyspawn : MonoBehaviour
     }
     public void spawnElite(int spawnamt)
     {
+        if (spawnspace != null)
+        {
+            for (int i = 0; i < spawnamt; i++)
+            {
+                Vector3 spawnPos = GetRandomPointInCollider(spawnspace);
+                Instantiate(eliteprefab, spawnPos, Quaternion.identity);
+            }
+
+        }
         spawnedEnemies += spawnamt;
     }
     public void spawnBoss(int spawnamt)
@@ -56,7 +66,7 @@ public class enemyspawn : MonoBehaviour
     {
         if (canCheckDoors)
         {
-            if (defeatedEnemies == spawnedEnemies)
+            if (defeatedEnemies >= spawnedEnemies)
             {
 
                 foreach (DoorSlide door in doorScripts)
