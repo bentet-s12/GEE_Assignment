@@ -26,20 +26,56 @@ public class levelling_logic : MonoBehaviour
     [SerializeField] private int currentmultishot;
     [SerializeField] private int multishot;
 
+    [SerializeField] private int temphealth;
+
+    [SerializeField] private bool teleport;
+    [SerializeField] private bool doublejump;
+
     private GameObject player;
     //playerPrefs
     public void SaveData()
     {
         PlayerPrefs.SetInt("multi", multishot);
         PlayerPrefs.SetFloat("spd", Tempspeed);
+        if (teleport == true)
+        {
+            PlayerPrefs.SetString("teleport", "true");
+        }
+        else
+        {
+            PlayerPrefs.SetString("teleport", "false");
+        }
+        if (doublejump == true)
+        {
+            PlayerPrefs.SetString("double_jump", "true");
+        }
+        else
+        {
+            PlayerPrefs.SetString("double_jump", "false");
+        }
         PlayerPrefs.Save();
     }
     public void loadData()
     {
         multishot = PlayerPrefs.GetInt("multi");
         Tempspeed = PlayerPrefs.GetFloat("spd");
- 
-        //maybe ability
+        if (PlayerPrefs.GetString("teleport") == "true")
+        {
+            teleport = true;
+        }
+        else
+        {
+            teleport = false;
+        }
+        if (PlayerPrefs.GetString("double_jump") == "true")
+        {
+            doublejump = true;
+        }
+        else
+        {
+            doublejump = false;
+        }
+
     }
     public void DeleteData()
     {
@@ -47,7 +83,7 @@ public class levelling_logic : MonoBehaviour
     }
     private void Start()
     {
-
+        calculateExpNeeded();
         player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
@@ -86,14 +122,9 @@ public class levelling_logic : MonoBehaviour
       }
     public void calculateExpNeeded()
     {
-        if (level == 0)
-        {
-            expNeeded = 10;
-        }
-        else
-        {
-            expNeeded = (level + 1) * 10;
-        }
+        
+        expNeeded = (level + 1) * 10;
+        Debug.Log("current level" + level.ToString());
     }
     public void lvlup()
     {
@@ -103,6 +134,7 @@ public class levelling_logic : MonoBehaviour
             currentexp = 0;
             level++;
             calculateExpNeeded();
+            //open up the UI to pick power up
         }
     }
     
@@ -124,6 +156,10 @@ public class levelling_logic : MonoBehaviour
     public void addtempspd(float add)
     {
         Tempspeed += add;
+    }
+    public void addtemphealth(int add)
+    {
+        statScript.setTempHealth(add);
     }
     private void Update()
     {
@@ -178,7 +214,14 @@ public class levelling_logic : MonoBehaviour
             {
                 statScript.setHealth(health);
                 statScript.setmaxhealth();
+
+                if (statScript.getmaxHealth() != (health + temphealth))
+                {
+                    statScript.setTempHealth(temphealth);
+                    statScript.setmaxhealth();
+                }
             }
+
         }
         if (spdScript != null)
         {
@@ -209,6 +252,17 @@ public class levelling_logic : MonoBehaviour
         
 
         }
+    public void resetdata()
+    {
+        damage = 1;
+        damagetemp = 0;
+
+        temphealth = 0;
+        health = 20;
+
+
+
+    }
     }
 
 

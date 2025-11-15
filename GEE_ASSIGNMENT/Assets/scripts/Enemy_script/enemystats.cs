@@ -47,6 +47,6 @@ public class enemystats : MonoBehaviour
         if (spawnscript != null)
             spawnscript.enemydefeated();
 
-        Destroy(gameObject);
+            Destroy(gameObject);
     }
 }

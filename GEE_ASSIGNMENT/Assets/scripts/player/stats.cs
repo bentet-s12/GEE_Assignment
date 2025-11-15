@@ -22,14 +22,18 @@ public class stats : MonoBehaviour
     {
         return health;
     }
+    public int getmaxHealth()
+    {
+        return maxhealth;
+    }
     public void setHealth(int add)
     {
         health = add;
     }
     public void setTempHealth(int add)
     {
-        temphealth += add;
-        setmaxhealth();
+        temphealth = add;
+      
     }
     public void setmaxhealth()
     {

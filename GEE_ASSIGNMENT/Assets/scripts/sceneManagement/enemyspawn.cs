@@ -12,12 +12,14 @@ public class enemyspawn : MonoBehaviour
     [SerializeField] private int spawnedEnemies;
     [SerializeField] private int defeatedEnemies;
     [SerializeField] private DoorSlide[] doorScripts;
+    [SerializeField] private levelling_logic levelscript;
     private bool canCheckDoors = false;
 
     void Start()
     {
         StartCoroutine(EnableDoorCheckAfterDelay(5f));
         spawnspace = GameObject.FindGameObjectWithTag("enemySpawn").GetComponent<Collider>();
+        
     }
     IEnumerator EnableDoorCheckAfterDelay(float delay)
     {
@@ -29,6 +31,11 @@ public class enemyspawn : MonoBehaviour
     public void enemydefeated()
     {
         defeatedEnemies += 1;
+        if (levelscript != null)
+        {
+            levelscript.lvlup();
+        }
+
     }
     public void spawnEnemy(int spawnamt)
     {
@@ -64,6 +71,7 @@ public class enemyspawn : MonoBehaviour
 
     private void Update()
     {
+        levelscript = GameObject.FindGameObjectWithTag("gameManager").GetComponent<levelling_logic>();
         if (canCheckDoors)
         {
             if (defeatedEnemies >= spawnedEnemies)
