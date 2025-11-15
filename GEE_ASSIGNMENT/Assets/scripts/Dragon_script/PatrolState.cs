@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -5,83 +6,56 @@ using UnityEngine.AI;
 public class PatrolState : StateMachineBehaviour
 {
     float timer;
+    List<Transform> Waypoints = new List<Transform>();
     NavMeshAgent agent;
     Transform player;
-    Dragon dragon;
-    readonly List<Transform> Waypoints = new();
-
-    const string PLAYER_TAG = "Player";
-
-    void SetRandomDestination()
-    {
-        if (agent == null || !agent.isOnNavMesh || Waypoints.Count == 0)
-            return;
-
-        Transform target = Waypoints[Random.Range(0, Waypoints.Count)];
-        agent.SetDestination(target.position);
-    }
+    float chaseRange = 8;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        dragon = animator.GetComponentInParent<Dragon>();
-        agent = animator.GetComponentInParent<NavMeshAgent>();
-
-        if (dragon != null)
-            dragon.SetDetectorActive(false);  // No attack colliders while patrolling
-
-        GameObject p = GameObject.FindGameObjectWithTag(PLAYER_TAG);
-        if (p != null)
-            player = p.transform;
-
-        timer = 0f;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        agent = animator.GetComponent<NavMeshAgent>();
+        agent.speed = 2.5f;
+        timer = 0;
 
         GameObject go = GameObject.FindGameObjectWithTag("Waypoints");
-        if (!go)
+        if (go == null)
+        {
+            Debug.LogError("No GameObject with tag 'Waypoints' found in the scene!");
             return;
+        }
 
         Waypoints.Clear();
         foreach (Transform t in go.transform)
             Waypoints.Add(t);
 
-        if (agent == null || dragon == null)
+        if (Waypoints.Count == 0)
+        {
+            Debug.LogError("No child waypoints found under the 'Waypoints' object!");
             return;
+        }
 
-        if (!agent.isOnNavMesh)
-            return;
-
-        agent.speed = dragon.patrolSpeed;
-        agent.isStopped = false;
-
-        if (Waypoints.Count > 0)
-            SetRandomDestination();
+        agent.SetDestination(Waypoints[Random.Range(0, Waypoints.Count)].position);
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (player == null)
-        {
-            GameObject p = GameObject.FindGameObjectWithTag(PLAYER_TAG);
-            if (p != null) player = p.transform;
-            else return;
-        }
+        if (Waypoints.Count == 0) return;
 
-        if (agent == null || dragon == null || Waypoints.Count == 0)
-            return;
-
-        if (!agent.isOnNavMesh)
-            return;
-
-        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance + 0.1f)
-        {
-            SetRandomDestination();
-        }
+        if (agent.remainingDistance <= agent.stoppingDistance)
+            agent.SetDestination(Waypoints[Random.Range(0, Waypoints.Count)].position);
 
         timer += Time.deltaTime;
-        if (timer > 10f)
+        if (timer > 10)
             animator.SetBool("isPatrolling", false);
 
-        float distance = Vector3.Distance(player.position, dragon.transform.position);
-        if (distance < dragon.chaseRange)
+        float distance = Vector3.Distance(player.position, animator.transform.position);
+        if (distance < chaseRange)
             animator.SetBool("isChasing", true);
+    }
+
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        agent.SetDestination(agent.transform.position);
     }
 }

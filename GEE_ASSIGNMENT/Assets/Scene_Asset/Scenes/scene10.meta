@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< Updated upstream
@@ -27,6 +28,9 @@ guid: abfb398f0050a844e82d99088f9c1dec
 guid: abfb398f0050a844e82d99088f9c1dec
 >>>>>>> Stashed changes
 >>>>>>> Stashed changes
+=======
+guid: 31decae489c24574e843331a2585be9d
+>>>>>>> parent of b7e1130 (Dragon)
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

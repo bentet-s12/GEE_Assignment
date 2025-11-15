@@ -1,48 +1,39 @@
 using UnityEngine;
-using UnityEngine.AI;
 
 public class idleState : StateMachineBehaviour
 {
     float timer;
     Transform player;
-    Dragon dragon;
-    NavMeshAgent agent;
-
-    const string PLAYER_TAG = "Player";
-
+    float chaseRange = 8;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        dragon = animator.GetComponentInParent<Dragon>();
-        agent = animator.GetComponentInParent<NavMeshAgent>();
-
-        if (dragon != null)
-            dragon.SetDetectorActive(false);
-
-        timer = 0f;
-
-        GameObject p = GameObject.FindGameObjectWithTag(PLAYER_TAG);
-        if (p != null)
-            player = p.transform;
+        timer = 0;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (player == null)
-        {
-            GameObject p = GameObject.FindGameObjectWithTag(PLAYER_TAG);
-            if (p != null) player = p.transform;
-            else return;
-        }
-
-        if (dragon == null)
-            return;
-
         timer += Time.deltaTime;
-        if (timer > 3f)
+        if (timer > 5)
             animator.SetBool("isPatrolling", true);
 
-        float distance = Vector3.Distance(player.position, dragon.transform.position);
-        if (distance < dragon.chaseRange)
+        float distance = Vector3.Distance(player.position, animator.transform.position);
+        if (distance < chaseRange)
             animator.SetBool("isChasing", true);
+    }
+
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+
+    }
+
+    override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        // Implement code that processes and affects root motion
+    }
+
+    override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+       
     }
 }

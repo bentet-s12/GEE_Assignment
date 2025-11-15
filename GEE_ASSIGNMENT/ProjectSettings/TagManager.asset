@@ -10,7 +10,6 @@ TagManager:
   - Waypoints
   - enemySpawn
   - weapon
-  - Dragon
   layers:
   - Default
   - TransparentFX
