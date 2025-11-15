@@ -6,7 +6,7 @@ AnimatorStateTransition:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   m_Conditions:
   - m_ConditionMode: 2
     m_ConditionEvent: isChasing
@@ -37,6 +37,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a9369e468e70334fa05091a74cd11dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1102 &-6624383054485906932
 AnimatorState:
   serializedVersion: 6
@@ -64,6 +66,11 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+  m_Tag:
+  m_SpeedParameter:
+  m_MirrorParameter:
+  m_CycleOffsetParameter:
+  m_TimeParameter:
 --- !u!114 &-5491526859766034014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -76,6 +83,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e48f90db7bfed741a71254569145227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!114 &-4701868505244593904
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,6 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07bb6e30e14a37e4eba11fca5f2fc156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   attackRange: 5
 --- !u!1101 &-2968274944631606358
 AnimatorStateTransition:
@@ -95,7 +106,7 @@ AnimatorStateTransition:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: die
@@ -120,7 +131,7 @@ AnimatorStateTransition:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: isChasing
@@ -168,6 +179,11 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+  m_Tag:
+  m_SpeedParameter:
+  m_MirrorParameter:
+  m_CycleOffsetParameter:
+  m_TimeParameter:
 --- !u!1102 &-1209126020190206140
 AnimatorState:
   serializedVersion: 6
@@ -195,6 +211,11 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+  m_Tag:
+  m_SpeedParameter:
+  m_MirrorParameter:
+  m_CycleOffsetParameter:
+  m_TimeParameter:
 --- !u!114 &-501860018494117240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -207,6 +228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec44eee83df2224bb03e6b7168afacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!114 &-490606347374240153
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -219,6 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01a1dee8efb6b004ebc30781e95ed4e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   basicRange: 3.5
   flameRange: 7
 --- !u!1101 &-258396170585614838
@@ -228,6 +253,7 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
+  m_Name:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: FlameAttack
@@ -252,7 +278,7 @@ AnimatorStateTransition:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: getHit
@@ -390,10 +416,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a9369e468e70334fa05091a74cd11dd, type: 3}
+<<<<<<< HEAD
   m_Name: 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+=======
+  m_Name:
+  m_EditorClassIdentifier:
+>>>>>>> 4b1a627856468c4f3724366d57f27a3a3264195e
   m_Conditions:
   - m_ConditionMode: 2
     m_ConditionEvent: isAttacking
@@ -427,7 +458,7 @@ AnimatorStateTransition:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: isChasing
@@ -452,7 +483,7 @@ AnimatorStateTransition:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: isPatrolling
@@ -492,11 +523,19 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 347d2e064d3a3f946b17655dcc998386, type: 3}
+<<<<<<< HEAD
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+=======
+  m_Tag:
+  m_SpeedParameter:
+  m_MirrorParameter:
+  m_CycleOffsetParameter:
+  m_TimeParameter:
+>>>>>>> 4b1a627856468c4f3724366d57f27a3a3264195e
 --- !u!1102 &4668286854321765769
 AnimatorState:
   serializedVersion: 6
@@ -520,18 +559,30 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 9ad2ad510a1fd694392849b8dce337e3, type: 3}
+<<<<<<< HEAD
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+=======
+  m_Tag:
+  m_SpeedParameter:
+  m_MirrorParameter:
+  m_CycleOffsetParameter:
+  m_TimeParameter:
+>>>>>>> 4b1a627856468c4f3724366d57f27a3a3264195e
 --- !u!1101 &4744538622340005623
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: 
+=======
+  m_Name:
+>>>>>>> 4b1a627856468c4f3724366d57f27a3a3264195e
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5331260804540479594}
@@ -572,11 +623,11 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 239b8825753a9e04ab2528df8f251b8b, type: 3}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
+  m_Tag:
+  m_SpeedParameter:
+  m_MirrorParameter:
+  m_CycleOffsetParameter:
+  m_TimeParameter:
 --- !u!114 &5679312835104218628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -587,8 +638,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 070ac1a5e77d02e44906918a5f295f80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1102 &5831314173621576826
 AnimatorState:
   serializedVersion: 6
@@ -613,18 +664,30 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: f862cf09513abb14cbba0e94da9a410f, type: 3}
+<<<<<<< HEAD
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+=======
+  m_Tag:
+  m_SpeedParameter:
+  m_MirrorParameter:
+  m_CycleOffsetParameter:
+  m_TimeParameter:
+>>>>>>> 4b1a627856468c4f3724366d57f27a3a3264195e
 --- !u!1101 &6101845677920172070
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: 
+=======
+  m_Name:
+>>>>>>> 4b1a627856468c4f3724366d57f27a3a3264195e
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: BasicAttack
@@ -666,18 +729,26 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: f3c4af16992f14c43a050675b9be2f68, type: 3}
+<<<<<<< HEAD
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+=======
+  m_Tag:
+  m_SpeedParameter:
+  m_MirrorParameter:
+  m_CycleOffsetParameter:
+  m_TimeParameter:
+>>>>>>> 4b1a627856468c4f3724366d57f27a3a3264195e
 --- !u!1101 &7468218583081044158
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   m_Conditions:
   - m_ConditionMode: 2
     m_ConditionEvent: isPatrolling
@@ -702,7 +773,11 @@ AnimatorStateTransition:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: 
+=======
+  m_Name:
+>>>>>>> 4b1a627856468c4f3724366d57f27a3a3264195e
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5331260804540479594}
@@ -724,7 +799,7 @@ AnimatorStateTransition:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5331260804540479594}
