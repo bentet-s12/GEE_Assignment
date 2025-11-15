@@ -3,6 +3,10 @@ using UnityEngine;
 public class EnemyHitbox : MonoBehaviour
 {
     [SerializeField] private EnemyLogic enemylogic;
+    [SerializeField] private stats playerdmg;
+
+
+
 
     public int damage = 5;
 
@@ -20,8 +24,13 @@ public class EnemyHitbox : MonoBehaviour
             if (other.CompareTag("Player"))
             {
                 Debug.Log("Player hit for " + damage);
+                playerdmg = other.GetComponent<stats>();
+                if (playerdmg != null)
+                {
+                    playerdmg.takedmg(damage);
+                }
+                }
             }
-        }
         else
         {
             return;

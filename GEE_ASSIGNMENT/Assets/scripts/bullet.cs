@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    [SerializeField] private float basedamage = 1;
-    [SerializeField] private float damage = 1;
+    [SerializeField] private int basedamage = 1;
+    [SerializeField] private int damage = 1;
     [SerializeField] private GameObject prefabs;
     private void Start()
     {
@@ -13,11 +13,11 @@ public class bullet : MonoBehaviour
     {
         // update damage from player stats here
     }
-    public float getdmg()
+    public int getdmg()
     {
        return damage;
     }
-    public void setdmg(float add)
+    public void setdmg(int add)
     {
         this.damage = add;
     }
@@ -25,8 +25,12 @@ public class bullet : MonoBehaviour
     {
         GameObject target = collision.gameObject;
         //getscript here
-
+        enemystats dmgScript = target.GetComponent<enemystats>();
         //damage here using the enemy script
+        if (dmgScript != null)
+        {
+            dmgScript.takedmg(this.damage);
+        }
 
         Destroy(prefabs);
     }
