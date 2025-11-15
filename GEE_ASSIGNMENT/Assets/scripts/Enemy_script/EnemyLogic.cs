@@ -150,6 +150,11 @@ public class EnemyLogic : MonoBehaviour
         isSwinging = false;
     }
 
+    public bool getSwinging()
+    {
+        return isSwinging;
+    }
+
 
     private void Wander()
     {
