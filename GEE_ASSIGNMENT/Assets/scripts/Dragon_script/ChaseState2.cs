@@ -1,12 +1,11 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class idleState : StateMachineBehaviour
+public class ChaseState2 : StateMachineBehaviour
 {
-    float timer;
+    NavMeshAgent agent;
     Transform player;
     Dragon dragon;
-    NavMeshAgent agent;
 
     const string PLAYER_TAG = "Player";
 
@@ -15,14 +14,18 @@ public class idleState : StateMachineBehaviour
         dragon = animator.GetComponentInParent<Dragon>();
         agent = animator.GetComponentInParent<NavMeshAgent>();
 
-        if (dragon != null)
-            dragon.SetDetectorActive(false);
-
-        timer = 0f;
-
         GameObject p = GameObject.FindGameObjectWithTag(PLAYER_TAG);
         if (p != null)
             player = p.transform;
+
+        if (dragon != null)
+            dragon.SetDetectorActive(true);
+
+        if (agent != null && dragon != null && agent.isOnNavMesh)
+        {
+            agent.speed = dragon.chaseSpeed;
+            agent.isStopped = false;
+        }
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -34,15 +37,22 @@ public class idleState : StateMachineBehaviour
             else return;
         }
 
-        if (dragon == null)
+        if (agent == null || dragon == null)
             return;
 
-        timer += Time.deltaTime;
-        if (timer > 3f)
-            animator.SetBool("isPatrolling", true);
+        if (!agent.isOnNavMesh)
+            return;
+
+        agent.SetDestination(player.position);
 
         float distance = Vector3.Distance(player.position, dragon.transform.position);
-        if (distance < dragon.chaseRange)
-            animator.SetBool("isChasing", true);
+
+        if (distance > dragon.chaseRange)
+            animator.SetBool("isChasing", false);
+
+        if (distance < dragon.flameAttackRange)
+            animator.SetBool("isAttacking", true);
+        else
+            animator.SetBool("isAttacking", false);
     }
 }

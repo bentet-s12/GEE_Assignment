@@ -33,5 +33,10 @@ public class bullet : MonoBehaviour
         }
 
         Destroy(prefabs);
+
+        if(collision.gameObject.CompareTag("Dragon"))
+        {
+            collision.gameObject.GetComponent<Dragon>().TakeDamage(1);   
+        }
     }
 }
