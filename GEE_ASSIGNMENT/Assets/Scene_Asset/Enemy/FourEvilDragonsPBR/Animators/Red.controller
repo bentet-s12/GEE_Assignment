@@ -421,10 +421,14 @@ MonoBehaviour:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
   m_Name:
   m_EditorClassIdentifier:
 >>>>>>> 4b1a627856468c4f3724366d57f27a3a3264195e
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
   m_Conditions:
   - m_ConditionMode: 2
     m_ConditionEvent: isAttacking
@@ -443,6 +447,9 @@ MonoBehaviour:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+=======
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes
 =======
   m_EditorClassIdentifier: 
 >>>>>>> Stashed changes
