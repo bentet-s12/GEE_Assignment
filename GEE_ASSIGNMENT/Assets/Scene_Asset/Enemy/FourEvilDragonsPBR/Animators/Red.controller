@@ -451,12 +451,7 @@ AnimatorStateTransition:
   m_EditorClassIdentifier:
 =======
   m_Name: 
-<<<<<<< HEAD
 >>>>>>> parent of b7e1130 (Dragon)
-=======
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> parent of 3c4b689 (Dragon)
   m_Conditions:
   - m_ConditionMode: 2
     m_ConditionEvent: isAttacking
@@ -475,15 +470,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
-<<<<<<< HEAD
-=======
-=======
-  m_EditorClassIdentifier: 
->>>>>>> Stashed changes
-=======
-  m_EditorClassIdentifier: 
->>>>>>> Stashed changes
->>>>>>> parent of 3c4b689 (Dragon)
 --- !u!1101 &2380362728249190206
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
