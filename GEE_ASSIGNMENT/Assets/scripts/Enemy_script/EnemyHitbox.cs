@@ -14,25 +14,25 @@ public class EnemyHitbox : MonoBehaviour
         hasHit = false;
     }
 
-    private void OnTriggerEnter (Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (enemylogic.getSwinging() == true)
+        // Don't hit twice in one swing
+        if (hasHit) return;
+
+        // Enemy must be swinging
+        if (!enemylogic.getSwinging()) return;
+
+        // Check if player entered
+        if (other.CompareTag("Player"))
         {
-            if (other.CompareTag("Player"))
+            Debug.Log("Player hit for " + damage);
+
+            playerdmg = other.GetComponent<stats>();
+            if (playerdmg != null)
             {
-                Debug.Log("Player hit for " + damage);
-                playerdmg = other.GetComponent<stats>();
-                if (playerdmg != null)
-                {
-                    playerdmg.takedmg(damage);
-                }
-                }
+                playerdmg.takedmg(damage);
+                hasHit = true; // Mark that this swing already hit
             }
-        else
-        {
-            return;
         }
-        if (hasHit) return;   
-        
     }
 }
