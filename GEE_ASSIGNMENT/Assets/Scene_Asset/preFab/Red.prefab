@@ -12077,6 +12077,7 @@ GameObject:
   - component: {fileID: 3928354804149772053}
   - component: {fileID: 7974193187310006405}
   - component: {fileID: 9181906443342460108}
+  - component: {fileID: 8162162534829234666}
   m_Layer: 0
   m_Name: Red
   m_TagString: Dragon
@@ -12093,7 +12094,7 @@ Transform:
   m_GameObject: {fileID: 5203905003973247032}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 6.8}
+  m_LocalPosition: {x: 0, y: 0.02, z: 6.8}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -12162,7 +12163,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -12195,6 +12196,7 @@ MonoBehaviour:
   roomscaler: {fileID: 0}
   basicDetector: {fileID: 445095173282247701}
   flameDetector: {fileID: 8907832047887325801}
+  exp: {fileID: 0}
 --- !u!54 &9181906443342460108
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12222,6 +12224,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &8162162534829234666
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5203905003973247032}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.22, y: 3.8, z: 6.04}
+  m_Center: {x: 0, y: 1.4, z: 0}
 --- !u!1 &5246194767319429761
 GameObject:
   m_ObjectHideFlags: 0
