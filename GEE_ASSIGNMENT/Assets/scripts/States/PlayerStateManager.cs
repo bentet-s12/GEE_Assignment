@@ -9,7 +9,7 @@ public class PlayerStateManager : MonoBehaviour
     [HideInInspector] public CharacterController controller;
 
     [Header("Audio")]
-    public AudioSource sfxSource;     // main audio source for character
+    public AudioSource sfxSource;
     public AudioClip walkSFX;
     public AudioClip runSFX;
     public AudioClip jumpSFX;
@@ -32,10 +32,10 @@ public class PlayerStateManager : MonoBehaviour
 
     // ================= TELEPORT ABILITY =================
     [Header("Teleport Ability")]
-    public bool canTeleport = false;        // unlocked ability
-    public float teleportCooldown = 6f;     // starting cooldown (reduced by upgrades)
-    public float teleportDistance = 6f;     // teleport length
-    private float teleportTimer = 0f;       // cooldown timer
+    public bool canTeleport = false;
+    public float teleportCooldown = 6f;
+    public float teleportDistance = 6f;
+    private float teleportTimer = 0f;
 
     // States
     [HideInInspector] public PlayerState currentState;
@@ -54,18 +54,18 @@ public class PlayerStateManager : MonoBehaviour
     {
         return walkSpeed;
     }
+
     public void setspeed(float addspeed)
     {
         walkSpeed += addspeed;
         runSpeed += addspeed;
-
     }
+
     void Start()
     {
         abilitycheckScript = GameObject.FindGameObjectWithTag("gameManager").GetComponent<levelling_logic>();
         controller = GetComponent<CharacterController>();
 
-        // Initialize states
         idleState = new IdleState(this);
         walkState = new WalkState(this);
         runState = new RunState(this);
@@ -77,6 +77,7 @@ public class PlayerStateManager : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
         if (abilitycheckScript != null)
         {
             canTeleport = abilitycheckScript.getTP();
@@ -86,8 +87,7 @@ public class PlayerStateManager : MonoBehaviour
 
     void Update()
     {
-        if (isDead)
-            return; // STOP ALL MOVEMENT / INPUT
+        if (isDead) return;
 
         HandleAimToggle();
         HandleTeleport();
@@ -95,27 +95,17 @@ public class PlayerStateManager : MonoBehaviour
         HandleMovement();
         currentState.UpdateState();
         ApplyGravity();
-
-        
     }
 
     // ------------------ AIM TOGGLE ------------------
     private void HandleAimToggle()
     {
-        // Press once to toggle aim
         if (Input.GetMouseButtonDown(1))
         {
-            isAiming = !isAiming; // flip the bool
+            isAiming = !isAiming;
 
             animator.SetBool("Aiming", isAiming);
             cameraScript.SetAiming(isAiming);
-
-            // Maintain walking, jumping 
-            animator.SetBool("Walking", animator.GetBool("Walking"));
-            animator.SetBool("isJumping", animator.GetBool("isJumping"));
-            animator.SetBool("Running", animator.GetBool("Running"));
-
-
         }
     }
 
@@ -125,22 +115,17 @@ public class PlayerStateManager : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
-        // Update your existing animator parameters
         animator.SetFloat("hzinput", h);
         animator.SetFloat("vinput", v);
 
-        // movement direction relative to camera
         Vector3 forward = cameraScript.GetCameraForwardFlat();
         Vector3 right = cameraScript.GetCameraRightFlat();
         Vector3 move = forward * v + right * h;
 
-        // normal speed / run
-        float speed = (Input.GetKey(KeyCode.LeftShift)) ? runSpeed : walkSpeed;
+        float speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
 
-        // ================== AIMING MOVEMENT (STRAFING) ===================
         if (isAiming)
         {
-            // 1) Always face camera direction
             Vector3 camDir = cameraScript.GetCameraForwardFlat();
             if (camDir != Vector3.zero)
             {
@@ -148,24 +133,19 @@ public class PlayerStateManager : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation, aimRot, Time.deltaTime * 15f);
             }
 
-            // 2) Strafe: W/S forward/back, A/D left/right, WITHOUT turning around
             Vector3 strafeMove = (forward * v) + (right * h);
-
             if (strafeMove.sqrMagnitude > 0.0001f)
             {
                 controller.Move(strafeMove.normalized * speed * Time.deltaTime);
             }
 
-            // we handled movement for aiming → stop here
             return;
         }
 
-        // ================== NORMAL MOVEMENT (NOT AIMING) ===================
         if (move.magnitude > 0.1f)
         {
             controller.Move(move.normalized * speed * Time.deltaTime);
 
-            // rotate with camera direction
             Vector3 lookDir = cameraScript.GetCameraForwardFlat();
             if (lookDir != Vector3.zero)
             {
@@ -180,21 +160,21 @@ public class PlayerStateManager : MonoBehaviour
     {
         isGrounded = controller.isGrounded;
 
-        // ---------------- LANDING ----------------
         if (isGrounded && velocity.y < 0)
         {
             if (isFalling && landSFX != null)
                 sfxSource.PlayOneShot(landSFX);
 
             velocity.y = -2f;
+
             animator.SetBool("isJumping", false);
             animator.SetBool("isFalling", false);
 
             isFalling = false;
-            hasDoubleJumped = false;   // reset double jump
+            hasDoubleJumped = false;
         }
 
-        // ---------------- NORMAL JUMP ----------------
+        // Jump
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             velocity.y = jumpForce;
@@ -204,15 +184,14 @@ public class PlayerStateManager : MonoBehaviour
 
             animator.SetBool("isJumping", true);
             animator.SetBool("isFalling", false);
-
             return;
         }
 
-        // ---------------- DOUBLE JUMP (NO COOLDOWN) ----------------
+        // Double jump
         if (!isGrounded &&
             Input.GetKeyDown(KeyCode.Space) &&
-            canDoubleJump &&        // ability unlocked
-            !hasDoubleJumped)       // only once per jump
+            canDoubleJump &&
+            !hasDoubleJumped)
         {
             velocity.y = jumpForce;
 
@@ -225,7 +204,7 @@ public class PlayerStateManager : MonoBehaviour
             hasDoubleJumped = true;
         }
 
-        // ---------------- FALLING ----------------
+        // Falling
         if (!isGrounded && velocity.y < 0)
         {
             isFalling = true;
@@ -236,39 +215,29 @@ public class PlayerStateManager : MonoBehaviour
 
     private void HandleTeleport()
     {
-        if (!canTeleport)
-            return; // ability not unlocked yet
+        if (!canTeleport) return;
 
-        // Cooldown countdown
         if (teleportTimer > 0f)
         {
             teleportTimer -= Time.deltaTime;
             return;
         }
 
-        // Press E to teleport
         if (Input.GetKeyDown(KeyCode.T))
         {
             teleportTimer = teleportCooldown;
-            Vector3 camForward = cameraScript.GetCameraForwardFlat();
 
-            // Desired target
+            Vector3 camForward = cameraScript.GetCameraForwardFlat();
             Vector3 targetPos = transform.position + camForward * teleportDistance;
 
-            // Prevent teleport into walls
             if (Physics.Raycast(transform.position, camForward, out RaycastHit hit, teleportDistance))
             {
-                targetPos = hit.point - camForward * 1f; // step back 1m
+                targetPos = hit.point - camForward * 1f;
             }
 
-            // Teleport safely
             controller.enabled = false;
             transform.position = targetPos;
             controller.enabled = true;
-
-            // Play optional SFX/animation here:
-            // sfxSource.PlayOneShot(teleportSFX);
-            // animator.SetTrigger("Teleport");
 
             Debug.Log("Teleported toward CAMERA direction!");
         }
@@ -277,28 +246,18 @@ public class PlayerStateManager : MonoBehaviour
     public void Die()
     {
         if (isDead) return;
+
         isDead = true;
-
-        controller.enabled = false;     // stop movement physic
-        animator.SetTrigger("Die");     // play death animation
-    }
-
-
-
         controller.enabled = false;
+        animator.applyRootMotion = true;
 
+        animator.SetTrigger("Die");
         animator.SetBool("Walking", false);
         animator.SetBool("Running", false);
         animator.SetBool("isJumping", false);
         animator.SetBool("isFalling", false);
         animator.SetBool("Aiming", false);
 
-        // IMPORTANT
-        animator.applyRootMotion = true;
-
-        animator.SetTrigger("Die");
-
-        // enable scripts
         cameraScript.enabled = true;
 
         shootScript gun = FindFirstObjectByType<shootScript>();
@@ -311,12 +270,11 @@ public class PlayerStateManager : MonoBehaviour
     // ------------------ GRAVITY ------------------
     private void ApplyGravity()
     {
-        if (isDead) return;  // don't apply gravity after death
+        if (isDead) return;
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
-
 
     // ------------------ STATE SWITCH ------------------
     public void SwitchState(PlayerState newState)
