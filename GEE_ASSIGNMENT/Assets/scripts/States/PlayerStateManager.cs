@@ -46,7 +46,6 @@ public class PlayerStateManager : MonoBehaviour
     [HideInInspector] public JumpState jumpState;
 
     [HideInInspector] public bool isAiming = false;
-    [HideInInspector] public bool isDead = false;
 
     private levelling_logic abilitycheckScript;
 
@@ -111,7 +110,6 @@ public class PlayerStateManager : MonoBehaviour
             // Maintain walking, jumping 
             animator.SetBool("Walking", animator.GetBool("Walking"));
             animator.SetBool("isJumping", animator.GetBool("isJumping"));
-            animator.SetBool("Running", animator.GetBool("Running"));
 
 
         }
@@ -123,55 +121,42 @@ public class PlayerStateManager : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
-        // Update your existing animator parameters
-        animator.SetFloat("hzinput", h);
-        animator.SetFloat("vinput", v);
-
         // movement direction relative to camera
         Vector3 forward = cameraScript.GetCameraForwardFlat();
         Vector3 right = cameraScript.GetCameraRightFlat();
         Vector3 move = forward * v + right * h;
 
-        // normal speed / run
         float speed = (Input.GetKey(KeyCode.LeftShift)) ? runSpeed : walkSpeed;
 
-        // ================== AIMING MOVEMENT (STRAFING) ===================
         if (isAiming)
-        {
-            // 1) Always face camera direction
-            Vector3 camDir = cameraScript.GetCameraForwardFlat();
-            if (camDir != Vector3.zero)
-            {
-                Quaternion aimRot = Quaternion.LookRotation(camDir);
-                transform.rotation = Quaternion.Slerp(transform.rotation, aimRot, Time.deltaTime * 15f);
-            }
+            speed *= 0.7f;
 
-            // 2) Strafe: W/S forward/back, A/D left/right, WITHOUT turning around
-            Vector3 strafeMove = (forward * v) + (right * h);
-
-            if (strafeMove.sqrMagnitude > 0.0001f)
-            {
-                controller.Move(strafeMove.normalized * speed * Time.deltaTime);
-            }
-
-            // we handled movement for aiming → stop here
-            return;
-        }
-
-        // ================== NORMAL MOVEMENT (NOT AIMING) ===================
+        // MOVE
         if (move.magnitude > 0.1f)
         {
             controller.Move(move.normalized * speed * Time.deltaTime);
 
-            // rotate with camera direction
+            // movement rotation
             Vector3 lookDir = cameraScript.GetCameraForwardFlat();
             if (lookDir != Vector3.zero)
             {
                 Quaternion targetRot = Quaternion.LookRotation(lookDir);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * 15f);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * 10f);
+            }
+        }
+
+        // ⭐ Rotate player with camera even when standing still and aiming
+        if (isAiming && move.magnitude < 0.1f)
+        {
+            Vector3 aimDir = cameraScript.GetCameraForwardFlat();
+            if (aimDir != Vector3.zero)
+            {
+                Quaternion targetRot = Quaternion.LookRotation(aimDir);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * 10f);
             }
         }
     }
+
 
     // ------------------ JUMP ------------------
     private void HandleJumpInput()
@@ -248,6 +233,8 @@ public class PlayerStateManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
         {
             teleportTimer = teleportCooldown;
+
+            // ✔ camera direction (FLAT, no Y)
             Vector3 camForward = cameraScript.GetCameraForwardFlat();
 
             // Desired target
@@ -271,17 +258,6 @@ public class PlayerStateManager : MonoBehaviour
             Debug.Log("Teleported toward CAMERA direction!");
         }
     }
-
-    public void Die()
-    {
-        if (isDead) return;
-        isDead = true;
-
-        controller.enabled = false;     // stop movement physic
-        animator.SetTrigger("Die");     // play death animation
-    }
-
-
 
     // ------------------ GRAVITY ------------------
     private void ApplyGravity()
