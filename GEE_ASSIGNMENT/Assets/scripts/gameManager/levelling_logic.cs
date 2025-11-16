@@ -87,7 +87,7 @@ public class levelling_logic : MonoBehaviour
         PlayerPrefs.DeleteAll();
     }
 
-    public void upgradeTP()
+    private void upgradeTP()
     {
         if (teleport != true)
         {
@@ -111,7 +111,7 @@ public class levelling_logic : MonoBehaviour
     {
         return teleport;
     }
-    public void upgradeDJ()
+    private void upgradeDJ()
     {
         if (doublejump != true)
         {
@@ -209,7 +209,10 @@ public class levelling_logic : MonoBehaviour
 
     public void adddmg(int dmg)
     {
-        damagetemp += dmg;
+        if (gunScript != null)
+        {
+            gunScript.setdmg(dmg);
+        }
     }
     public void addmulti()
     {

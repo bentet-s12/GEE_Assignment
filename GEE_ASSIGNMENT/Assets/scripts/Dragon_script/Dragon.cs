@@ -50,13 +50,10 @@ public class Dragon : MonoBehaviour
     [SerializeField] private levelling_logic exp;
 
     private AudioSource audioSource;
-    
 
     [Header("Audio Clips")]
     public AudioClip biteSFX;
     public AudioClip flameSFX;
-    public AudioClip dieSFX;
-    public AudioClip roarSFX;
 
     void Start()
     {
@@ -67,8 +64,6 @@ public class Dragon : MonoBehaviour
         player = GameObject.FindGameObjectWithTag(PLAYER_TAG).transform;
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-
-        PlayRoarSFX();
 
         // Initialize health
         if (roomscaler != null)
@@ -85,11 +80,6 @@ public class Dragon : MonoBehaviour
 
         // First reaction at 75% HP
         nextFlinchThreshold = maxHealth - (maxHealth / 4);
-    }
-
-    public void PlayRoarSFX()
-    {
-        audioSource.PlayOneShot(roarSFX);
     }
 
     // ======== CLOSE RANGE ATTACK ========
@@ -215,7 +205,6 @@ public class Dragon : MonoBehaviour
         Debug.Log("Dragon DIED!");
 
         anim.SetTrigger("die");
-        audioSource.PlayOneShot(dieSFX);
 
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         if (agent != null && agent.isOnNavMesh)
