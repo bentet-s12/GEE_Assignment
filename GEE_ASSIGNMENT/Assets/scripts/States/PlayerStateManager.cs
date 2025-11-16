@@ -8,6 +8,13 @@ public class PlayerStateManager : MonoBehaviour
     public FixedThirdPersonCamera cameraScript;
     [HideInInspector] public CharacterController controller;
 
+    [Header("Audio")]
+    public AudioSource sfxSource;     // main audio source for character
+    public AudioClip walkSFX;
+    public AudioClip runSFX;
+    public AudioClip jumpSFX;
+    public AudioClip landSFX;
+
     [Header("Movement Speeds")]
     public float walkSpeed = 2.5f;
     public float runSpeed = 5f;
@@ -17,6 +24,8 @@ public class PlayerStateManager : MonoBehaviour
     public float gravity = -9.81f;
     [HideInInspector] public Vector3 velocity;
     private bool isGrounded;
+    [HideInInspector] public bool isFalling = false;
+
 
     // States
     [HideInInspector] public PlayerState currentState;
@@ -80,8 +89,8 @@ public class PlayerStateManager : MonoBehaviour
             // Maintain walking, jumping 
             animator.SetBool("Walking", animator.GetBool("Walking"));
             animator.SetBool("isJumping", animator.GetBool("isJumping"));
-            
-            
+
+
         }
     }
 
@@ -133,31 +142,41 @@ public class PlayerStateManager : MonoBehaviour
     {
         isGrounded = controller.isGrounded;
 
-        // ---------------- GROUND CHECK ----------------
-        if (isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-
-            animator.SetBool("isJumping", false);
-            animator.SetBool("isFalling", false);
-        }
-
         // ---------------- JUMP ----------------
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            if (jumpSFX != null)
+                sfxSource.PlayOneShot(jumpSFX);
             velocity.y = jumpForce;
+
             animator.SetBool("isJumping", true);
             animator.SetBool("isFalling", false);
+            isFalling = false;
             return;
         }
 
         // ---------------- FALLING ----------------
         if (!isGrounded && velocity.y < 0)
         {
+            isFalling = true;
             animator.SetBool("isFalling", true);
             animator.SetBool("isJumping", false);
         }
+
+        // ---------------- LANDING ----------------
+        if (isGrounded && velocity.y < 0)
+        {
+            if (landSFX != null && animator.GetBool("isFalling"))
+                sfxSource.PlayOneShot(landSFX);
+
+            velocity.y = -2f;
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", false);
+            isFalling = false;
+        }
     }
+
+
 
 
     // ------------------ GRAVITY ------------------

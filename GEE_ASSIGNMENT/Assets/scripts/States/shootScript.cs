@@ -20,6 +20,10 @@ public class shootScript : MonoBehaviour
     [SerializeField] private int damage = 1;
     [SerializeField] private int basedamage = 1;
 
+    [Header("Gun Audio")]
+    [SerializeField] private AudioSource gunAudioSource;
+    [SerializeField] private AudioClip gunShotSFX;
+
     [HideInInspector] public bool isShooting = false;
     private Coroutine shootingCoroutine;
 
@@ -31,6 +35,7 @@ public class shootScript : MonoBehaviour
         if (playerManager == null)
             playerManager = Object.FindFirstObjectByType<PlayerStateManager>();
     }
+
     public int getdamage()
     {
         return damage;
@@ -47,23 +52,33 @@ public class shootScript : MonoBehaviour
     void Update()
     {
         bool canShootNow =
-            playerManager.isAiming ||                                     // aim idle & aim walk shoot
-            playerManager.currentState == playerManager.walkState ||      // walk shooting
-            playerManager.currentState == playerManager.runState;
+    (playerManager.isAiming ||
+     playerManager.currentState == playerManager.walkState ||
+     playerManager.currentState == playerManager.runState ||
+     playerManager.animator.GetBool("isJumping"))
+     && !playerManager.isFalling; // block when falling
 
 
-        // Start shooting when button is pressed down
+        // ---------------- START SHOOT (MODIFIED ONLY SOUND) ----------------
         if (Input.GetMouseButtonDown(0) && canShootNow && !isShooting)
         {
             isShooting = true;
+
+            // 🔊 Remove looping logic, no Play() on clip
+            // (We play sound inside FireProjectileBurst now)
+
             shootingCoroutine = StartCoroutine(ShootContinuously());
         }
 
-        // Stop shooting when button is released
+        // ---------------- STOP SHOOT (MODIFIED ONLY SOUND) ----------------
         if (Input.GetMouseButtonUp(0) && isShooting)
         {
             isShooting = false;
-            StopCoroutine(shootingCoroutine);
+
+            if (shootingCoroutine != null)
+                StopCoroutine(shootingCoroutine);
+
+            // 🔇 No need to stop AudioSource because we use PlayOneShot
         }
     }
 
@@ -78,12 +93,19 @@ public class shootScript : MonoBehaviour
 
     void FireProjectileBurst()
     {
+        // ---------------- GUN SOUND (NEW) ----------------
+        if (playerManager.isFalling)
+            return;
+        if (gunAudioSource != null && gunShotSFX != null)
+        {
+            gunAudioSource.PlayOneShot(gunShotSFX);
+        }
+
         // Ray from camera to center of screen
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-        
+
         Vector3 targetPoint = ray.GetPoint(1000f);
         Vector3 shootDir = (targetPoint - firingPoint.position).normalized;
-
 
         // Handle single or multishot
         if (multishot <= 1)
@@ -95,7 +117,7 @@ public class shootScript : MonoBehaviour
             float startAngle = -spreadAngle * 0.5f;
             float angleStep = spreadAngle / (multishot - 1);
 
-            for (int i = 0; i < multishot+1; i++)
+            for (int i = 0; i < multishot + 1; i++)
             {
                 Quaternion spreadRot = Quaternion.AngleAxis(startAngle + angleStep * i, Vector3.up);
                 Vector3 spreadDir = spreadRot * shootDir;
@@ -103,11 +125,12 @@ public class shootScript : MonoBehaviour
             }
         }
     }
-    
+
     public void setmultishot(int add)
     {
         multishot = add;
     }
+
     void FireProjectile(Vector3 direction)
     {
         Vector3 spawnPos = firingPoint.position + direction * spawnOffset;
@@ -117,7 +140,7 @@ public class shootScript : MonoBehaviour
         if (dmgScript != null)
         {
             int currentdmg = dmgScript.getdmg();
-            if(currentdmg != damage)
+            if (currentdmg != damage)
             {
                 dmgScript.setdmg(currentdmg);
             }
@@ -125,7 +148,7 @@ public class shootScript : MonoBehaviour
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.linearVelocity = direction * bulletSpeed ; 
+            rb.linearVelocity = direction * bulletSpeed;
         }
 
         Destroy(projectile, bulletLifetime);
