@@ -5862,7 +5862,7 @@ PrefabInstance:
     - target: {fileID: 374630985880079498, guid: a0efa846b05557949817fe58f33289a3, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1240001806}
     - target: {fileID: 374630985880079498, guid: a0efa846b05557949817fe58f33289a3, type: 3}
       propertyPath: gunAudioSource
       value: 
@@ -6966,12 +6966,12 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 2.03
-  m_Radius: 0.25
+  m_Radius: 0.48
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.99, z: 0}
+  m_Center: {x: 0, y: 0.99, z: -0.01}
 --- !u!95 &1240001805 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 6a35efed7aff6284f8cfb684da549f8d, type: 3}
@@ -7003,7 +7003,12 @@ MonoBehaviour:
   gravity: -9.81
   velocity: {x: 0, y: 0, z: 0}
   isFalling: 0
+  canDoubleJump: 0
+  canTeleport: 0
+  teleportCooldown: 6
+  teleportDistance: 6
   isAiming: 0
+  isDead: 0
 --- !u!114 &1240001807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7016,11 +7021,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17175697d0a5bc84a968356a8495c294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basehealth: 0
-  health: 20
-  maxhealth: 0
+  basehealth: 20
+  health: 0
+  maxhealth: 50
   currenthealth: 0
   temphealth: 0
+  pm: {fileID: 1240001806}
 --- !u!82 &1240001808
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7970,11 +7976,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7942947498786162766, guid: 02e2090659d6d4a45bf307e9bd1fdc10, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8975071160946449162, guid: 02e2090659d6d4a45bf307e9bd1fdc10, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9038671995694896977, guid: 02e2090659d6d4a45bf307e9bd1fdc10, type: 3}
       propertyPath: currentscenename
