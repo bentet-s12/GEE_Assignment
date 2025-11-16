@@ -5,9 +5,6 @@ public class EnemyHitbox : MonoBehaviour
     [SerializeField] private EnemyLogic enemylogic;
     [SerializeField] private stats playerdmg;
 
-
-
-
     public int damage = 5;
 
     private bool hasHit = false;

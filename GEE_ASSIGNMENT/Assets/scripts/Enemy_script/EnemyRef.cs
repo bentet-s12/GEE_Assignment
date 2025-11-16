@@ -13,7 +13,7 @@ public class EnemyRef : MonoBehaviour
     public float swingTime = 0.3f;
     public float cooldownTime = 1.0f;
 
-    public GameObject hitbox;   // Assign in Inspector
+    public GameObject hitbox;
 
 
     public float pathUpdateDelay = 0.2f;
