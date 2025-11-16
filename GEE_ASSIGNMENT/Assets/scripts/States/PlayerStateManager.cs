@@ -8,11 +8,6 @@ public class PlayerStateManager : MonoBehaviour
     public FixedThirdPersonCamera cameraScript;
     [HideInInspector] public CharacterController controller;
 
-    private float footstepTimer = 0f;
-    public float walkStepRate = 0.5f;   // delay between steps
-    public float runStepRate = 0.3f;    // faster steps when running
-
-
     [Header("Audio")]
     public AudioSource sfxSource;
     public AudioClip walkSFX;
