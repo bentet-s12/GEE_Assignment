@@ -1551,17 +1551,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2079751523815364740, guid: 9621aa2b9d869b84cad07298adf3920a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1107904754}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9621aa2b9d869b84cad07298adf3920a, type: 3}
---- !u!4 &707892193 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2079751523815364740, guid: 9621aa2b9d869b84cad07298adf3920a, type: 3}
-  m_PrefabInstance: {fileID: 707892192}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &766343596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2596,11 +2588,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 707892193}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3665885612579128942, guid: 889cbe4269ae7a2478908bd96d3ab63f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6413821641103590611, guid: 889cbe4269ae7a2478908bd96d3ab63f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -2625,6 +2617,10 @@ PrefabInstance:
     - target: {fileID: 8409130634675301523, guid: 889cbe4269ae7a2478908bd96d3ab63f, type: 3}
       propertyPath: m_Name
       value: settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409130634675301523, guid: 889cbe4269ae7a2478908bd96d3ab63f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8726828048059081590, guid: 889cbe4269ae7a2478908bd96d3ab63f, type: 3}
       propertyPath: m_Pivot.x
@@ -2680,7 +2676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8726828048059081590, guid: 889cbe4269ae7a2478908bd96d3ab63f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -29.3
       objectReference: {fileID: 0}
     - target: {fileID: 8726828048059081590, guid: 889cbe4269ae7a2478908bd96d3ab63f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2688,15 +2684,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8726828048059081590, guid: 889cbe4269ae7a2478908bd96d3ab63f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8726828048059081590, guid: 889cbe4269ae7a2478908bd96d3ab63f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8726828048059081590, guid: 889cbe4269ae7a2478908bd96d3ab63f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8726828048059081590, guid: 889cbe4269ae7a2478908bd96d3ab63f, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2720,7 +2716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8732987221851554998, guid: 889cbe4269ae7a2478908bd96d3ab63f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2730,11 +2726,6 @@ PrefabInstance:
 --- !u!1 &1107904753 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8409130634675301523, guid: 889cbe4269ae7a2478908bd96d3ab63f, type: 3}
-  m_PrefabInstance: {fileID: 1107904752}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &1107904754 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8726828048059081590, guid: 889cbe4269ae7a2478908bd96d3ab63f, type: 3}
   m_PrefabInstance: {fileID: 1107904752}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1121568771
@@ -5040,4 +5031,5 @@ SceneRoots:
   - {fileID: 1049479714}
   - {fileID: 68371163}
   - {fileID: 766343598}
+  - {fileID: 1107904752}
   - {fileID: 707892192}
