@@ -10,7 +10,7 @@ public class StartGameButton : MonoBehaviour
     public AudioSource bgmSource;       // background music
     public AudioSource sfxSource;       // click sound source
     public AudioClip clickSound;        // click sound
-
+    [SerializeField] private GameObject Parent_player;
     private void Start()
     {
         GameObject manager = GameObject.FindGameObjectWithTag("gameManager");
@@ -66,6 +66,11 @@ public class StartGameButton : MonoBehaviour
             {
                 deathUI.SetActive(false);
             }
+            if (Parent_player != null)
+            {
+                Parent_player.GetComponent<DDL>().enabled = false;
+               Destroy(Parent_player);
+            }
             logicScript.SaveData();
             logicScript.loadData();
             logicScript.resetdata();
@@ -90,7 +95,11 @@ public class StartGameButton : MonoBehaviour
         {
             deathUI.SetActive(false);
         }
-      
+        if (Parent_player != null)
+        {
+            Parent_player.GetComponent<DDL>().enabled = false;
+            Destroy(Parent_player);
+        }
         logicScript.SaveData();
         PlayClick();
         Application.Quit();
