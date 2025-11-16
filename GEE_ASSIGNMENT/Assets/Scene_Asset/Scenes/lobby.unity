@@ -2363,6 +2363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LVLUP_UI
       objectReference: {fileID: 0}
+    - target: {fileID: 3730550576685092073, guid: 59d38fb594641f741a6583803e745445, type: 3}
+      propertyPath: m_TagString
+      value: lvlupUI
+      objectReference: {fileID: 0}
     - target: {fileID: 3899895694540172444, guid: 59d38fb594641f741a6583803e745445, type: 3}
       propertyPath: m_Pivot.x
       value: 0

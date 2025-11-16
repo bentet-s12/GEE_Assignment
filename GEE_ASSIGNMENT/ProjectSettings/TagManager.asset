@@ -11,6 +11,7 @@ TagManager:
   - enemySpawn
   - weapon
   - Dragon
+  - lvlupUI
   layers:
   - Default
   - TransparentFX
