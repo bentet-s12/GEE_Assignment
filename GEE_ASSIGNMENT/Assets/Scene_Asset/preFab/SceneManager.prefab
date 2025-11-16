@@ -61,7 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnspace: {fileID: 0}
   enemyprefab: {fileID: 411059229876827932, guid: 0ee30b2e2f4cf434a87984be41e519a7, type: 3}
-  eliteprefab: {fileID: 7884640493505374966, guid: 214258471f4a75c4282d80f0b640afe0, type: 3}
+  eliteprefab: {fileID: 8278215926090852882, guid: 6a1419c4676c9a64b8006de89ca77734, type: 3}
   bossprefab: {fileID: 5203905003973247032, guid: 8db72dc4d553bab46a0883d2647fbcd1, type: 3}
   spawnedEnemies: 0
   defeatedEnemies: 0

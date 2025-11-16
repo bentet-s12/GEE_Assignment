@@ -187,8 +187,9 @@ public class levelling_logic : MonoBehaviour
             calculateExpNeeded();
             //open up the UI to pick power up
             lvlup_script.upgrade_refresh();
-            lvlup_UI.SetActive(true);
-            
+            lvlup_script.activeUI();
+
+
         }
     }
     public void bosslvlup()
@@ -262,10 +263,11 @@ public class levelling_logic : MonoBehaviour
             {
                 Debug.Log("cannot find stats");
             }
-            GameObject lvlupUI = GameObject.FindGameObjectWithTag("P_player");
-            if (lvlupUI != null)
+            lvlup_UI = GameObject.FindGameObjectWithTag("lvlupUI");
+            if (lvlup_UI != null)
             {
-                lvlup_script = lvlupUI.GetComponent<lvlup_UI>();
+
+                lvlup_script = lvlup_UI.GetComponent<lvlup_UI>();
             }
             else
             {
