@@ -64,7 +64,9 @@ public class StartGameButton : MonoBehaviour
         {
             logicScript.SaveData();
             logicScript.loadData();
+            logicScript.resetdata();
             SceneManager.LoadScene(sceneToLoad);
+
         }
         else
         {
@@ -80,6 +82,7 @@ public class StartGameButton : MonoBehaviour
 
     public void QuitGame()
     {
+        logicScript.SaveData();
         PlayClick();
         Application.Quit();
     }
