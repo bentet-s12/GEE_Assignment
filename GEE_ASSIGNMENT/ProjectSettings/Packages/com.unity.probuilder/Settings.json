@@ -24,12 +24,16 @@
             {
                 "type": "UnityEngine.ProBuilder.SemVer, Unity.ProBuilder",
                 "key": "preferences.version",
+<<<<<<< Updated upstream
                 "value": "{\"m_Value\":{\"m_Major\":6,\"m_Minor\":0,\"m_Patch\":7,\"m_Build\":-1}}"
             },
             {
                 "type": "System.Boolean, mscorlib",
                 "key": "lightmapping.autoUnwrapLightmapUV",
                 "value": "{\"m_Value\":true}"
+=======
+                "value": "{\"m_Value\":{\"m_Major\":6,\"m_Minor\":0,\"m_Patch\":7,\"m_Build\":-1,\"m_Type\":\"\",\"m_Metadata\":\"\",\"m_Date\":\"\"}}"
+>>>>>>> Stashed changes
             }
         ]
     }
