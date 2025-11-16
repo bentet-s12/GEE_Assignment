@@ -313,7 +313,7 @@ public class PlayerStateManager : MonoBehaviour
         DeathUI.SetActive(true);
         Parent_player.GetComponent<DDL>().enabled = false;
         Debug.Log("PLAYER DIED");
-        
+
     }
 
     // ------------------ GRAVITY ------------------

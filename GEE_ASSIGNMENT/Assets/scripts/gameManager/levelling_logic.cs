@@ -65,7 +65,7 @@ public class levelling_logic : MonoBehaviour
         Tempspeed = PlayerPrefs.GetFloat("spd");
         if (PlayerPrefs.GetString("teleport") == "true")
         {
-            
+
             upgradeTP();
         }
         else
@@ -99,7 +99,7 @@ public class levelling_logic : MonoBehaviour
             {
                 spdScript.teleportCooldown -= 0.2f;
             }
-            else if(spdScript.teleportCooldown < 0)
+            else if (spdScript.teleportCooldown < 0)
             {
                 spdScript.teleportCooldown = 0;
             }
@@ -117,7 +117,7 @@ public class levelling_logic : MonoBehaviour
         {
             doublejump = true;
         }
-  
+
     }
     public bool getDJ()
     {
@@ -176,7 +176,7 @@ public class levelling_logic : MonoBehaviour
     }
     public void calculateExpNeeded()
     {
-        
+
         expNeeded = (level + 1) * 10;
         Debug.Log("current level" + level.ToString());
     }
@@ -229,7 +229,7 @@ public class levelling_logic : MonoBehaviour
     }
     private void Update()
     {
-        if(player == null)
+        if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player");
             if (player != null)
@@ -285,9 +285,9 @@ public class levelling_logic : MonoBehaviour
                 ApplyRoomScaling(currentRoom);
                 lastRoom = currentRoom;
             }
-        
-    }
-        
+
+        }
+
         if (statScript != null)
         {
             if (statScript.getHealth() != health)
@@ -312,11 +312,11 @@ public class levelling_logic : MonoBehaviour
                 spdScript.setspeed(addspd);
 
             }
-            if(spdScript.canTeleport != teleport)
+            if (spdScript.canTeleport != teleport)
             {
                 spdScript.canTeleport = teleport;
             }
-            if(spdScript.canDoubleJump != doublejump)
+            if (spdScript.canDoubleJump != doublejump)
             {
                 spdScript.canDoubleJump = doublejump;
             }
@@ -360,5 +360,3 @@ public class levelling_logic : MonoBehaviour
         statScript.setmaxhealth();
     }
 }
-
-
