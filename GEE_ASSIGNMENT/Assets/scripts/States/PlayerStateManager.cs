@@ -86,17 +86,19 @@ public class PlayerStateManager : MonoBehaviour
 
     void Update()
     {
+        if (isDead)
+            return; // STOP ALL MOVEMENT / INPUT
+
         HandleAimToggle();
         HandleTeleport();
         HandleJumpInput();
-
         HandleMovement();
-
         currentState.UpdateState();
         ApplyGravity();
 
         
     }
+
     // ------------------ AIM TOGGLE ------------------
     private void HandleAimToggle()
     {
@@ -277,18 +279,38 @@ public class PlayerStateManager : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
-        controller.enabled = false;     // stop movement physic
-        animator.SetTrigger("Die");     // play death animation
+        controller.enabled = false;
+
+        animator.SetBool("Walking", false);
+        animator.SetBool("Running", false);
+        animator.SetBool("isJumping", false);
+        animator.SetBool("isFalling", false);
+        animator.SetBool("Aiming", false);
+
+        // IMPORTANT
+        animator.applyRootMotion = true;
+
+        animator.SetTrigger("Die");
+
+        // enable scripts
+        cameraScript.enabled = true;
+
+        shootScript gun = FindFirstObjectByType<shootScript>();
+        if (gun != null)
+            gun.enabled = false;
+
+        Debug.Log("PLAYER DIED");
     }
-
-
 
     // ------------------ GRAVITY ------------------
     private void ApplyGravity()
     {
+        if (isDead) return;  // don't apply gravity after death
+
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
+
 
     // ------------------ STATE SWITCH ------------------
     public void SwitchState(PlayerState newState)
