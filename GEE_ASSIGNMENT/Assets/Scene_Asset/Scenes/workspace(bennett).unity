@@ -2727,7 +2727,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66b47f961ff93224faf767c2b7b83853, type: 3}
-<<<<<<< HEAD
 --- !u!1001 &4527723841236883796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2829,8 +2828,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c07e67a8f463764fa8f8a0c7d5e1b0a, type: 3}
-=======
->>>>>>> parent of 1fccfc9 (Merge branch 'main' of https://github.com/bentet-s12/GEE_Assignment)
 --- !u!1001 &7337507148811321176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2947,8 +2944,5 @@ SceneRoots:
   - {fileID: 338484398}
   - {fileID: 1592407711}
   - {fileID: 7337507148811321176}
-<<<<<<< HEAD
   - {fileID: 4527723841236883796}
   - {fileID: 286158404}
-=======
->>>>>>> parent of 1fccfc9 (Merge branch 'main' of https://github.com/bentet-s12/GEE_Assignment)
