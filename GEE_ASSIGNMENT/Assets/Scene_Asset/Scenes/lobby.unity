@@ -12379,6 +12379,10 @@ PrefabInstance:
       propertyPath: DeathUI
       value: 
       objectReference: {fileID: 357824701}
+    - target: {fileID: 7978935857530388841, guid: 1ac36d54514b7b344bef2a6ef5036c15, type: 3}
+      propertyPath: Parent_player
+      value: 
+      objectReference: {fileID: 730365709069281336}
     m_RemovedComponents:
     - {fileID: 479520086170701715, guid: 1ac36d54514b7b344bef2a6ef5036c15, type: 3}
     m_RemovedGameObjects: []
@@ -12397,6 +12401,11 @@ PrefabInstance:
 --- !u!4 &730365709069281335 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6855221513519239855, guid: 1ac36d54514b7b344bef2a6ef5036c15, type: 3}
+  m_PrefabInstance: {fileID: 730365709069281334}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &730365709069281336 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5856331597361546072, guid: 1ac36d54514b7b344bef2a6ef5036c15, type: 3}
   m_PrefabInstance: {fileID: 730365709069281334}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2896460050192474341

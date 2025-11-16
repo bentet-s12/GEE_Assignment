@@ -49,7 +49,8 @@ public class PlayerStateManager : MonoBehaviour
     [HideInInspector] public bool isDead = false;
 
     private levelling_logic abilitycheckScript;
-    [SerializeField] GameObject DeathUI;
+    [SerializeField] private GameObject DeathUI;
+    [SerializeField] private GameObject Parent_player;
     public float getspeed()
     {
         return walkSpeed;
@@ -270,6 +271,7 @@ public class PlayerStateManager : MonoBehaviour
         }
 
         DeathUI.SetActive(true);
+        Parent_player.GetComponent<DDL>().enabled = false;
         Debug.Log("PLAYER DIED");
         
     }

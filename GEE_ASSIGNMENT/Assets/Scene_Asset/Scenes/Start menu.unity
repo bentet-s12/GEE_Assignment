@@ -2494,6 +2494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: lobby
   logicScript: {fileID: 0}
+  deathUI: {fileID: 0}
   bgmSource: {fileID: 766343597}
   sfxSource: {fileID: 68371164}
   clickSound: {fileID: 8300000, guid: 8b8f6ee0206cdd74fa68bacf7d228a63, type: 3}
