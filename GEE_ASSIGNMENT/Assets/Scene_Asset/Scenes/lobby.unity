@@ -2276,6 +2276,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4879746879111124943, guid: 08dbd1fe716e771458cb142f31f5dd1b, type: 3}
   m_PrefabInstance: {fileID: 357824699}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &357824701 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5727103785074875656, guid: 08dbd1fe716e771458cb142f31f5dd1b, type: 3}
+  m_PrefabInstance: {fileID: 357824699}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &367473798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12291,6 +12296,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7978935857530388841, guid: 1ac36d54514b7b344bef2a6ef5036c15, type: 3}
+      propertyPath: DeathUI
+      value: 
+      objectReference: {fileID: 357824701}
     m_RemovedComponents:
     - {fileID: 479520086170701715, guid: 1ac36d54514b7b344bef2a6ef5036c15, type: 3}
     m_RemovedGameObjects: []
