@@ -2363,6 +2363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LVLUP_UI
       objectReference: {fileID: 0}
+    - target: {fileID: 3730550576685092073, guid: 59d38fb594641f741a6583803e745445, type: 3}
+      propertyPath: m_TagString
+      value: lvlupUI
+      objectReference: {fileID: 0}
     - target: {fileID: 3899895694540172444, guid: 59d38fb594641f741a6583803e745445, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2443,6 +2447,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8329106069783917253, guid: 59d38fb594641f741a6583803e745445, type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 372411089}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2451,6 +2459,11 @@ PrefabInstance:
 --- !u!224 &372411088 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3899895694540172444, guid: 59d38fb594641f741a6583803e745445, type: 3}
+  m_PrefabInstance: {fileID: 372411087}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &372411089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3730550576685092073, guid: 59d38fb594641f741a6583803e745445, type: 3}
   m_PrefabInstance: {fileID: 372411087}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &393548718

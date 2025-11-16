@@ -31,6 +31,8 @@ public class levelling_logic : MonoBehaviour
     [SerializeField] private bool teleport;
     [SerializeField] private bool doublejump;
 
+    [SerializeField] private GameObject lvlup_UI;
+    [SerializeField] private lvlup_UI lvlup_script;
     private int lastRoom = 0;
 
     private GameObject player;
@@ -158,8 +160,17 @@ public class levelling_logic : MonoBehaviour
             {
                 Debug.Log("cannot find stats");
             }
+            GameObject lvlupUI = GameObject.FindGameObjectWithTag("P_player");
+            if (lvlupUI != null)
+            {
+                lvlup_script = lvlupUI.GetComponent<lvlup_UI>();
+            }
+            else
+            {
+                Debug.Log("cannot find lvlup_UI");
+            }
         }
-      }
+    }
     public void calculateExpNeeded()
     {
         
@@ -175,6 +186,10 @@ public class levelling_logic : MonoBehaviour
             level++;
             calculateExpNeeded();
             //open up the UI to pick power up
+            lvlup_script.upgrade_refresh();
+            lvlup_script.activeUI();
+
+
         }
     }
     public void bosslvlup()
@@ -247,6 +262,16 @@ public class levelling_logic : MonoBehaviour
             else
             {
                 Debug.Log("cannot find stats");
+            }
+            lvlup_UI = GameObject.FindGameObjectWithTag("lvlupUI");
+            if (lvlup_UI != null)
+            {
+
+                lvlup_script = lvlup_UI.GetComponent<lvlup_UI>();
+            }
+            else
+            {
+                Debug.Log("cannot find lvlup_UI");
             }
         }
         if (logicScript != null)

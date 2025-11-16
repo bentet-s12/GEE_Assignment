@@ -4,7 +4,22 @@ public class lvlup_UI : MonoBehaviour
 {
     [SerializeField]private GameObject[] cards;
     [SerializeField] private GameObject[] spawnarea;
+    [SerializeField] private GameObject UI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public void activeUI()
+    {
+        Time.timeScale = 0f;
+        
+        AudioListener.pause = true;
+        UI.SetActive(true);
+    }
+    public void deactivateUI()
+    {
+        Time.timeScale = 1f;
+       
+        AudioListener.pause = false;
+        UI.SetActive(false);
+    }
     public void upgrade_refresh()
     {
         //ensure that there are no other cards

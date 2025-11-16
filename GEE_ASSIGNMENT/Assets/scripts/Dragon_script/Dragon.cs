@@ -49,6 +49,12 @@ public class Dragon : MonoBehaviour
 
     [SerializeField] private levelling_logic exp;
 
+    private AudioSource audioSource;
+
+    [Header("Audio Clips")]
+    public AudioClip biteSFX;
+    public AudioClip flameSFX;
+
     void Start()
     {
         exp = GameObject.FindGameObjectWithTag("gameManager").GetComponent<levelling_logic>();
@@ -57,6 +63,7 @@ public class Dragon : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag(PLAYER_TAG).transform;
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         // Initialize health
         if (roomscaler != null)
@@ -86,6 +93,7 @@ public class Dragon : MonoBehaviour
         canBasicAttack = false;
 
         anim.SetTrigger("BasicAttack");
+        audioSource.PlayOneShot(biteSFX);
 
         stats playerStats = player.GetComponent<stats>();
         if (playerStats != null)
@@ -112,6 +120,7 @@ public class Dragon : MonoBehaviour
         canFlameAttack = false;
 
         anim.SetTrigger("FlameAttack");
+        audioSource.PlayOneShot(flameSFX);
 
         stats playerStats = player.GetComponent<stats>();
         if (playerStats != null)
