@@ -93,7 +93,15 @@ public class levelling_logic : MonoBehaviour
         }
         else
         {
-            spdScript.teleportCooldown -= 0.1f;
+            if (spdScript.teleportCooldown > 0)
+            {
+                spdScript.teleportCooldown -= 0.2f;
+            }
+            else if(spdScript.teleportCooldown < 0)
+            {
+                spdScript.teleportCooldown = 0;
+            }
+
             //lowercooldown
         }
     }
