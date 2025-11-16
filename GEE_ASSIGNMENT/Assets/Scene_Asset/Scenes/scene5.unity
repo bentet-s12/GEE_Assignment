@@ -365,6 +365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA01_Env_Road_Cobble_Moss_04b_PRE
       objectReference: {fileID: 0}
+    - target: {fileID: 6233096292939041653, guid: f70662cb4685eaa4f8e1a58a580aac1d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6758698668735320527, guid: f70662cb4685eaa4f8e1a58a580aac1d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.015125
@@ -426,6 +430,10 @@ PrefabInstance:
     - target: {fileID: 6233096292939041653, guid: f70662cb4685eaa4f8e1a58a580aac1d, type: 3}
       propertyPath: m_Name
       value: EA01_Env_Road_Cobble_Moss_04b_PRE (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6233096292939041653, guid: f70662cb4685eaa4f8e1a58a580aac1d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6758698668735320527, guid: f70662cb4685eaa4f8e1a58a580aac1d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -537,6 +545,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -544,53 +556,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 86853807}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &86853805 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 86853804}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &86853806 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 86853804}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &86853807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 86853806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: d86d30942a949c447acaab1e4d4f64e0, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &94262898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -677,6 +649,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 895830656}
     m_Modifications:
+    - target: {fileID: 2943419783917664618, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831766418393381563, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8278622331501454264, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -741,6 +721,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Light_Torch_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 9089102939040269415, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -762,6 +746,10 @@ PrefabInstance:
     - target: {fileID: 6949164254482429691, guid: a8e251c3c0af799498728494abc96b8a, type: 3}
       propertyPath: m_Name
       value: Sack03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949164254482429691, guid: a8e251c3c0af799498728494abc96b8a, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7726968316521360449, guid: a8e251c3c0af799498728494abc96b8a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -864,6 +852,10 @@ PrefabInstance:
     - target: {fileID: 8676463834776328374, guid: 4a6919bcb6890404eae44b7751b4bf78, type: 3}
       propertyPath: m_Name
       value: EA01_Env_Road_Cobble_Moss_03b_PRE (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676463834776328374, guid: 4a6919bcb6890404eae44b7751b4bf78, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1013,6 +1005,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1020,53 +1016,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 179398909}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &179398907 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 179398906}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &179398908 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 179398906}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &179398909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179398908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 948b07b260b4de64789904e7c85980eb, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &189272254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1118,6 +1074,10 @@ PrefabInstance:
     - target: {fileID: 735675652717641344, guid: 24f6108c57e74224ab3791bae33da617, type: 3}
       propertyPath: m_Name
       value: Sack01
+      objectReference: {fileID: 0}
+    - target: {fileID: 735675652717641344, guid: 24f6108c57e74224ab3791bae33da617, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1215,6 +1175,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 895830656}
     m_Modifications:
+    - target: {fileID: 2943419783917664618, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831766418393381563, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8278622331501454264, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -1279,6 +1247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Light_Torch_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 9089102939040269415, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1340,6 +1312,10 @@ PrefabInstance:
     - target: {fileID: 8676463834776328374, guid: 4a6919bcb6890404eae44b7751b4bf78, type: 3}
       propertyPath: m_Name
       value: EA01_Env_Road_Cobble_Moss_03b_PRE (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676463834776328374, guid: 4a6919bcb6890404eae44b7751b4bf78, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1481,6 +1457,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClothesLine (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 622858727222471593, guid: 4bfe4f1a3243326488f3a530e31d077d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1555,6 +1535,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Coins_02
       objectReference: {fileID: 0}
+    - target: {fileID: 3076439506197556826, guid: a08e0d8ece7e220468a603f13092736c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1576,6 +1560,10 @@ PrefabInstance:
     - target: {fileID: 8629210084909255625, guid: 8aaac2cbed66d7a438abe5d0466b786b, type: 3}
       propertyPath: m_Name
       value: NGF_Barrel_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629210084909255625, guid: 8aaac2cbed66d7a438abe5d0466b786b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8974210018182975859, guid: 8aaac2cbed66d7a438abe5d0466b786b, type: 3}
       propertyPath: m_LocalScale.x
@@ -1650,6 +1638,10 @@ PrefabInstance:
     - target: {fileID: 7456256276691831009, guid: 74bde1252c71a034980edc99771ebbd9, type: 3}
       propertyPath: m_Name
       value: Box02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456256276691831009, guid: 74bde1252c71a034980edc99771ebbd9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7796330432501256795, guid: 74bde1252c71a034980edc99771ebbd9, type: 3}
       propertyPath: m_LocalScale.x
@@ -1773,6 +1765,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1780,53 +1776,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 253417531}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &253417529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 253417528}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &253417530 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 253417528}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &253417531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253417530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 26525136fbcbe36498f09137769cd7f6, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &253755848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1835,6 +1791,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 895830656}
     m_Modifications:
+    - target: {fileID: 2943419783917664618, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831766418393381563, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8278622331501454264, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -1898,6 +1862,10 @@ PrefabInstance:
     - target: {fileID: 9089102939040269415, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
       propertyPath: m_Name
       value: NGF_Light_Torch_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9089102939040269415, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2117,6 +2085,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Book_small_02
       objectReference: {fileID: 0}
+    - target: {fileID: 4503182584809373749, guid: 0a8b57bd3b8fa7b4897efded28e95d48, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2335,6 +2307,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA01_Env_Road_Cobble_Moss_03b_PRE (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8676463834776328374, guid: 4a6919bcb6890404eae44b7751b4bf78, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2353,6 +2329,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 895830656}
     m_Modifications:
+    - target: {fileID: 408174624010304937, guid: a8e48fb3bf59d15439283a510bd4effb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4762335750019389974, guid: a8e48fb3bf59d15439283a510bd4effb, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.8442
@@ -2409,6 +2389,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Chest_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5286354657075839148, guid: a8e48fb3bf59d15439283a510bd4effb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6422859128712048249, guid: a8e48fb3bf59d15439283a510bd4effb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650368096825779948, guid: a8e48fb3bf59d15439283a510bd4effb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907832856706570709, guid: a8e48fb3bf59d15439283a510bd4effb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2430,6 +2426,10 @@ PrefabInstance:
     - target: {fileID: 1573239227211775334, guid: 92a593af37536334d988c772bf547589, type: 3}
       propertyPath: m_Name
       value: NGF_Env_Brick_small_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1573239227211775334, guid: 92a593af37536334d988c772bf547589, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2206363670309152732, guid: 92a593af37536334d988c772bf547589, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2493,6 +2493,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Light_Pedestal_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1726765264077759207, guid: 230dc22592fef7b4fa38844ac6cb7cf2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2070920767576930397, guid: 230dc22592fef7b4fa38844ac6cb7cf2, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4991
@@ -2544,6 +2548,10 @@ PrefabInstance:
     - target: {fileID: 2070920767576930397, guid: 230dc22592fef7b4fa38844ac6cb7cf2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3171922804479784496, guid: 230dc22592fef7b4fa38844ac6cb7cf2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2645,6 +2653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box02
       objectReference: {fileID: 0}
+    - target: {fileID: 7456256276691831009, guid: 74bde1252c71a034980edc99771ebbd9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7796330432501256795, guid: 74bde1252c71a034980edc99771ebbd9, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.6532
@@ -2722,6 +2734,10 @@ PrefabInstance:
     - target: {fileID: 6024144505019928961, guid: 2f93ce104037b0643a12bf89172b1fa4, type: 3}
       propertyPath: m_Name
       value: NGF_Env_Column_04 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6024144505019928961, guid: 2f93ce104037b0643a12bf89172b1fa4, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6400141934331284283, guid: 2f93ce104037b0643a12bf89172b1fa4, type: 3}
       propertyPath: m_LocalScale.x
@@ -2837,6 +2853,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA01_Env_Road_Cobble_Moss_03b_PRE (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8676463834776328374, guid: 4a6919bcb6890404eae44b7751b4bf78, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2898,6 +2918,10 @@ PrefabInstance:
     - target: {fileID: 7991276272930775699, guid: f758a332326fdad4c95eebd59558040f, type: 3}
       propertyPath: m_Name
       value: NGF_Env_Ceil_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7991276272930775699, guid: f758a332326fdad4c95eebd59558040f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3203,6 +3227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -3210,53 +3238,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 383744681}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &383744679 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 383744678}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &383744680 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 383744678}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &383744681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383744680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 065bb64c0f6b7da44b78dba30bbfcccf, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &396390048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3465,6 +3453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClothesLine (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 622858727222471593, guid: 4bfe4f1a3243326488f3a530e31d077d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3613,6 +3605,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box04 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6760806682838902219, guid: d2574b4561b007d44b0e1b2ee7bf3c08, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3634,6 +3630,10 @@ PrefabInstance:
     - target: {fileID: 3705932080514532444, guid: 5da87029dd17a0c4c8fd2f5cb268a45d, type: 3}
       propertyPath: m_Name
       value: Newspapers (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705932080514532444, guid: 5da87029dd17a0c4c8fd2f5cb268a45d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4045865494597295846, guid: 5da87029dd17a0c4c8fd2f5cb268a45d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3806,6 +3806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Crate_03
       objectReference: {fileID: 0}
+    - target: {fileID: 8914257937366541342, guid: eca6c471453570440b948018e9de4763, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3827,6 +3831,10 @@ PrefabInstance:
     - target: {fileID: 8095199203365782797, guid: da9448f8707691d4eb86987681a32473, type: 3}
       propertyPath: m_Name
       value: EA01_Env_Road_Cobble_Moss_04c_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095199203365782797, guid: da9448f8707691d4eb86987681a32473, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8871031773121011639, guid: da9448f8707691d4eb86987681a32473, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3934,6 +3942,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Fx (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2341631016086246860, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594948009868458338, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689882410493412398, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3956,7 +3976,7 @@ GameObject:
   - component: {fileID: 465890340}
   - component: {fileID: 465890339}
   - component: {fileID: 465890338}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4045,12 +4065,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465890337}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.73, y: -0.1, z: 0}
-  m_LocalScale: {x: 58.87282, y: 1, z: 59.228317}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1178851226}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &472435789
 PrefabInstance:
@@ -4346,6 +4366,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -4353,53 +4377,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 499492972}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &499492970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 499492969}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &499492971 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 499492969}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &499492972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499492971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: cd19536edb959bf46adbd36f025c5e37, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &503438685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4411,6 +4395,10 @@ PrefabInstance:
     - target: {fileID: 1726765264077759207, guid: 230dc22592fef7b4fa38844ac6cb7cf2, type: 3}
       propertyPath: m_Name
       value: NGF_Light_Pedestal_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726765264077759207, guid: 230dc22592fef7b4fa38844ac6cb7cf2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2070920767576930397, guid: 230dc22592fef7b4fa38844ac6cb7cf2, type: 3}
       propertyPath: m_LocalScale.x
@@ -4463,6 +4451,10 @@ PrefabInstance:
     - target: {fileID: 2070920767576930397, guid: 230dc22592fef7b4fa38844ac6cb7cf2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3171922804479784496, guid: 230dc22592fef7b4fa38844ac6cb7cf2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4534,6 +4526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -4541,53 +4537,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 522916427}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &522916425 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 522916424}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &522916426 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 522916424}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &522916427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522916426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: d7f4c9735b1fc204381e412387fd7499, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &570000093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4651,6 +4607,10 @@ PrefabInstance:
     - target: {fileID: 8271493619714806536, guid: 4189fe8001ecbd1438b9832741309635, type: 3}
       propertyPath: m_Name
       value: NGF_Bag_of_coins
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271493619714806536, guid: 4189fe8001ecbd1438b9832741309635, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4722,6 +4682,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -4729,53 +4693,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 576771230}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &576771228 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 576771227}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &576771229 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 576771227}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &576771230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576771229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 5ba3a02b7e8e2ba49863b8ed8b4684db, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &590296735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4831,6 +4755,18 @@ PrefabInstance:
     - target: {fileID: 2341631016086246860, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
       propertyPath: m_Name
       value: Fire_Fx (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2341631016086246860, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594948009868458338, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689882410493412398, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4893,6 +4829,10 @@ PrefabInstance:
     - target: {fileID: 7875937034443474270, guid: b47eb683663799840b8113602cd083b4, type: 3}
       propertyPath: m_Name
       value: NGF_Book_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7875937034443474270, guid: b47eb683663799840b8113602cd083b4, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4959,6 +4899,18 @@ PrefabInstance:
     - target: {fileID: 2341631016086246860, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
       propertyPath: m_Name
       value: Fire_Fx (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2341631016086246860, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594948009868458338, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689882410493412398, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5108,6 +5060,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -5115,53 +5071,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 647404676}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &647404674 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 647404673}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &647404675 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 647404673}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &647404676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 647404675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: bd57106e977506843badd50ec408c0ef, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &658970011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5222,6 +5138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -5229,53 +5149,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 658970014}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &658970012 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 658970011}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &658970013 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 658970011}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &658970014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 658970013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: c4c8d65c971db38449253f3155369c14, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &674224089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5328,6 +5208,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClothesLine
       objectReference: {fileID: 0}
+    - target: {fileID: 622858727222471593, guid: 4bfe4f1a3243326488f3a530e31d077d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5349,6 +5233,10 @@ PrefabInstance:
     - target: {fileID: 8629210084909255625, guid: 8aaac2cbed66d7a438abe5d0466b786b, type: 3}
       propertyPath: m_Name
       value: NGF_Barrel_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629210084909255625, guid: 8aaac2cbed66d7a438abe5d0466b786b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8974210018182975859, guid: 8aaac2cbed66d7a438abe5d0466b786b, type: 3}
       propertyPath: m_LocalScale.x
@@ -5472,6 +5360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -5479,53 +5371,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 711925368}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &711925366 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 711925365}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &711925367 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 711925365}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &711925368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711925367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: d626c66a79d404b499bc55ffa2e8d76b, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &725440006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5890,6 +5742,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Brick_10
       objectReference: {fileID: 0}
+    - target: {fileID: 6844488442100958035, guid: 2d799fcf36e1b77449ab08d21765d71b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5960,6 +5816,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -5967,53 +5827,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 778351304}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &778351302 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 778351301}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &778351303 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 778351301}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &778351304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778351303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 348899c516eb745468e04a85550fc0cc, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1 &800843564
 GameObject:
   m_ObjectHideFlags: 0
@@ -6111,6 +5931,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 895830656}
     m_Modifications:
+    - target: {fileID: 2943419783917664618, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831766418393381563, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8278622331501454264, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -6174,6 +6002,10 @@ PrefabInstance:
     - target: {fileID: 9089102939040269415, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
       propertyPath: m_Name
       value: NGF_Light_Torch_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9089102939040269415, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6241,6 +6073,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Fx (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2341631016086246860, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594948009868458338, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689882410493412398, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6262,6 +6106,10 @@ PrefabInstance:
     - target: {fileID: 8629210084909255625, guid: 8aaac2cbed66d7a438abe5d0466b786b, type: 3}
       propertyPath: m_Name
       value: NGF_Barrel_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629210084909255625, guid: 8aaac2cbed66d7a438abe5d0466b786b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8974210018182975859, guid: 8aaac2cbed66d7a438abe5d0466b786b, type: 3}
       propertyPath: m_LocalScale.x
@@ -6384,6 +6232,10 @@ PrefabInstance:
     - target: {fileID: 6760806682838902219, guid: d2574b4561b007d44b0e1b2ee7bf3c08, type: 3}
       propertyPath: m_Name
       value: Box04 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760806682838902219, guid: d2574b4561b007d44b0e1b2ee7bf3c08, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6533,6 +6385,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -6540,53 +6396,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 890977923}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &890977921 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 890977920}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &890977922 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 890977920}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &890977923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 890977922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: eb211269c80e84c40ada148dc28ba4f9, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1 &895830655
 GameObject:
   m_ObjectHideFlags: 0
@@ -6596,7 +6412,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 895830656}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: mapstuff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6611,9 +6427,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 895830655}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.321, y: 7.052, z: 12.82}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.26482508, y: 7.152, z: 0.21645053}
+  m_LocalScale: {x: 0.016985767, y: 1, z: 0.016883817}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 303164383}
@@ -6697,7 +6513,7 @@ Transform:
   - {fileID: 1433507583}
   - {fileID: 2124768423}
   - {fileID: 464756798}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1178851226}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &903693163
 PrefabInstance:
@@ -6788,6 +6604,10 @@ PrefabInstance:
     - target: {fileID: 3705932080514532444, guid: 5da87029dd17a0c4c8fd2f5cb268a45d, type: 3}
       propertyPath: m_Name
       value: Newspapers (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705932080514532444, guid: 5da87029dd17a0c4c8fd2f5cb268a45d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4045865494597295846, guid: 5da87029dd17a0c4c8fd2f5cb268a45d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6899,6 +6719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -6906,53 +6730,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 940567856}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &940567854 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 940567853}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &940567855 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 940567853}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &940567856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940567855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 52af73c1dfdc0fb4d9c153a1b769c766, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &942807113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7042,6 +6826,10 @@ PrefabInstance:
     - target: {fileID: 8629210084909255625, guid: 8aaac2cbed66d7a438abe5d0466b786b, type: 3}
       propertyPath: m_Name
       value: NGF_Barrel_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629210084909255625, guid: 8aaac2cbed66d7a438abe5d0466b786b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8974210018182975859, guid: 8aaac2cbed66d7a438abe5d0466b786b, type: 3}
       propertyPath: m_LocalScale.x
@@ -7157,6 +6945,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA01_Env_Road_Cobble_Moss_04a_PRE (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5362435494832233739, guid: 136822af14eb2c8458705123d71f66cd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7231,6 +7023,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Bag_of_coins (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8271493619714806536, guid: 4189fe8001ecbd1438b9832741309635, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7292,6 +7088,10 @@ PrefabInstance:
     - target: {fileID: 8676463834776328374, guid: 4a6919bcb6890404eae44b7751b4bf78, type: 3}
       propertyPath: m_Name
       value: EA01_Env_Road_Cobble_Moss_03b_PRE (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676463834776328374, guid: 4a6919bcb6890404eae44b7751b4bf78, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7363,6 +7163,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box04 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6760806682838902219, guid: d2574b4561b007d44b0e1b2ee7bf3c08, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7424,6 +7228,10 @@ PrefabInstance:
     - target: {fileID: 2895389238790461492, guid: ada4ce43c2aa4594a99e3970ba127612, type: 3}
       propertyPath: m_Name
       value: NGF_Book_open_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2895389238790461492, guid: ada4ce43c2aa4594a99e3970ba127612, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7495,6 +7303,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -7502,53 +7314,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 998990314}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &998990312 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 998990311}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &998990313 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 998990311}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &998990314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 998990313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: a7f69522292a35144a365c9f5e675dd8, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &1001247745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7609,6 +7381,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -7616,53 +7392,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1001247748}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &1001247746 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 1001247745}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1001247747 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 1001247745}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1001247748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001247747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: acb8eca38f5a96e419d99c463f745d43, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &1009032058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7674,6 +7410,10 @@ PrefabInstance:
     - target: {fileID: 2416547330357942522, guid: f90ff1e2c5acc904c8a0d6860e8daf92, type: 3}
       propertyPath: m_Name
       value: NGF_Book_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2416547330357942522, guid: f90ff1e2c5acc904c8a0d6860e8daf92, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3081196974336574016, guid: f90ff1e2c5acc904c8a0d6860e8daf92, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7785,6 +7525,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -7792,53 +7536,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1009451102}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &1009451100 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 1009451099}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1009451101 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 1009451099}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1009451102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1009451101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 86e3d9efbed51584eb793a49cded6d8c, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &1054138374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7899,6 +7603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -7906,53 +7614,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1054138377}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &1054138375 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 1054138374}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1054138376 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 1054138374}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1054138377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1054138376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: cdecdfd3286779e49af6b56c19434e20, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &1075293975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7964,6 +7632,10 @@ PrefabInstance:
     - target: {fileID: 3694685117111359570, guid: 9fed61d25bf0732449bdd216802cd056, type: 3}
       propertyPath: m_Name
       value: Sand
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694685117111359570, guid: 9fed61d25bf0732449bdd216802cd056, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4039157280512934632, guid: 9fed61d25bf0732449bdd216802cd056, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8023,6 +7695,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 895830656}
     m_Modifications:
+    - target: {fileID: 2943419783917664618, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831766418393381563, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8278622331501454264, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -8086,6 +7766,10 @@ PrefabInstance:
     - target: {fileID: 9089102939040269415, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
       propertyPath: m_Name
       value: NGF_Light_Torch_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9089102939040269415, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8504,7 +8188,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1178851226}
-  m_Layer: 0
+  - component: {fileID: 1178851227}
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8549,8 +8234,42 @@ Transform:
   - {fileID: 2115689588}
   - {fileID: 383744679}
   - {fileID: 253417529}
+  - {fileID: 465890341}
+  - {fileID: 895830656}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1178851227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178851225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 1
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 20
+  m_NavMeshData: {fileID: 23800000, guid: 214c56dfcb975f84e8e87fb452d03a40, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &1180105115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8602,6 +8321,10 @@ PrefabInstance:
     - target: {fileID: 8676463834776328374, guid: 4a6919bcb6890404eae44b7751b4bf78, type: 3}
       propertyPath: m_Name
       value: EA01_Env_Road_Cobble_Moss_03b_PRE (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676463834776328374, guid: 4a6919bcb6890404eae44b7751b4bf78, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8677,6 +8400,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Coins_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3076439506197556826, guid: a08e0d8ece7e220468a603f13092736c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8698,6 +8425,10 @@ PrefabInstance:
     - target: {fileID: 8629210084909255625, guid: 8aaac2cbed66d7a438abe5d0466b786b, type: 3}
       propertyPath: m_Name
       value: NGF_Barrel_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629210084909255625, guid: 8aaac2cbed66d7a438abe5d0466b786b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8974210018182975859, guid: 8aaac2cbed66d7a438abe5d0466b786b, type: 3}
       propertyPath: m_LocalScale.x
@@ -8977,6 +8708,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -8984,53 +8719,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1218273450}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &1218273448 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 1218273447}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1218273449 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 1218273447}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1218273450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1218273449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: efdde764dfb185b4a9e291fad9533f98, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &1228868809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9160,6 +8855,10 @@ PrefabInstance:
     - target: {fileID: 1991333075782563503, guid: 3ffef52221ec8cb44be3a6b897581305, type: 3}
       propertyPath: m_Name
       value: Sack04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991333075782563503, guid: 3ffef52221ec8cb44be3a6b897581305, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9417,6 +9116,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7456256276691831009, guid: 74bde1252c71a034980edc99771ebbd9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7796330432501256795, guid: 74bde1252c71a034980edc99771ebbd9, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.6532
@@ -9573,6 +9276,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Column_04 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6024144505019928961, guid: 2f93ce104037b0643a12bf89172b1fa4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6400141934331284283, guid: 2f93ce104037b0643a12bf89172b1fa4, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.612
@@ -9691,6 +9398,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Fx
       objectReference: {fileID: 0}
+    - target: {fileID: 2341631016086246860, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594948009868458338, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689882410493412398, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9756,6 +9475,18 @@ PrefabInstance:
     - target: {fileID: 2341631016086246860, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
       propertyPath: m_Name
       value: Fire_Fx (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2341631016086246860, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594948009868458338, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689882410493412398, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9830,6 +9561,10 @@ PrefabInstance:
     - target: {fileID: 3076439506197556826, guid: a08e0d8ece7e220468a603f13092736c, type: 3}
       propertyPath: m_Name
       value: NGF_Coins_02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076439506197556826, guid: a08e0d8ece7e220468a603f13092736c, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10022,6 +9757,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -10029,53 +9768,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1468578475}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &1468578473 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 1468578472}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1468578474 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 1468578472}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1468578475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468578474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: b9e64347d7ae8e14b8220f2b3a74562a, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &1470357366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10713,6 +10412,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -10720,53 +10423,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1548733027}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &1548733025 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 1548733024}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1548733026 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 1548733024}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1548733027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548733026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: c5966e7d8d30b08469b0e1e6d557aa1b, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &1595415506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10848,6 +10511,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RuinedCar
       objectReference: {fileID: 0}
+    - target: {fileID: 1536574757321280650, guid: 80265af3619702c4fa412a4ee6375c6e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2168714347235759664, guid: 80265af3619702c4fa412a4ee6375c6e, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.7178
@@ -10921,6 +10588,10 @@ PrefabInstance:
     - target: {fileID: 482002131922744556, guid: 7eff63078612850448f8437f0a750bb5, type: 3}
       propertyPath: m_Name
       value: GasCylinder02
+      objectReference: {fileID: 0}
+    - target: {fileID: 482002131922744556, guid: 7eff63078612850448f8437f0a750bb5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1007604335649762902, guid: 7eff63078612850448f8437f0a750bb5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11032,6 +10703,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box04 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6760806682838902219, guid: d2574b4561b007d44b0e1b2ee7bf3c08, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11101,6 +10776,10 @@ PrefabInstance:
     - target: {fileID: 6760806682838902219, guid: d2574b4561b007d44b0e1b2ee7bf3c08, type: 3}
       propertyPath: m_Name
       value: Box04 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760806682838902219, guid: d2574b4561b007d44b0e1b2ee7bf3c08, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11198,6 +10877,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 895830656}
     m_Modifications:
+    - target: {fileID: 2943419783917664618, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831766418393381563, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8278622331501454264, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -11262,6 +10949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Light_Torch_01
       objectReference: {fileID: 0}
+    - target: {fileID: 9089102939040269415, guid: cd659715c1a1aa54f88ef1de4c39e9db, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11283,6 +10974,10 @@ PrefabInstance:
     - target: {fileID: 3705932080514532444, guid: 5da87029dd17a0c4c8fd2f5cb268a45d, type: 3}
       propertyPath: m_Name
       value: Newspapers
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705932080514532444, guid: 5da87029dd17a0c4c8fd2f5cb268a45d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4045865494597295846, guid: 5da87029dd17a0c4c8fd2f5cb268a45d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11394,6 +11089,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -11401,53 +11100,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1733702911}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &1733702909 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 1733702908}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1733702910 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 1733702908}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1733702911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733702910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 5d3d8cea020f2cd498e6ecb969bd383d, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &1748398914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11592,6 +11251,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -11599,53 +11262,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1774541912}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &1774541910 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 1774541909}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1774541911 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 1774541909}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1774541912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774541911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 2118d02fc869fc34b843d7fbd0f53c9a, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &1780793835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11810,6 +11433,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 895830656}
     m_Modifications:
+    - target: {fileID: 408174624010304937, guid: a8e48fb3bf59d15439283a510bd4effb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4762335750019389974, guid: a8e48fb3bf59d15439283a510bd4effb, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.8442
@@ -11865,6 +11492,22 @@ PrefabInstance:
     - target: {fileID: 5286354657075839148, guid: a8e48fb3bf59d15439283a510bd4effb, type: 3}
       propertyPath: m_Name
       value: NGF_Chest_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286354657075839148, guid: a8e48fb3bf59d15439283a510bd4effb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6422859128712048249, guid: a8e48fb3bf59d15439283a510bd4effb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650368096825779948, guid: a8e48fb3bf59d15439283a510bd4effb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907832856706570709, guid: a8e48fb3bf59d15439283a510bd4effb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11939,6 +11582,10 @@ PrefabInstance:
     - target: {fileID: 5534098952110440530, guid: c2c15114fef559c44b07c28466206c6d, type: 3}
       propertyPath: m_Name
       value: NGF_Crate_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534098952110440530, guid: c2c15114fef559c44b07c28466206c6d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12131,6 +11778,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -12138,53 +11789,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1820177858}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &1820177856 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 1820177855}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1820177857 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 1820177855}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1820177858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820177857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: a72b213fe6f79d3439c66ec2b0b4115a, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &1829434972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12245,6 +11856,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -12252,53 +11867,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1829434975}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &1829434973 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 1829434972}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1829434974 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 1829434972}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1829434975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829434974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 67532cf01a17ce14cb7faa07d6c7734f, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &1841899241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12307,9 +11882,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 895830656}
     m_Modifications:
+    - target: {fileID: 3096076370126101663, guid: f7fdfbe18d9268f40973ba9d7a11fc39, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3510623310698035078, guid: f7fdfbe18d9268f40973ba9d7a11fc39, type: 3}
       propertyPath: m_Name
       value: NGF_Chest_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510623310698035078, guid: f7fdfbe18d9268f40973ba9d7a11fc39, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4320058020700417340, guid: f7fdfbe18d9268f40973ba9d7a11fc39, type: 3}
       propertyPath: m_LocalScale.x
@@ -12545,6 +12128,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Column_04 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6024144505019928961, guid: 2f93ce104037b0643a12bf89172b1fa4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6400141934331284283, guid: 2f93ce104037b0643a12bf89172b1fa4, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.612
@@ -12667,6 +12254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box04 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6760806682838902219, guid: d2574b4561b007d44b0e1b2ee7bf3c08, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12728,6 +12319,10 @@ PrefabInstance:
     - target: {fileID: 8676463834776328374, guid: 4a6919bcb6890404eae44b7751b4bf78, type: 3}
       propertyPath: m_Name
       value: EA01_Env_Road_Cobble_Moss_03b_PRE (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676463834776328374, guid: 4a6919bcb6890404eae44b7751b4bf78, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12828,6 +12423,10 @@ PrefabInstance:
     - target: {fileID: 1223668164687629082, guid: 0dc4fe15577dc8446afffaa1bea63c1e, type: 3}
       propertyPath: m_Name
       value: Table01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223668164687629082, guid: 0dc4fe15577dc8446afffaa1bea63c1e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1995243184918712736, guid: 0dc4fe15577dc8446afffaa1bea63c1e, type: 3}
       propertyPath: m_LocalScale.x
@@ -12984,6 +12583,10 @@ PrefabInstance:
     - target: {fileID: 6760806682838902219, guid: d2574b4561b007d44b0e1b2ee7bf3c08, type: 3}
       propertyPath: m_Name
       value: Box04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760806682838902219, guid: d2574b4561b007d44b0e1b2ee7bf3c08, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13163,6 +12766,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel03
       objectReference: {fileID: 0}
+    - target: {fileID: 2879965604949167394, guid: 6767f0db873750e4ca9bb75bd044472e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3223559018377566104, guid: 6767f0db873750e4ca9bb75bd044472e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 34.195213
@@ -13264,6 +12871,10 @@ PrefabInstance:
     - target: {fileID: 5362435494832233739, guid: 136822af14eb2c8458705123d71f66cd, type: 3}
       propertyPath: m_Name
       value: EA01_Env_Road_Cobble_Moss_04a_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 5362435494832233739, guid: 136822af14eb2c8458705123d71f66cd, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13508,6 +13119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sack02
       objectReference: {fileID: 0}
+    - target: {fileID: 1660419103546863340, guid: e1810117ae6b7904f9dc50b3bf4a4004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2035959960384222294, guid: e1810117ae6b7904f9dc50b3bf4a4004, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.82264
@@ -13610,6 +13225,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA01_Env_Road_Cobble_Moss_03b_PRE
       objectReference: {fileID: 0}
+    - target: {fileID: 8676463834776328374, guid: 4a6919bcb6890404eae44b7751b4bf78, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13675,6 +13294,18 @@ PrefabInstance:
     - target: {fileID: 2341631016086246860, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
       propertyPath: m_Name
       value: Fire_Fx (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2341631016086246860, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594948009868458338, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689882410493412398, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13775,6 +13406,10 @@ PrefabInstance:
     - target: {fileID: 8629210084909255625, guid: 8aaac2cbed66d7a438abe5d0466b786b, type: 3}
       propertyPath: m_Name
       value: NGF_Barrel_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629210084909255625, guid: 8aaac2cbed66d7a438abe5d0466b786b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8974210018182975859, guid: 8aaac2cbed66d7a438abe5d0466b786b, type: 3}
       propertyPath: m_LocalScale.x
@@ -14054,6 +13689,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Env_Floor_06 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1266924850176997065, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -14061,53 +13700,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2115689590}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
 --- !u!4 &2115689588 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 134590861873106342, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
   m_PrefabInstance: {fileID: 2115689587}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2115689589 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 762789492003542812, guid: db3192f630a7b9040bc3cbb2bcb462a3, type: 3}
-  m_PrefabInstance: {fileID: 2115689587}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2115689590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2115689589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 3c9ffd38ef240c840876d4964da5d907, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &2124768422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14163,6 +13762,18 @@ PrefabInstance:
     - target: {fileID: 2341631016086246860, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
       propertyPath: m_Name
       value: Fire_Fx (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2341631016086246860, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594948009868458338, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689882410493412398, guid: 23da9eb181967734f8de15fcf4eeda90, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14238,6 +13849,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NGF_Bag_of_coins (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8271493619714806536, guid: 4189fe8001ecbd1438b9832741309635, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14258,8 +13873,6 @@ SceneRoots:
   - {fileID: 800843565}
   - {fileID: 1178851226}
   - {fileID: 1927721501}
-  - {fileID: 465890341}
-  - {fileID: 895830656}
   - {fileID: 1595415506}
   - {fileID: 1748398914}
   - {fileID: 449837922}

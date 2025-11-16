@@ -15,8 +15,10 @@ public class enemystats : MonoBehaviour
     {
         spawnscript = GameObject.FindGameObjectWithTag("SpawnPoint").GetComponent<enemyspawn>();
         roomscaler = GameObject.FindGameObjectWithTag("gameManager").GetComponent<gamelogic>();
+      
         if (roomscaler != null)
         {
+            currentroom = roomscaler.getCurrentRoom();
             health = health + (currentroom * 10);
         }
         else

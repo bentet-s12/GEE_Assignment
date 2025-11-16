@@ -31,6 +31,8 @@ public class levelling_logic : MonoBehaviour
     [SerializeField] private bool teleport;
     [SerializeField] private bool doublejump;
 
+    private int lastRoom = 0;
+
     private GameObject player;
     //playerPrefs
     public void SaveData()
@@ -137,7 +139,18 @@ public class levelling_logic : MonoBehaviour
             //open up the UI to pick power up
         }
     }
-    
+    public void bosslvlup()
+    {
+        currentexp = expNeeded;
+        if (currentexp >= expNeeded)
+        {
+            currentexp = 0;
+            level++;
+            calculateExpNeeded();
+            //open up the UI to pick power up
+        }
+    }
+
     public void adddmg(int dmg)
     {
         if (gunScript != null)
@@ -201,13 +214,14 @@ public class levelling_logic : MonoBehaviour
         if (logicScript != null)
         {
             int currentRoom = logicScript.getCurrentRoom();
-            health = health * currentRoom;
-        }
-        else
-        {
-            health = 20;
 
-        }
+            if (currentRoom != lastRoom)
+            {
+                ApplyRoomScaling(currentRoom);
+                lastRoom = currentRoom;
+            }
+        
+    }
         if (statScript != null)
         {
             if (statScript.getHealth() != health)
@@ -249,9 +263,9 @@ public class levelling_logic : MonoBehaviour
                 gunScript.setmultishot(multishot);
             }
         }
-        
 
-        }
+
+    }
     public void resetdata()
     {
         damage = 1;
@@ -263,6 +277,14 @@ public class levelling_logic : MonoBehaviour
 
 
     }
+    private void ApplyRoomScaling(int room)
+    {
+        if (room <= 0) room = 1;
+
+        health = 20 * room; // or any formula you want
+        statScript.setHealth(health);
+        statScript.setmaxhealth();
     }
+}
 
 

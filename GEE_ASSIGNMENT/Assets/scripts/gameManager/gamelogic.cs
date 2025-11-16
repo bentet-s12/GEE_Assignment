@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class gamelogic : MonoBehaviour
 {
-    [SerializeField] private int currentRoom = 0;
+    [SerializeField] private int currentRoom = -1;
     [SerializeField] private int spawnCount;
     [SerializeField] private GameObject manager;
     private enemyspawn enemyScript;

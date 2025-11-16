@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.042
       objectReference: {fileID: 0}
+    - target: {fileID: 8975071160946449162, guid: 02e2090659d6d4a45bf307e9bd1fdc10, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9038671995694896977, guid: 02e2090659d6d4a45bf307e9bd1fdc10, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -84,7 +88,8 @@ PrefabInstance:
       propertyPath: currentscenename
       value: scene1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8975071160946449162, guid: 02e2090659d6d4a45bf307e9bd1fdc10, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8469000480429511753, guid: 02e2090659d6d4a45bf307e9bd1fdc10, type: 3}
     m_AddedGameObjects: []

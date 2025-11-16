@@ -66,6 +66,15 @@ public class enemyspawn : MonoBehaviour
     }
     public void spawnBoss(int spawnamt)
     {
+        if (spawnspace != null)
+        {
+            for (int i = 0; i < spawnamt; i++)
+            {
+                Vector3 spawnPos = GetRandomPointInCollider(spawnspace);
+                Instantiate(bossprefab, spawnPos, Quaternion.identity);
+            }
+
+        }
         spawnedEnemies += spawnamt;
     }
 

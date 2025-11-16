@@ -10,10 +10,10 @@ public class Dragon : MonoBehaviour
 
     [Header("Movement Settings")]   
     public float patrolSpeed = 2.5f;
-    public float chaseSpeed = 5f;
+    public float chaseSpeed = 3f;
 
     [Header("Detection Ranges")]
-    public float chaseRange = 8f;
+    public float chaseRange = 2f;
     public float basicAttackRange = 4f;
     public float flameAttackRange = 10f;
 
@@ -34,6 +34,8 @@ public class Dragon : MonoBehaviour
     private bool canBasicAttack = true;
     private bool canFlameAttack = true;
 
+    [SerializeField]private int currentRoom;
+    [SerializeField] private gamelogic roomscaler;
     public bool CanBasicAttack => canBasicAttack;
     public bool CanFlameAttack => canFlameAttack;
 
@@ -45,16 +47,29 @@ public class Dragon : MonoBehaviour
 
     const string PLAYER_TAG = "Player";
 
+    [SerializeField] private levelling_logic exp;
+
     void Start()
     {
+        exp = GameObject.FindGameObjectWithTag("gameManager").GetComponent<levelling_logic>();
         player = GameObject.FindGameObjectWithTag(PLAYER_TAG).transform;
         anim = GetComponent<Animator>();
 
         player = GameObject.FindGameObjectWithTag(PLAYER_TAG).transform;
         anim = GetComponent<Animator>();
-            
+
         // Initialize health
-        dragonHealth = maxHealth;
+        if (roomscaler != null)
+        {
+            currentRoom = roomscaler.getCurrentRoom();
+            dragonHealth = maxHealth * (currentRoom / 10);
+            basicAttackDamage = basicAttackDamage * (currentRoom / 10);
+            flameDamage = flameDamage * (currentRoom / 10);
+        }
+        else
+        {
+            return;
+        }
 
         // First reaction at 75% HP
         nextFlinchThreshold = maxHealth - (maxHealth / 4);
@@ -193,7 +208,11 @@ public class Dragon : MonoBehaviour
 
         if (basicDetector != null) basicDetector.SetActive(false);
         if (flameDetector != null) flameDetector.SetActive(false);
+        if(exp != null)
+        {
+            exp.bosslvlup();
 
+        }
         Destroy(gameObject, 6f);
     }
 

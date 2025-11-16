@@ -392,6 +392,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Environment_Mud_03_PRE (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5371711713399070056, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.05869324
@@ -446,9 +450,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 46116254}
-    - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 46116255}
   m_SourcePrefab: {fileID: 100100000, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
 --- !u!4 &46116252 stripped
@@ -461,38 +462,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
   m_PrefabInstance: {fileID: 46116251}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &46116254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46116253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: bc325579f95b7fe4493d1105d88c9820, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &46116255
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -526,6 +495,10 @@ PrefabInstance:
     - target: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
       propertyPath: m_Name
       value: EA_Pumpkin_01c_PRE (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4075184535340755632, guid: 40228266b39385b49a94ff0a96722178, type: 3}
       propertyPath: m_LocalScale.x
@@ -578,13 +551,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 49461788}
   m_SourcePrefab: {fileID: 100100000, guid: 40228266b39385b49a94ff0a96722178, type: 3}
 --- !u!4 &49461786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4075184535340755632, guid: 40228266b39385b49a94ff0a96722178, type: 3}
   m_PrefabInstance: {fileID: 49461785}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &49461787 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+  m_PrefabInstance: {fileID: 49461785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &49461788
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49461787}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3433745, y: 2.7773743, z: 2.3439567}
+  m_Center: {x: 0.00038105246, y: 1.2923887, z: 0.0015217661}
 --- !u!1 &52669063
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,7 +599,7 @@ GameObject:
   - component: {fileID: 52669067}
   - component: {fileID: 52669066}
   - component: {fileID: 52669065}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -775,6 +777,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA_Pumpkin_01b_PRE
       objectReference: {fileID: 0}
+    - target: {fileID: 328474465573130534, guid: 1434182759a66f749a11573ce173a00c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1136359997516909468, guid: 1434182759a66f749a11573ce173a00c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -826,13 +832,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 328474465573130534, guid: 1434182759a66f749a11573ce173a00c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 79709784}
   m_SourcePrefab: {fileID: 100100000, guid: 1434182759a66f749a11573ce173a00c, type: 3}
 --- !u!4 &79709782 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1136359997516909468, guid: 1434182759a66f749a11573ce173a00c, type: 3}
   m_PrefabInstance: {fileID: 79709781}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &79709783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 328474465573130534, guid: 1434182759a66f749a11573ce173a00c, type: 3}
+  m_PrefabInstance: {fileID: 79709781}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &79709784
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79709783}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.0930943, y: 2.7389941, z: 2.0962806}
+  m_Center: {x: -0.0010570884, y: 1.3694971, z: 0.0023428798}
 --- !u!1001 &132305414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -844,6 +879,10 @@ PrefabInstance:
     - target: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       propertyPath: m_Name
       value: EA03_Environment_Mud_03_PRE (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5371711713399070056, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       propertyPath: m_LocalScale.x
@@ -899,9 +938,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 132305417}
-    - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 132305418}
   m_SourcePrefab: {fileID: 100100000, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
 --- !u!4 &132305415 stripped
@@ -914,38 +950,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
   m_PrefabInstance: {fileID: 132305414}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &132305417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132305416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 3791d8410a898c840a28843d74f12084, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &132305418
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1083,6 +1087,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA_Pumpkin_01c_PRE (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4075184535340755632, guid: 40228266b39385b49a94ff0a96722178, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -1134,13 +1142,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 237198996}
   m_SourcePrefab: {fileID: 100100000, guid: 40228266b39385b49a94ff0a96722178, type: 3}
 --- !u!4 &237198994 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4075184535340755632, guid: 40228266b39385b49a94ff0a96722178, type: 3}
   m_PrefabInstance: {fileID: 237198993}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &237198995 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+  m_PrefabInstance: {fileID: 237198993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &237198996
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237198995}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3433757, y: 2.7773743, z: 2.343958}
+  m_Center: {x: 0.00038296, y: 1.2923887, z: 0.0015179521}
 --- !u!1001 &237718791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1494,7 +1531,7 @@ GameObject:
   - component: {fileID: 347954432}
   - component: {fileID: 347954431}
   - component: {fileID: 347954430}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1918,7 +1955,7 @@ GameObject:
   - component: {fileID: 422647209}
   - component: {fileID: 422647208}
   - component: {fileID: 422647207}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2240,7 +2277,7 @@ GameObject:
   - component: {fileID: 462664063}
   - component: {fileID: 462664062}
   - component: {fileID: 462664061}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2418,6 +2455,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA_Pumpkin_Candle_02b_PRE (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 183641730362675261, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 704740236282088071, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -2469,13 +2510,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 183641730362675261, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 486654572}
   m_SourcePrefab: {fileID: 100100000, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
 --- !u!4 &486654570 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 704740236282088071, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
   m_PrefabInstance: {fileID: 486654569}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &486654571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 183641730362675261, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
+  m_PrefabInstance: {fileID: 486654569}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &486654572
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486654571}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.739315, y: 2.4434614, z: 4.0549817}
+  m_Center: {x: 0.4157884, y: 1.2217307, z: 1.0318773}
 --- !u!1001 &492790425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2487,6 +2557,10 @@ PrefabInstance:
     - target: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       propertyPath: m_Name
       value: EA03_Environment_Mud_03_PRE (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5371711713399070056, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       propertyPath: m_LocalScale.x
@@ -2542,9 +2616,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 492790428}
-    - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 492790429}
   m_SourcePrefab: {fileID: 100100000, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
 --- !u!4 &492790426 stripped
@@ -2557,38 +2628,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
   m_PrefabInstance: {fileID: 492790425}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &492790428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 492790427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: eb2e8f2333b236d4d8f11100f84f7cdf, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &492790429
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2765,6 +2804,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Environment_Mud_02_PRE (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9020466761566075346, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.075287014
@@ -2819,9 +2862,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 533175909}
-    - targetCorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 533175910}
   m_SourcePrefab: {fileID: 100100000, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
 --- !u!4 &533175907 stripped
@@ -2834,38 +2874,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
   m_PrefabInstance: {fileID: 533175906}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &533175909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533175908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: ce4e253e97387964cba4cc317e6a3c45, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &533175910
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2970,6 +2978,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Environment_Mud_03_PRE (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5371711713399070056, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.05869324
@@ -3024,9 +3036,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 538170812}
-    - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 538170813}
   m_SourcePrefab: {fileID: 100100000, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
 --- !u!4 &538170810 stripped
@@ -3039,38 +3048,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
   m_PrefabInstance: {fileID: 538170809}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &538170812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538170811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 2351d506659e77f4c954b8eb805e8edb, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &538170813
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3170,6 +3147,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Environment_Mud_03_PRE (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5371711713399070056, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.037137996
@@ -3224,9 +3205,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 554074801}
-    - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 554074802}
   m_SourcePrefab: {fileID: 100100000, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
 --- !u!4 &554074799 stripped
@@ -3239,38 +3217,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
   m_PrefabInstance: {fileID: 554074798}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &554074801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554074800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 299ce8194db4a7a409e1aa7f69db9592, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &554074802
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3375,6 +3321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Environment_Mud_02_PRE (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9020466761566075346, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.086122416
@@ -3429,9 +3379,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 575244656}
-    - targetCorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 575244657}
   m_SourcePrefab: {fileID: 100100000, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
 --- !u!4 &575244654 stripped
@@ -3444,38 +3391,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
   m_PrefabInstance: {fileID: 575244653}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &575244656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575244655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 664066af4656fb54887afa9f1f38677b, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &575244657
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3830,6 +3745,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Environment_Mud_02_PRE
       objectReference: {fileID: 0}
+    - target: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9020466761566075346, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07861492
@@ -3884,9 +3803,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 669901958}
-    - targetCorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 669901959}
   m_SourcePrefab: {fileID: 100100000, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
 --- !u!4 &669901956 stripped
@@ -3899,38 +3815,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
   m_PrefabInstance: {fileID: 669901955}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &669901958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 669901957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 37a9b17c0e379214b9848cc3b5ae627b, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &669901959
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4137,6 +4021,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Environment_Mud_03_PRE (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5371711713399070056, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.037137996
@@ -4191,9 +4079,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 700050886}
-    - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 700050887}
   m_SourcePrefab: {fileID: 100100000, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
 --- !u!4 &700050884 stripped
@@ -4206,38 +4091,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
   m_PrefabInstance: {fileID: 700050883}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &700050886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700050885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: f8f45d9c66504c54c9362f5afe0628a2, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &700050887
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4651,16 +4504,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA_Pumpkin_01a_PRE (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 760029137}
   m_SourcePrefab: {fileID: 100100000, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
 --- !u!4 &760029135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7134305894039836792, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
   m_PrefabInstance: {fileID: 760029134}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &760029136 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+  m_PrefabInstance: {fileID: 760029134}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &760029137
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760029136}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8663406, y: 2.371162, z: 1.8846226}
+  m_Center: {x: 0, y: 1.1662548, z: 0.009141296}
 --- !u!1001 &770083649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4672,6 +4558,10 @@ PrefabInstance:
     - target: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       propertyPath: m_Name
       value: EA03_Environment_Mud_02_PRE (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9020466761566075346, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       propertyPath: m_LocalScale.x
@@ -4727,9 +4617,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 770083652}
-    - targetCorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 770083653}
   m_SourcePrefab: {fileID: 100100000, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
 --- !u!4 &770083650 stripped
@@ -4742,38 +4629,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
   m_PrefabInstance: {fileID: 770083649}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &770083652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770083651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 64e887aca8968f449ae2e097db7cd47d, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &770083653
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4930,16 +4785,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA_Pumpkin_01a_PRE (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 781774676}
   m_SourcePrefab: {fileID: 100100000, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
 --- !u!4 &781774674 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7134305894039836792, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
   m_PrefabInstance: {fileID: 781774673}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &781774675 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+  m_PrefabInstance: {fileID: 781774673}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &781774676
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781774675}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8663409, y: 2.371162, z: 1.8846232}
+  m_Center: {x: -0.0000009536743, y: 1.1662552, z: 0.009145113}
 --- !u!1001 &782803046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4951,6 +4839,10 @@ PrefabInstance:
     - target: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
       propertyPath: m_Name
       value: EA_Pumpkin_01c_PRE (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4075184535340755632, guid: 40228266b39385b49a94ff0a96722178, type: 3}
       propertyPath: m_LocalScale.x
@@ -5003,13 +4895,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 782803049}
   m_SourcePrefab: {fileID: 100100000, guid: 40228266b39385b49a94ff0a96722178, type: 3}
 --- !u!4 &782803047 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4075184535340755632, guid: 40228266b39385b49a94ff0a96722178, type: 3}
   m_PrefabInstance: {fileID: 782803046}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &782803048 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+  m_PrefabInstance: {fileID: 782803046}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &782803049
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782803048}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3433747, y: 2.7773743, z: 2.343957}
+  m_Center: {x: 0.00038295984, y: 1.2923887, z: 0.0015217662}
 --- !u!1001 &789342468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5144,16 +5065,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA_Pumpkin_01a_PRE (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 792265510}
   m_SourcePrefab: {fileID: 100100000, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
 --- !u!4 &792265508 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7134305894039836792, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
   m_PrefabInstance: {fileID: 792265507}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &792265509 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+  m_PrefabInstance: {fileID: 792265507}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &792265510
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792265509}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8663409, y: 2.371162, z: 1.8846232}
+  m_Center: {x: -0.0000009536743, y: 1.1662536, z: 0.009137483}
 --- !u!1001 &829881898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5165,6 +5119,10 @@ PrefabInstance:
     - target: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       propertyPath: m_Name
       value: EA03_Environment_Mud_03_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5371711713399070056, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       propertyPath: m_LocalScale.x
@@ -5220,9 +5178,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 829881901}
-    - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 829881902}
   m_SourcePrefab: {fileID: 100100000, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
 --- !u!4 &829881899 stripped
@@ -5235,38 +5190,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
   m_PrefabInstance: {fileID: 829881898}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &829881901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829881900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: fa24d662672d86d47ba862ed237a19d7, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &829881902
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5300,6 +5223,10 @@ PrefabInstance:
     - target: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       propertyPath: m_Name
       value: EA03_Environment_Mud_03_PRE (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5371711713399070056, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       propertyPath: m_LocalScale.x
@@ -5355,9 +5282,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 837828962}
-    - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 837828963}
   m_SourcePrefab: {fileID: 100100000, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
 --- !u!4 &837828960 stripped
@@ -5370,38 +5294,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
   m_PrefabInstance: {fileID: 837828959}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &837828962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837828961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 1937fb3259a20df4785fc527e56a9ce1, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &837828963
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5435,6 +5327,10 @@ PrefabInstance:
     - target: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       propertyPath: m_Name
       value: EA03_Environment_Mud_02_PRE (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9020466761566075346, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       propertyPath: m_LocalScale.x
@@ -5490,9 +5386,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 864825781}
-    - targetCorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 864825782}
   m_SourcePrefab: {fileID: 100100000, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
 --- !u!4 &864825779 stripped
@@ -5505,38 +5398,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
   m_PrefabInstance: {fileID: 864825778}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &864825781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864825780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: c0e0ddc02f41aaf4a963fe485275aae3, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &864825782
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5641,6 +5502,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Environment_Mud_03_PRE (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5371711713399070056, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.037137996
@@ -5695,9 +5560,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 925820141}
-    - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 925820142}
   m_SourcePrefab: {fileID: 100100000, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
 --- !u!4 &925820139 stripped
@@ -5710,38 +5572,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
   m_PrefabInstance: {fileID: 925820138}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &925820141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925820140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 8e61db52ba038fc49be40a59538e2621, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &925820142
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5846,6 +5676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA_Pumpkin_01c_PRE (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4075184535340755632, guid: 40228266b39385b49a94ff0a96722178, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -5897,13 +5731,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 961504282}
   m_SourcePrefab: {fileID: 100100000, guid: 40228266b39385b49a94ff0a96722178, type: 3}
 --- !u!4 &961504280 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4075184535340755632, guid: 40228266b39385b49a94ff0a96722178, type: 3}
   m_PrefabInstance: {fileID: 961504279}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &961504281 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+  m_PrefabInstance: {fileID: 961504279}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &961504282
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961504281}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3433757, y: 2.7773743, z: 2.343958}
+  m_Center: {x: 0.0003791453, y: 1.2923887, z: 0.0015179521}
 --- !u!1001 &967666100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5986,6 +5849,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Environment_Mud_03_PRE (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5371711713399070056, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.037137996
@@ -6040,9 +5907,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1019152811}
-    - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1019152812}
   m_SourcePrefab: {fileID: 100100000, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
 --- !u!4 &1019152809 stripped
@@ -6055,38 +5919,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
   m_PrefabInstance: {fileID: 1019152808}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1019152811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019152810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 90ace551c47bcb7419238baf274bc7da, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &1019152812
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6224,6 +6056,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA_Pumpkin_Candle_02b_PRE
       objectReference: {fileID: 0}
+    - target: {fileID: 183641730362675261, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 704740236282088071, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -6275,13 +6111,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 183641730362675261, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1034501939}
   m_SourcePrefab: {fileID: 100100000, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
 --- !u!4 &1034501937 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 704740236282088071, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
   m_PrefabInstance: {fileID: 1034501936}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1034501938 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 183641730362675261, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
+  m_PrefabInstance: {fileID: 1034501936}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1034501939
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034501938}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.739315, y: 2.4434614, z: 4.0549817}
+  m_Center: {x: 0.4157884, y: 1.2217307, z: 1.0318773}
 --- !u!1001 &1037258992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6474,6 +6339,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Environment_Mud_04_PRE
       objectReference: {fileID: 0}
+    - target: {fileID: 1621994411055446912, guid: 3831ef39ab5566444a85634f02b3e99e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2146435805366755642, guid: 3831ef39ab5566444a85634f02b3e99e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0191591
@@ -6528,9 +6397,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1621994411055446912, guid: 3831ef39ab5566444a85634f02b3e99e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1044959167}
-    - targetCorrespondingSourceObject: {fileID: 1621994411055446912, guid: 3831ef39ab5566444a85634f02b3e99e, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1044959168}
   m_SourcePrefab: {fileID: 100100000, guid: 3831ef39ab5566444a85634f02b3e99e, type: 3}
 --- !u!4 &1044959165 stripped
@@ -6543,38 +6409,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1621994411055446912, guid: 3831ef39ab5566444a85634f02b3e99e, type: 3}
   m_PrefabInstance: {fileID: 1044959164}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1044959167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1044959166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 3dc0c9dd4c71aab45aa179d98422b0e2, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &1044959168
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6608,6 +6442,10 @@ PrefabInstance:
     - target: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
       propertyPath: m_Name
       value: EA_Pumpkin_01c_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4075184535340755632, guid: 40228266b39385b49a94ff0a96722178, type: 3}
       propertyPath: m_LocalScale.x
@@ -6660,13 +6498,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1138077569}
   m_SourcePrefab: {fileID: 100100000, guid: 40228266b39385b49a94ff0a96722178, type: 3}
 --- !u!4 &1138077567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4075184535340755632, guid: 40228266b39385b49a94ff0a96722178, type: 3}
   m_PrefabInstance: {fileID: 1138077566}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1138077568 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+  m_PrefabInstance: {fileID: 1138077566}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1138077569
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138077568}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3433757, y: 2.7773743, z: 2.343958}
+  m_Center: {x: 0.00038296, y: 1.2923887, z: 0.0015179521}
 --- !u!1001 &1168858895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6801,16 +6668,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA_Pumpkin_01a_PRE (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1196724608}
   m_SourcePrefab: {fileID: 100100000, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
 --- !u!4 &1196724606 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7134305894039836792, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
   m_PrefabInstance: {fileID: 1196724605}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1196724607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+  m_PrefabInstance: {fileID: 1196724605}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1196724608
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196724607}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8663409, y: 2.371162, z: 1.8846232}
+  m_Center: {x: -0.0000019073486, y: 1.1662536, z: 0.009141298}
 --- !u!1001 &1239727235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7169,6 +7069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Environment_Mud_02_PRE (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9020466761566075346, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07477851
@@ -7223,9 +7127,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1292886943}
-    - targetCorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1292886944}
   m_SourcePrefab: {fileID: 100100000, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
 --- !u!4 &1292886941 stripped
@@ -7238,38 +7139,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
   m_PrefabInstance: {fileID: 1292886940}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1292886943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1292886942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: f5308825179962849b7256cf6f935d8c, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &1292886944
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7500,16 +7369,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA_Pumpkin_01a_PRE
       objectReference: {fileID: 0}
+    - target: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1311825718}
   m_SourcePrefab: {fileID: 100100000, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
 --- !u!4 &1311825716 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7134305894039836792, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
   m_PrefabInstance: {fileID: 1311825715}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1311825717 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+  m_PrefabInstance: {fileID: 1311825715}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1311825718
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311825717}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8663411, y: 2.371162, z: 1.8846234}
+  m_Center: {x: 0.0000019073486, y: 1.1662536, z: 0.009145115}
 --- !u!1001 &1339230804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7714,16 +7616,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA_Pumpkin_01a_PRE (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1356978957}
   m_SourcePrefab: {fileID: 100100000, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
 --- !u!4 &1356978955 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7134305894039836792, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
   m_PrefabInstance: {fileID: 1356978954}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1356978956 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+  m_PrefabInstance: {fileID: 1356978954}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1356978957
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356978956}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8663409, y: 2.371162, z: 1.8846232}
+  m_Center: {x: -0.0000019073486, y: 1.1662548, z: 0.009145113}
 --- !u!1001 &1430931812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8058,16 +7993,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA_Pumpkin_01a_PRE (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1517536573}
   m_SourcePrefab: {fileID: 100100000, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
 --- !u!4 &1517536571 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7134305894039836792, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
   m_PrefabInstance: {fileID: 1517536570}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1517536572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+  m_PrefabInstance: {fileID: 1517536570}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1517536573
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517536572}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8663411, y: 2.371162, z: 1.8846234}
+  m_Center: {x: 0.0000019073486, y: 1.1662536, z: 0.009147022}
 --- !u!1001 &1577751599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8220,6 +8188,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Environment_Mud_03_PRE (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5371711713399070056, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.037137996
@@ -8274,9 +8246,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1640965068}
-    - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1640965069}
   m_SourcePrefab: {fileID: 100100000, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
 --- !u!4 &1640965066 stripped
@@ -8289,38 +8258,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
   m_PrefabInstance: {fileID: 1640965065}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1640965068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640965067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 775f1d2a2a917fe4eb04f34f9ee9d56f, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &1640965069
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8477,16 +8414,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA_Pumpkin_01a_PRE (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1706393986}
   m_SourcePrefab: {fileID: 100100000, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
 --- !u!4 &1706393984 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7134305894039836792, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
   m_PrefabInstance: {fileID: 1706393983}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1706393985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+  m_PrefabInstance: {fileID: 1706393983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1706393986
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706393985}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8663409, y: 2.371162, z: 1.8846232}
+  m_Center: {x: -0.0000019073486, y: 1.1662538, z: 0.009145113}
 --- !u!1001 &1706483281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8621,16 +8591,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA_Pumpkin_01a_PRE (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1739115110}
   m_SourcePrefab: {fileID: 100100000, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
 --- !u!4 &1739115108 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7134305894039836792, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
   m_PrefabInstance: {fileID: 1739115107}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1739115109 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+  m_PrefabInstance: {fileID: 1739115107}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1739115110
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739115109}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8663411, y: 2.371162, z: 1.8846234}
+  m_Center: {x: 0, y: 1.1662536, z: 0.009152744}
 --- !u!1001 &1739281942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8642,6 +8645,10 @@ PrefabInstance:
     - target: {fileID: 183641730362675261, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
       propertyPath: m_Name
       value: EA_Pumpkin_Candle_02b_PRE (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 183641730362675261, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 704740236282088071, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
       propertyPath: m_LocalScale.x
@@ -8694,13 +8701,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 183641730362675261, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1739281945}
   m_SourcePrefab: {fileID: 100100000, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
 --- !u!4 &1739281943 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 704740236282088071, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
   m_PrefabInstance: {fileID: 1739281942}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1739281944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 183641730362675261, guid: ccc640acdc2cd004e97d876356c6a0f5, type: 3}
+  m_PrefabInstance: {fileID: 1739281942}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1739281945
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739281944}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.739315, y: 2.4434614, z: 4.0549817}
+  m_Center: {x: 0.4157884, y: 1.2217307, z: 1.0318773}
 --- !u!1001 &1767443429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8850,7 +8886,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1784478629}
-  m_Layer: 0
+  - component: {fileID: 1784478630}
+  m_Layer: 7
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8874,8 +8911,41 @@ Transform:
   - {fileID: 422647206}
   - {fileID: 462664060}
   - {fileID: 52669064}
+  - {fileID: 1826475964}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1784478630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784478628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 1
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 20
+  m_NavMeshData: {fileID: 23800000, guid: d7c31f0f9e2004e4da6ca52aa8de966f, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &1823626926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8887,6 +8957,10 @@ PrefabInstance:
     - target: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
       propertyPath: m_Name
       value: EA_Pumpkin_01c_PRE (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4075184535340755632, guid: 40228266b39385b49a94ff0a96722178, type: 3}
       propertyPath: m_LocalScale.x
@@ -8939,13 +9013,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1823626929}
   m_SourcePrefab: {fileID: 100100000, guid: 40228266b39385b49a94ff0a96722178, type: 3}
 --- !u!4 &1823626927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4075184535340755632, guid: 40228266b39385b49a94ff0a96722178, type: 3}
   m_PrefabInstance: {fileID: 1823626926}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1823626928 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+  m_PrefabInstance: {fileID: 1823626926}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1823626929
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823626928}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3433745, y: 2.7773743, z: 2.3439567}
+  m_Center: {x: 0.0003829598, y: 1.2923887, z: 0.0015217661}
 --- !u!1 &1826475963
 GameObject:
   m_ObjectHideFlags: 0
@@ -8955,7 +9058,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1826475964}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Muds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8971,8 +9074,8 @@ Transform:
   m_GameObject: {fileID: 1826475963}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.1683, y: 0.7366, z: 4.1281}
-  m_LocalScale: {x: 52.19452, y: 1, z: 41.82901}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 829881899}
@@ -8997,7 +9100,7 @@ Transform:
   - {fileID: 1292886941}
   - {fileID: 864825779}
   - {fileID: 2011515017}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1784478629}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1850172345
 GameObject:
@@ -9050,7 +9153,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1850519724}
-  m_Layer: 0
+  - component: {fileID: 1850519725}
+  m_Layer: 7
   m_Name: Pumpkins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9095,6 +9199,27 @@ Transform:
   - {fileID: 1739281943}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1850519725
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850519723}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1854445895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9106,6 +9231,10 @@ PrefabInstance:
     - target: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
       propertyPath: m_Name
       value: EA_Pumpkin_01c_PRE (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4075184535340755632, guid: 40228266b39385b49a94ff0a96722178, type: 3}
       propertyPath: m_LocalScale.x
@@ -9158,13 +9287,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1854445898}
   m_SourcePrefab: {fileID: 100100000, guid: 40228266b39385b49a94ff0a96722178, type: 3}
 --- !u!4 &1854445896 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4075184535340755632, guid: 40228266b39385b49a94ff0a96722178, type: 3}
   m_PrefabInstance: {fileID: 1854445895}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1854445897 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+  m_PrefabInstance: {fileID: 1854445895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1854445898
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854445897}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3433747, y: 2.7773743, z: 2.343957}
+  m_Center: {x: 0.00038295984, y: 1.2923887, z: 0.0015217662}
 --- !u!1001 &1869283140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9457,6 +9615,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Environment_Mud_02_PRE (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9020466761566075346, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07861492
@@ -9511,9 +9673,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1907064345}
-    - targetCorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1907064346}
   m_SourcePrefab: {fileID: 100100000, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
 --- !u!4 &1907064343 stripped
@@ -9526,38 +9685,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
   m_PrefabInstance: {fileID: 1907064342}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1907064345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1907064344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 8e2ae3c815885644fa22d713ce04c25c, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &1907064346
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9710,16 +9837,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA_Pumpkin_01a_PRE (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1984696760}
   m_SourcePrefab: {fileID: 100100000, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
 --- !u!4 &1984696758 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7134305894039836792, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
   m_PrefabInstance: {fileID: 1984696757}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1984696759 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7514807683183542978, guid: 0cca5bfaf76547843a8814286839684c, type: 3}
+  m_PrefabInstance: {fileID: 1984696757}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1984696760
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984696759}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8663406, y: 2.371162, z: 1.8846226}
+  m_Center: {x: 0, y: 1.1662548, z: 0.009141296}
 --- !u!1001 &2002304651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9802,6 +9962,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Environment_Mud_03_PRE (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5371711713399070056, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.037137996
@@ -9856,9 +10020,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2011515019}
-    - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2011515020}
   m_SourcePrefab: {fileID: 100100000, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
 --- !u!4 &2011515017 stripped
@@ -9871,38 +10032,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
   m_PrefabInstance: {fileID: 2011515016}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2011515019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2011515018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: bcb8cb24859cd0e46b6d16efeef73643, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &2011515020
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9936,6 +10065,10 @@ PrefabInstance:
     - target: {fileID: 328474465573130534, guid: 1434182759a66f749a11573ce173a00c, type: 3}
       propertyPath: m_Name
       value: EA_Pumpkin_01b_PRE (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 328474465573130534, guid: 1434182759a66f749a11573ce173a00c, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1136359997516909468, guid: 1434182759a66f749a11573ce173a00c, type: 3}
       propertyPath: m_LocalScale.x
@@ -9988,13 +10121,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 328474465573130534, guid: 1434182759a66f749a11573ce173a00c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2019552413}
   m_SourcePrefab: {fileID: 100100000, guid: 1434182759a66f749a11573ce173a00c, type: 3}
 --- !u!4 &2019552411 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1136359997516909468, guid: 1434182759a66f749a11573ce173a00c, type: 3}
   m_PrefabInstance: {fileID: 2019552410}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2019552412 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 328474465573130534, guid: 1434182759a66f749a11573ce173a00c, type: 3}
+  m_PrefabInstance: {fileID: 2019552410}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2019552413
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019552412}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.0930943, y: 2.7389941, z: 2.0962806}
+  m_Center: {x: -0.0010570884, y: 1.3694971, z: 0.0023428798}
 --- !u!1001 &2020032203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10085,6 +10247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA_Pumpkin_01c_PRE (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4075184535340755632, guid: 40228266b39385b49a94ff0a96722178, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -10136,13 +10302,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2026267679}
   m_SourcePrefab: {fileID: 100100000, guid: 40228266b39385b49a94ff0a96722178, type: 3}
 --- !u!4 &2026267677 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4075184535340755632, guid: 40228266b39385b49a94ff0a96722178, type: 3}
   m_PrefabInstance: {fileID: 2026267676}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2026267678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3730711203389304842, guid: 40228266b39385b49a94ff0a96722178, type: 3}
+  m_PrefabInstance: {fileID: 2026267676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2026267679
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026267678}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3433745, y: 2.7773743, z: 2.3439567}
+  m_Center: {x: 0.00037914512, y: 1.2923887, z: 0.0015217661}
 --- !u!1001 &2042760342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10431,6 +10626,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA03_Environment_Mud_03_PRE (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5371711713399070056, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.037137996
@@ -10485,9 +10684,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2133837683}
-    - targetCorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2133837684}
   m_SourcePrefab: {fileID: 100100000, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
 --- !u!4 &2133837681 stripped
@@ -10500,38 +10696,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4740029791754029010, guid: 85a9a8a0c75a7be4c83d1d2de35063f2, type: 3}
   m_PrefabInstance: {fileID: 2133837680}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2133837683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2133837682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: e75afab8441a5514caccedb04cda958b, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &2133837684
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10565,6 +10729,10 @@ PrefabInstance:
     - target: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       propertyPath: m_Name
       value: EA03_Environment_Mud_02_PRE (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9020466761566075346, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       propertyPath: m_LocalScale.x
@@ -10620,9 +10788,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2142577831}
-    - targetCorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2142577832}
   m_SourcePrefab: {fileID: 100100000, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
 --- !u!4 &2142577829 stripped
@@ -10635,38 +10800,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8531209773636215656, guid: 5394d968aea4a7f448a5866236a8a47a, type: 3}
   m_PrefabInstance: {fileID: 2142577828}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2142577831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2142577830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 86054e49891ee204fa733535933ad540, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!64 &2142577832
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10770,7 +10903,6 @@ SceneRoots:
   - {fileID: 545332483}
   - {fileID: 26742854}
   - {fileID: 1784478629}
-  - {fileID: 1826475964}
   - {fileID: 326204220}
   - {fileID: 1850519724}
   - {fileID: 1464322611}
