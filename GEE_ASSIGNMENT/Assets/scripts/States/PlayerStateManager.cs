@@ -49,7 +49,7 @@ public class PlayerStateManager : MonoBehaviour
     [HideInInspector] public bool isDead = false;
 
     private levelling_logic abilitycheckScript;
-
+    [SerializeField] GameObject DeathUI;
     public float getspeed()
     {
         return walkSpeed;
@@ -259,12 +259,19 @@ public class PlayerStateManager : MonoBehaviour
         animator.SetBool("Aiming", false);
 
         cameraScript.enabled = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         shootScript gun = FindFirstObjectByType<shootScript>();
         if (gun != null)
-            gun.enabled = false;
+        {
 
+            gun.enabled = false;
+        }
+
+        DeathUI.SetActive(true);
         Debug.Log("PLAYER DIED");
+        
     }
 
     // ------------------ GRAVITY ------------------
