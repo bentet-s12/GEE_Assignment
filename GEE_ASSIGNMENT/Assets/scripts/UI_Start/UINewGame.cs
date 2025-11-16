@@ -5,7 +5,7 @@ public class StartGameButton : MonoBehaviour
 {
     [SerializeField] private string sceneToLoad;
     [SerializeField] private levelling_logic logicScript;
-
+    [SerializeField] private GameObject deathUI;
     [Header("Audio")]
     public AudioSource bgmSource;       // background music
     public AudioSource sfxSource;       // click sound source
@@ -62,6 +62,7 @@ public class StartGameButton : MonoBehaviour
 
         if (!string.IsNullOrEmpty(sceneToLoad))
         {
+            deathUI.SetActive(false);
             logicScript.SaveData();
             logicScript.loadData();
             logicScript.resetdata();
@@ -82,6 +83,7 @@ public class StartGameButton : MonoBehaviour
 
     public void QuitGame()
     {
+        deathUI.SetActive(false);
         logicScript.SaveData();
         PlayClick();
         Application.Quit();
