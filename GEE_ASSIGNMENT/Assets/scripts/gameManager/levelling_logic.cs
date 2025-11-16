@@ -160,10 +160,13 @@ public class levelling_logic : MonoBehaviour
             {
                 Debug.Log("cannot find stats");
             }
-            GameObject lvlupUI = GameObject.FindGameObjectWithTag("P_player");
+            GameObject lvlupUI = GameObject.FindGameObjectWithTag("lvlupUI");
             if (lvlupUI != null)
             {
+                lvlup_UI = lvlupUI.gameObject;
+                lvlup_UI.SetActive(false);
                 lvlup_script = lvlupUI.GetComponent<lvlup_UI>();
+                lvlup_script.deactivateUI();
             }
             else
             {
@@ -263,11 +266,13 @@ public class levelling_logic : MonoBehaviour
             {
                 Debug.Log("cannot find stats");
             }
-            lvlup_UI = GameObject.FindGameObjectWithTag("lvlupUI");
-            if (lvlup_UI != null)
+            GameObject lvlupUI = GameObject.FindGameObjectWithTag("lvlupUI");
+            if (lvlupUI != null)
             {
-
-                lvlup_script = lvlup_UI.GetComponent<lvlup_UI>();
+                lvlup_UI = lvlupUI.gameObject;
+                lvlup_UI.SetActive(false);
+                lvlup_script = lvlupUI.GetComponent<lvlup_UI>();
+                lvlup_script.deactivateUI();
             }
             else
             {
