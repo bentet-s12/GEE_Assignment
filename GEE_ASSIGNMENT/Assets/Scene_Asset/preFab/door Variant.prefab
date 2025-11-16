@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: door Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8385266111571714555, guid: b4085400587ce8343bc19fdf76f07f76, type: 3}
+      propertyPath: scenenames.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385266111571714555, guid: b4085400587ce8343bc19fdf76f07f76, type: 3}
+      propertyPath: 'scenenames.Array.data[10]'
+      value: scene12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 9030921914966060728, guid: b4085400587ce8343bc19fdf76f07f76, type: 3}
