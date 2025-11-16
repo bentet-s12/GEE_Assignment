@@ -328,6 +328,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ContinueGame
       objectReference: {fileID: 0}
+    - target: {fileID: 1996169965773020512, guid: e63e0e1d3911433429fd19a5f548650f, type: 3}
+      propertyPath: deathUI
+      value: 
+      objectReference: {fileID: 5727103785074875656}
     - target: {fileID: 8458005077805648623, guid: e63e0e1d3911433429fd19a5f548650f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -430,6 +434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuitGame
       objectReference: {fileID: 0}
+    - target: {fileID: 1996169965773020512, guid: e63e0e1d3911433429fd19a5f548650f, type: 3}
+      propertyPath: deathUI
+      value: 
+      objectReference: {fileID: 5727103785074875656}
     - target: {fileID: 4699245879297288607, guid: e63e0e1d3911433429fd19a5f548650f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame

@@ -62,7 +62,10 @@ public class StartGameButton : MonoBehaviour
 
         if (!string.IsNullOrEmpty(sceneToLoad))
         {
-            deathUI.SetActive(false);
+            if (deathUI != null)
+            {
+                deathUI.SetActive(false);
+            }
             logicScript.SaveData();
             logicScript.loadData();
             logicScript.resetdata();
@@ -83,7 +86,11 @@ public class StartGameButton : MonoBehaviour
 
     public void QuitGame()
     {
-        deathUI.SetActive(false);
+        if(deathUI != null)
+        {
+            deathUI.SetActive(false);
+        }
+      
         logicScript.SaveData();
         PlayClick();
         Application.Quit();
