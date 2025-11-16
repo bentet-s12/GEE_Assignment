@@ -52,21 +52,16 @@ public class shootScript : MonoBehaviour
     void Update()
     {
         bool canShootNow =
-    (playerManager.isAiming ||
+     playerManager.isAiming ||
      playerManager.currentState == playerManager.walkState ||
      playerManager.currentState == playerManager.runState ||
-     playerManager.animator.GetBool("isJumping"))
-     && !playerManager.isFalling; // block when falling
-
+     playerManager.currentState == playerManager.jumpState ||
+     playerManager.isFalling;   
 
         // ---------------- START SHOOT (MODIFIED ONLY SOUND) ----------------
         if (Input.GetMouseButtonDown(0) && canShootNow && !isShooting)
         {
             isShooting = true;
-
-            // 🔊 Remove looping logic, no Play() on clip
-            // (We play sound inside FireProjectileBurst now)
-
             shootingCoroutine = StartCoroutine(ShootContinuously());
         }
 
@@ -77,8 +72,6 @@ public class shootScript : MonoBehaviour
 
             if (shootingCoroutine != null)
                 StopCoroutine(shootingCoroutine);
-
-            // 🔇 No need to stop AudioSource because we use PlayOneShot
         }
     }
 
@@ -93,9 +86,6 @@ public class shootScript : MonoBehaviour
 
     void FireProjectileBurst()
     {
-        // ---------------- GUN SOUND (NEW) ----------------
-        if (playerManager.isFalling)
-            return;
         if (gunAudioSource != null && gunShotSFX != null)
         {
             gunAudioSource.PlayOneShot(gunShotSFX);

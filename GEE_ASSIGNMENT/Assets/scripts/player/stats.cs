@@ -7,16 +7,23 @@ public class stats : MonoBehaviour
     [SerializeField] private int maxhealth;
     [SerializeField] private int currenthealth;
     [SerializeField] private int temphealth;
+    [SerializeField] private PlayerStateManager pm;
 
-    
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
-       
         basehealth = 20;
+
+        // Initialize correctly
         health = basehealth;
+        temphealth = 0;
+
+        maxhealth = health + temphealth;
+        currenthealth = maxhealth;   
     }
+
 
     public int getHealth()
     {
@@ -44,15 +51,19 @@ public class stats : MonoBehaviour
     public void takedmg(int dmg)
     {
         currenthealth -= dmg;
+
         if (currenthealth <= 0)
         {
-           //playerDie
-           //after animation add UI
-           //disable DDU/ do not destroy
+            currenthealth = 0;
+            PlayerStateManager pm = GetComponent<PlayerStateManager>();
+            if (pm != null)
+                pm.Die();
         }
-    }
+
     }
 
-    // Update is called once per frame
+}
+
+// Update is called once per frame
 
 
