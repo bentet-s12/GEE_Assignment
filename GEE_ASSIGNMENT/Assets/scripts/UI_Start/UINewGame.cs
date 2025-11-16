@@ -6,6 +6,7 @@ public class StartGameButton : MonoBehaviour
     [SerializeField] private string sceneToLoad;
     [SerializeField] private levelling_logic logicScript;
     [SerializeField] private GameObject deathUI;
+    [SerializeField] private GameObject pausescreen;
     [Header("Audio")]
     public AudioSource bgmSource;       // background music
     public AudioSource sfxSource;       // click sound source
@@ -82,7 +83,15 @@ public class StartGameButton : MonoBehaviour
             Debug.LogError("StartGame: sceneToLoad is empty");
         }
     }
+    public void gameResume()
+    {
+        Time.timeScale = 1f;
+        if(pausescreen != null)
+        {
+            pausescreen.SetActive(false);
+        }
 
+    }
     public void OpenSettings()
     {
         PlayClick();
