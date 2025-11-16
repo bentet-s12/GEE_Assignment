@@ -8,6 +8,11 @@ public class PlayerStateManager : MonoBehaviour
     public FixedThirdPersonCamera cameraScript;
     [HideInInspector] public CharacterController controller;
 
+    private float footstepTimer = 0f;
+    public float walkStepRate = 0.5f;   // delay between steps
+    public float runStepRate = 0.3f;    // faster steps when running
+
+
     [Header("Audio")]
     public AudioSource sfxSource;
     public AudioClip walkSFX;
@@ -139,6 +144,11 @@ public class PlayerStateManager : MonoBehaviour
         {
             controller.Move(move.normalized * speed * Time.deltaTime);
 
+            if (Input.GetKey(KeyCode.LeftShift))
+                PlayRunSound();   // running sound
+            else
+                PlayWalkSound();  // walking sound
+
             Vector3 lookDir = cameraScript.GetCameraForwardFlat();
             if (lookDir != Vector3.zero)
             {
@@ -146,7 +156,45 @@ public class PlayerStateManager : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * 15f);
             }
         }
+        else
+        {
+            StopFootstepSound();   // Stop sound when player is idle
+        }
+
     }
+
+    public void PlayWalkSound()
+    {
+        if (!sfxSource) return;
+        if (walkSFX == null) return;
+
+        if (!sfxSource.isPlaying || sfxSource.clip != walkSFX)
+        {
+            sfxSource.clip = walkSFX;
+            sfxSource.loop = true;
+            sfxSource.Play();
+        }
+    }
+
+    public void PlayRunSound()
+    {
+        if (!sfxSource) return;
+        if (runSFX == null) return;
+
+        if (!sfxSource.isPlaying || sfxSource.clip != runSFX)
+        {
+            sfxSource.clip = runSFX;
+            sfxSource.loop = true;
+            sfxSource.Play();
+        }
+    }
+
+    public void StopFootstepSound()
+    {
+        if (sfxSource != null && sfxSource.isPlaying)
+            sfxSource.Stop();
+    }
+
 
     // ------------------ JUMP ------------------
     private void HandleJumpInput()
