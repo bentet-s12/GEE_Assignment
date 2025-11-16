@@ -538,7 +538,6 @@ GameObject:
   - component: {fileID: 3824376872616119446}
   - component: {fileID: 6277855844050429845}
   - component: {fileID: 5609468666155980633}
-  - component: {fileID: 3800829763349842757}
   - component: {fileID: 1919721671153352450}
   - component: {fileID: 5384732041683847909}
   m_Layer: 0
@@ -621,7 +620,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d15acb176fe878488de3fa3c0f876b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   detectionRange: 20
   wanderRadius: 8
   wanderDelay: 3
@@ -629,6 +627,7 @@ MonoBehaviour:
   rotSpeed: 8
   stuckCheckInterval: 2
   minMoveDistance: 0.5
+  hitScript: {fileID: 2751464598556906312}
 --- !u!114 &5609468666155980633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,21 +647,6 @@ MonoBehaviour:
   cooldownTime: 1
   hitbox: {fileID: 9157873504735499554}
   pathUpdateDelay: 0.2
---- !u!114 &3800829763349842757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411059229876827932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cb96a2890f9d5b4185a97888a60b121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemylogic: {fileID: 6277855844050429845}
-  playerdmg: {fileID: 0}
-  damage: 20
 --- !u!136 &1919721671153352450
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1041,7 +1025,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6185459161270184373
 Transform:
   m_ObjectHideFlags: 0

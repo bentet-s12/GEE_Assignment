@@ -48,6 +48,8 @@ public class PlayerStateManager : MonoBehaviour
     [HideInInspector] public bool isAiming = false;
     [HideInInspector] public bool isDead = false;
 
+    private levelling_logic abilitycheckScript;
+
     public float getspeed()
     {
         return walkSpeed;
@@ -60,6 +62,7 @@ public class PlayerStateManager : MonoBehaviour
     }
     void Start()
     {
+        abilitycheckScript = GameObject.FindGameObjectWithTag("gameManager").GetComponent<levelling_logic>();
         controller = GetComponent<CharacterController>();
 
         // Initialize states
@@ -74,6 +77,11 @@ public class PlayerStateManager : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        if (abilitycheckScript != null)
+        {
+            canTeleport = abilitycheckScript.getTP();
+            canDoubleJump = abilitycheckScript.getDJ();
+        }
     }
 
     void Update()
@@ -86,6 +94,8 @@ public class PlayerStateManager : MonoBehaviour
 
         currentState.UpdateState();
         ApplyGravity();
+
+        
     }
     // ------------------ AIM TOGGLE ------------------
     private void HandleAimToggle()

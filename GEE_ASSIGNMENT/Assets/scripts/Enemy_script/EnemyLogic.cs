@@ -32,6 +32,7 @@ public class EnemyLogic : MonoBehaviour
     private Vector3 lastPosition;
     private float stuckTimer;
 
+    [SerializeField] private EnemyHitbox hitScript;
     private void Awake()
     {
         enemyRef = GetComponent<EnemyRef>();
@@ -92,6 +93,7 @@ public class EnemyLogic : MonoBehaviour
 
         if (!isSwinging && inRange)
         {
+            hitScript.resetHit();
             LookAtTarget();
             StartCoroutine(SwingRoutine());
         }

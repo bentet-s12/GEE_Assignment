@@ -222,6 +222,7 @@ MonoBehaviour:
   - scene9
   - scene10
   - scene11
+  - scene12
   logicscript: {fileID: 0}
 --- !u!1 &6227474010251623436
 GameObject:

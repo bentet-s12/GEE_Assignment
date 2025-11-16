@@ -29,14 +29,18 @@ public class bullet : MonoBehaviour
         //damage here using the enemy script
         if (dmgScript != null)
         {
-            dmgScript.takedmg(this.damage);
+            if (collision.gameObject.CompareTag("Dragon"))
+            {
+                collision.gameObject.GetComponent<Dragon>().TakeDamage(this.damage / 2);
+
+            }
+            else
+            {
+                dmgScript.takedmg(this.damage);
+            }
         }
 
         Destroy(prefabs);
-
-        if(collision.gameObject.CompareTag("Dragon"))
-        {
-            collision.gameObject.GetComponent<Dragon>().TakeDamage(1);   
-        }
     }
+
 }
