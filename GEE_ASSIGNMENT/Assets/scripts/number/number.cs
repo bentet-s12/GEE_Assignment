@@ -8,12 +8,17 @@ public class number : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private Slider slider;
     [SerializeField] private AudioMixer mixer;
+    public void start()
+    {
+        slider.value = PlayerPrefs.GetFloat("audio");
+        updatevalue();
+    }
 
     public void updatevalue()
     {
         float value = slider.value;
 
-   
+        PlayerPrefs.SetFloat("audio", slider.value);
         text.SetText(value.ToString("0.00"));
 
         if (mixer != null)
