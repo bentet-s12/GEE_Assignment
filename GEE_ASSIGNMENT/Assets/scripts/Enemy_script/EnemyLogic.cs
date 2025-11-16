@@ -5,7 +5,7 @@ using UnityEngine.AI;
 public class EnemyLogic : MonoBehaviour
 {
     [Header("References")]
-    public Transform target;
+    private Transform player;
     private EnemyRef enemyRef;
 
     [Header("Attack Settings")]
@@ -36,12 +36,10 @@ public class EnemyLogic : MonoBehaviour
     {
         enemyRef = GetComponent<EnemyRef>();
 
-        if (target == null)
-        {
-            GameObject p = GameObject.FindGameObjectWithTag("Player");
+           GameObject p = GameObject.FindGameObjectWithTag("Player");
             if (p != null)
-                target = p.transform;
-        }
+               player = p.transform;
+        
     }
 
     private void Start()
@@ -59,9 +57,12 @@ public class EnemyLogic : MonoBehaviour
 
     private void Update()
     {
-        if (target != null)
+        if (player == null)
         {
-            float dist = Vector3.Distance(transform.position, target.position);
+            Wander();
+            return;
+        }
+            float dist = Vector3.Distance(transform.position, player.position);
 
             // If target is within detection range, chase/attack
             if (dist <= detectionRange)
@@ -72,11 +73,6 @@ public class EnemyLogic : MonoBehaviour
             {
                 Wander();
             }
-        }
-        else
-        {
-            Wander();
-        }
 
         // update animation speed
         float speed = enemyRef.agent.velocity.magnitude;
@@ -103,7 +99,7 @@ public class EnemyLogic : MonoBehaviour
 
     private void LookAtTarget()
     {
-        Vector3 lookPos = target.position - transform.position;
+        Vector3 lookPos = player.position - transform.position;
         lookPos.y = 0;
         if (lookPos.sqrMagnitude > 0.001f)
         {
@@ -118,7 +114,7 @@ public class EnemyLogic : MonoBehaviour
         {
             pathUpdateDeadline = Time.time + enemyRef.pathUpdateDelay;
             if (enemyRef.agent.enabled)
-                enemyRef.agent.SetDestination(target.position);
+                enemyRef.agent.SetDestination(player.position);
         }
     }
 
