@@ -1076,8 +1076,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 515031661894261806, guid: 817416b5af46a9643ab6074debd2dd00, type: 3}
   m_PrefabInstance: {fileID: 143681845}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+=======
+>>>>>>> parent of b3913ef (s)
 --- !u!1001 &151317913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1181,7 +1184,11 @@ PrefabInstance:
     - target: {fileID: 3692428581337692709, guid: 9c07e67a8f463764fa8f8a0c7d5e1b0a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+<<<<<<< HEAD
       objectReference: {fileID: 0}
+=======
+      objectReference: {fileID: 730365709069281337}
+>>>>>>> parent of b3913ef (s)
     - target: {fileID: 3692428581337692709, guid: 9c07e67a8f463764fa8f8a0c7d5e1b0a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ResumeGame
@@ -1209,7 +1216,10 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 10149568535709590, guid: 9c07e67a8f463764fa8f8a0c7d5e1b0a, type: 3}
   m_PrefabInstance: {fileID: 151317913}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of b3913ef (s)
 --- !u!1001 &221082877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12445,11 +12455,17 @@ PrefabInstance:
       addedObject: {fileID: 372411088}
     - targetCorrespondingSourceObject: {fileID: 6855221513519239855, guid: 1ac36d54514b7b344bef2a6ef5036c15, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 151317914}
+    - targetCorrespondingSourceObject: {fileID: 6855221513519239855, guid: 1ac36d54514b7b344bef2a6ef5036c15, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 357824700}
     - targetCorrespondingSourceObject: {fileID: 6855221513519239855, guid: 1ac36d54514b7b344bef2a6ef5036c15, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1144187994}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5856331597361546072, guid: 1ac36d54514b7b344bef2a6ef5036c15, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 730365709069281337}
   m_SourcePrefab: {fileID: 100100000, guid: 1ac36d54514b7b344bef2a6ef5036c15, type: 3}
 --- !u!4 &730365709069281335 stripped
 Transform:
@@ -12472,9 +12488,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec17587b244d0b4cb37d5fcc1e51e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 
+=======
+--- !u!114 &730365709069281337
+>>>>>>> parent of b3913ef (s)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12487,7 +12507,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseUI: {fileID: 151317915}
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of b3913ef (s)
 --- !u!1001 &2896460050192474341
 PrefabInstance:
   m_ObjectHideFlags: 0
