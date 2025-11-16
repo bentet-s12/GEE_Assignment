@@ -48,7 +48,6 @@ public class PlayerStateManager : MonoBehaviour
     [HideInInspector] public bool isAiming = false;
     [HideInInspector] public bool isDead = false;
 
-    private levelling_logic abilitycheckScript;
     [SerializeField] private GameObject DeathUI;
     [SerializeField] private GameObject Parent_player;
     public float getspeed()
@@ -64,7 +63,6 @@ public class PlayerStateManager : MonoBehaviour
 
     void Start()
     {
-        abilitycheckScript = GameObject.FindGameObjectWithTag("gameManager").GetComponent<levelling_logic>();
         controller = GetComponent<CharacterController>();
 
         idleState = new IdleState(this);
@@ -78,12 +76,6 @@ public class PlayerStateManager : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
-        if (abilitycheckScript != null)
-        {
-            canTeleport = abilitycheckScript.getTP();
-            canDoubleJump = abilitycheckScript.getDJ();
-        }
     }
 
     void Update()
