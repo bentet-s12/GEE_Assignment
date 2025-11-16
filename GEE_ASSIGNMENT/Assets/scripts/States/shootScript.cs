@@ -42,7 +42,7 @@ public class shootScript : MonoBehaviour
     }
     public void setdmg(int dmg)
     {
-        damage = dmg;
+        damage += dmg;
     }
     public int getmultishot()
     {

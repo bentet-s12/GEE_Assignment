@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 226665072386552670}
   - component: {fileID: 5588798970786566567}
   - component: {fileID: 4031958508378209541}
+  - component: {fileID: 2141316152049504286}
   m_Layer: 5
   m_Name: MultiShot
   m_TagString: Untagged
@@ -256,4 +257,30 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5588798970786566567}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2141316152049504286}
+        m_TargetAssemblyTypeName: lvlup_buttons, Assembly-CSharp
+        m_MethodName: multishotup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2141316152049504286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354836630994022243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f0446031210b14698ec7f4c4327a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  lvlscript: {fileID: 0}
