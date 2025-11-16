@@ -782,7 +782,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d15acb176fe878488de3fa3c0f876b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   detectionRange: 15
   wanderRadius: 8
   wanderDelay: 3
@@ -790,6 +789,7 @@ MonoBehaviour:
   rotSpeed: 8
   stuckCheckInterval: 2
   minMoveDistance: 0.5
+  hitScript: {fileID: 8474928466560028228}
 --- !u!114 &4125787893900477402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,7 +807,7 @@ MonoBehaviour:
   windupTime: 0.4
   swingTime: 0.3
   cooldownTime: 1
-  hitbox: {fileID: 0}
+  hitbox: {fileID: 4231379816270402439}
   pathUpdateDelay: 0.2
 --- !u!114 &3968737692483916141
 MonoBehaviour:
