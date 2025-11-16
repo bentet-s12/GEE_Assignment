@@ -63,7 +63,8 @@ public class levelling_logic : MonoBehaviour
         Tempspeed = PlayerPrefs.GetFloat("spd");
         if (PlayerPrefs.GetString("teleport") == "true")
         {
-            teleport = true;
+            
+            upgradeTP();
         }
         else
         {
@@ -71,7 +72,7 @@ public class levelling_logic : MonoBehaviour
         }
         if (PlayerPrefs.GetString("double_jump") == "true")
         {
-            doublejump = true;
+            upgradeDJ();
         }
         else
         {
@@ -82,6 +83,35 @@ public class levelling_logic : MonoBehaviour
     public void DeleteData()
     {
         PlayerPrefs.DeleteAll();
+    }
+
+    private void upgradeTP()
+    {
+        if (teleport != true)
+        {
+            teleport = true;
+        }
+        else
+        {
+            spdScript.teleportCooldown -= 0.1f;
+            //lowercooldown
+        }
+    }
+    public bool getTP()
+    {
+        return teleport;
+    }
+    private void upgradeDJ()
+    {
+        if (doublejump != true)
+        {
+            doublejump = true;
+        }
+  
+    }
+    public bool getDJ()
+    {
+        return doublejump;
     }
     private void Start()
     {
@@ -222,6 +252,7 @@ public class levelling_logic : MonoBehaviour
             }
         
     }
+        
         if (statScript != null)
         {
             if (statScript.getHealth() != health)
@@ -245,6 +276,14 @@ public class levelling_logic : MonoBehaviour
                 float addspd = basespeed + Tempspeed - currentspeed;
                 spdScript.setspeed(addspd);
 
+            }
+            if(spdScript.canTeleport != teleport)
+            {
+                spdScript.canTeleport = teleport;
+            }
+            if(spdScript.canDoubleJump != doublejump)
+            {
+                spdScript.canDoubleJump = doublejump;
             }
         }
         if (gunScript != null)

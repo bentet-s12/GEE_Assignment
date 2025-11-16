@@ -7003,6 +7003,10 @@ MonoBehaviour:
   gravity: -9.81
   velocity: {x: 0, y: 0, z: 0}
   isFalling: 0
+  canDoubleJump: 0
+  canTeleport: 0
+  teleportCooldown: 6
+  teleportDistance: 6
   isAiming: 0
 --- !u!114 &1240001807
 MonoBehaviour:
@@ -7974,7 +7978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8975071160946449162, guid: 02e2090659d6d4a45bf307e9bd1fdc10, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9038671995694896977, guid: 02e2090659d6d4a45bf307e9bd1fdc10, type: 3}
       propertyPath: currentscenename
