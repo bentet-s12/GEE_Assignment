@@ -394,7 +394,7 @@ AudioSource:
   m_GameObject: {fileID: 68371161}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: cb5db12b9b815614bafa2a60bd38dab4, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -1580,7 +1580,7 @@ AudioSource:
   m_GameObject: {fileID: 766343596}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: cb5db12b9b815614bafa2a60bd38dab4, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 4cd0b51da1965884cbed246f8a2956a1, type: 3}
   m_PlayOnAwake: 1
@@ -2594,6 +2594,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5767591375463547614, guid: 889cbe4269ae7a2478908bd96d3ab63f, type: 3}
+      propertyPath: mixer
+      value: 
+      objectReference: {fileID: 24100000, guid: cb5db12b9b815614bafa2a60bd38dab4, type: 2}
     - target: {fileID: 6413821641103590611, guid: 889cbe4269ae7a2478908bd96d3ab63f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 6

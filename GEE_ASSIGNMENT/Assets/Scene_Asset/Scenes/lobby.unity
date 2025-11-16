@@ -11565,6 +11565,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5767591375463547614, guid: 889cbe4269ae7a2478908bd96d3ab63f, type: 3}
+      propertyPath: mixer
+      value: 
+      objectReference: {fileID: 24100000, guid: cb5db12b9b815614bafa2a60bd38dab4, type: 2}
     - target: {fileID: 6413821641103590611, guid: 889cbe4269ae7a2478908bd96d3ab63f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 6
@@ -12569,6 +12573,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3444104107723736234, guid: 1ac36d54514b7b344bef2a6ef5036c15, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: cb5db12b9b815614bafa2a60bd38dab4, type: 2}
     - target: {fileID: 5856331597361546072, guid: 1ac36d54514b7b344bef2a6ef5036c15, type: 3}
       propertyPath: m_Name
       value: Player
@@ -12641,6 +12649,10 @@ PrefabInstance:
       propertyPath: canDoubleJump
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9204360206557991104, guid: 1ac36d54514b7b344bef2a6ef5036c15, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: cb5db12b9b815614bafa2a60bd38dab4, type: 2}
     m_RemovedComponents:
     - {fileID: 479520086170701715, guid: 1ac36d54514b7b344bef2a6ef5036c15, type: 3}
     - {fileID: 7978935857530388841, guid: 1ac36d54514b7b344bef2a6ef5036c15, type: 3}
