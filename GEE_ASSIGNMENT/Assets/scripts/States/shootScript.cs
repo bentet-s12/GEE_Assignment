@@ -42,7 +42,7 @@ public class shootScript : MonoBehaviour
     }
     public void setdmg(int dmg)
     {
-        damage += dmg;
+        damage = dmg;
     }
     public int getmultishot()
     {
@@ -98,14 +98,14 @@ public class shootScript : MonoBehaviour
         Vector3 shootDir = (targetPoint - firingPoint.position).normalized;
 
         // Handle single or multishot
-        if (multishot <= 1)
+        if (multishot <= 0)
         {
             FireProjectile(shootDir);
         }
         else
         {
             float startAngle = -spreadAngle * 0.5f;
-            float angleStep = spreadAngle / (multishot - 1);
+            float angleStep = spreadAngle / (multishot);
 
             for (int i = 0; i < multishot + 1; i++)
             {

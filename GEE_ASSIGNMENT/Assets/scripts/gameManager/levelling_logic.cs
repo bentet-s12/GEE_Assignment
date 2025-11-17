@@ -213,10 +213,10 @@ public class levelling_logic : MonoBehaviour
     }
     public void addmulti()
     {
-        currentmultishot++;
+        multishot+=1;
         if (gunScript != null)
         {
-            gunScript.setmultishot(currentmultishot);
+            gunScript.setmultishot(multishot);
         }
     }
     public void addtempspd(float add)
