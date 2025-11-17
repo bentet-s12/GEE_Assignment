@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8385266111571714555, guid: b4085400587ce8343bc19fdf76f07f76, type: 3}
       propertyPath: scenenames.Array.size
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8385266111571714555, guid: b4085400587ce8343bc19fdf76f07f76, type: 3}
       propertyPath: 'scenenames.Array.data[10]'
@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8385266111571714555, guid: b4085400587ce8343bc19fdf76f07f76, type: 3}
       propertyPath: 'scenenames.Array.data[11]'
-      value: scene12
+      value: scene7
       objectReference: {fileID: 0}
     - target: {fileID: 8385266111571714555, guid: b4085400587ce8343bc19fdf76f07f76, type: 3}
       propertyPath: 'scenenames.Array.data[12]'
