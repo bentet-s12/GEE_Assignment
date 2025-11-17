@@ -23,7 +23,7 @@ public class Dragon : MonoBehaviour
 
     [Header("Dragon Health")]
     public int maxHealth = 200;
-    private int dragonHealth;
+    [SerializeField]private int dragonHealth;
     private int nextFlinchThreshold;
 
 
@@ -67,6 +67,7 @@ public class Dragon : MonoBehaviour
         player = GameObject.FindGameObjectWithTag(PLAYER_TAG).transform;
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        roomscaler = GameObject.FindGameObjectWithTag("gameManager").GetComponent<gamelogic>();
 
         PlayRoarSFX();
 
@@ -183,6 +184,8 @@ public class Dragon : MonoBehaviour
     
     public void TakeDamage(int amount)
     {
+
+        Debug.Log("dragon dmg");
         if (dragonHealth <= 0)
             return;
 

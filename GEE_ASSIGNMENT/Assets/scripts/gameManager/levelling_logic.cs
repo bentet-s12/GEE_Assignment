@@ -198,13 +198,7 @@ public class levelling_logic : MonoBehaviour
     public void bosslvlup()
     {
         currentexp = expNeeded;
-        if (currentexp >= expNeeded)
-        {
-            currentexp = 0;
-            level++;
-            calculateExpNeeded();
-            //open up the UI to pick power up
-        }
+        lvlup();
     }
 
     public void adddmg(int dmg)
